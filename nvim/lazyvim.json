@@ -1,0 +1,13 @@
+{
+  "extras": [
+    "lazyvim.plugins.extras.coding.copilot-chat",
+    "lazyvim.plugins.extras.lang.json",
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.tailwind",
+    "lazyvim.plugins.extras.lang.typescript"
+  ],
+  "news": {
+    "NEWS.md": "6520"
+  },
+  "version": 6
+}
