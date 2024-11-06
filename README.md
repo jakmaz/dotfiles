@@ -14,15 +14,19 @@ Personal configuration files for macOS and Linux, managed with Git for easy vers
 
    ```bash
    ln -s ~/git/dotfiles/gitconfig ~/.gitconfig
-   ln -s ~/git/dotfiles/zshrc ~/.zshrc
    ln -s ~/git/dotfiles/nvim ~/.config/nvim
+   ln -s ~/git/dotfiles/zshrc ~/.zshrc
+   ln -s ~/git/dotfiles/oh-my-zsh-custom ~/.oh-my-zsh/custom
+   ln -s ~/git/dotfiles/p10k.zsh ~/.p10k.zsh
    ```
 
 ## Contents
 
 - **gitconfig**: Global Git configuration
-- **zshrc**: Zsh shell configuration
 - **nvim**: Neovim configuration files
+- **zshrc**: Zsh shell configuration
+- **oh-my-zsh-custom**: Custom themes and plugins for Oh My Zsh
+- **p10k.zsh**: Powerlevel10k theme configuration for Zsh
 
 ## Usage
 
