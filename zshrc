@@ -1,12 +1,13 @@
-# Add Homebrew to PATH
-export PATH="/opt/homebrew/bin:$PATH"
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# Add Homebrew to PATH
+export PATH="/opt/homebrew/bin:$PATH"
+
 
 # Path to Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -21,7 +22,7 @@ zstyle ':omz:update' frequency 30
 ENABLE_CORRECTION="true"
 
 # Plugins for aliases and more
-plugins=(zsh-autosuggestions zoxide git docker alias-finder)
+plugins=(zsh-autosuggestions zoxide git docker alias-finder tmux)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -69,3 +70,19 @@ alias brewup='brew update && brew upgrade'
 alias c='clear'
 alias lg='lazygit'
 alias ld='lazydocker'
+
+BUN_INSTALL="/home/YOUR_USERNAME/.bun"
+PATH="$BUN_INSTALL/bin:$PATH"
+
+bindkey '^I' autosuggest-accept
+
+# bun completions
+[ -s "/Users/jakubmazur/.bun/_bun" ] && source "/Users/jakubmazur/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export JAVA_HOME=$(brew --prefix openjdk@23)/libexec/openjdk.jdk/Contents/Home
+# Initialize Conda
+eval "$(/opt/homebrew/anaconda3/bin/conda shell.zsh hook)"
