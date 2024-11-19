@@ -74,10 +74,12 @@ alias ld='lazydocker'
 BUN_INSTALL="/home/YOUR_USERNAME/.bun"
 PATH="$BUN_INSTALL/bin:$PATH"
 
-bindkey '^I' autosuggest-accept
+bindkey '^I'   complete-word       # tab          | complete
+bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 
 # bun completions
 [ -s "/Users/jakubmazur/.bun/_bun" ] && source "/Users/jakubmazur/.bun/_bun"
+
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
