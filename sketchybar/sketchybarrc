@@ -6,7 +6,7 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
 
 ##### Bar Appearance #####
-sketchybar --bar position=top height=40 blur_radius=30 color=$BAR_COLOR
+sketchybar --bar position=top height=40 color=$BAR_COLOR
 
 ##### Defaults #####
 default=(
@@ -18,7 +18,7 @@ default=(
   label.color=$WHITE
   background.color=$ITEM_BG_COLOR
   background.corner_radius=5
-  background.height=24
+  background.height=26
   icon.padding_left=10
   icon.padding_right=4
   label.padding_left=4
@@ -38,6 +38,7 @@ source $ITEM_DIR/calendar.sh
 source $ITEM_DIR/volume.sh
 source $ITEM_DIR/battery.sh
 source $ITEM_DIR/cpu.sh
+source $ITEM_DIR/spaces.sh
 
 
 ##### Force all scripts to run the first time (never do this in a script) #####
