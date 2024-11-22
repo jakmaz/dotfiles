@@ -1,27 +1,18 @@
 #!/bin/bash
 
-sketchybar --add event aerospace_workspace_change
+# Define your spaces with names and corresponding Nerd Font icons
+SPACES=("home:" "web:󰖟" "code:" "chat:󰍩" "music:󰎆")
 
-for sid in $(aerospace list-workspaces --all); do
-  sketchybar --add item space.$sid left \
-    --subscribe space.$sid aerospace_workspace_change \
-    --set space.$sid \
-    icon=$sid \
-    label.font="sketchybar-app-font:Regular:16.0" \
-    background.color=0x44ffffff \
-    background.corner_radius=5 \
-    background.height=20 \
-    background.drawing=off \
-    label="$sid" \
-    click_script="aerospace workspace $sid" \
-    script="$CONFIG_DIR/plugins/space.sh $sid"
+# Add and configure spaces
+for SPACE in "${SPACES[@]}"; do
+  WORKSPACE_NAME=${SPACE%%:*} # Extract name (everything before ':')
+  ICON=${SPACE##*:}           # Extract icon (everything after ':')
+
+  # Add and set space
+  sketchybar --add item "$WORKSPACE_NAME" left \
+    --set "$WORKSPACE_NAME" \
+    icon="$ICON" \
+    label="$WORKSPACE_NAME" \
+    icon.padding_right=5 \
+    label.y_offset=-1
 done
-
-sketchybar --add item space_separator left \
-  --set space_separator icon="" \
-  icon.color=$ACCENT_COLOR \
-  icon.padding_left=4 \
-  label.drawing=off \
-  background.drawing=off \
-  script="$PLUGIN_DIR/space_windows.sh" \
-  --subscribe space_separator space_windows_change
