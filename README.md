@@ -1,6 +1,8 @@
 # Dotfiles
 
-Personal configuration files for macOS and Linux, managed with Git for easy version control and syncing across systems.
+Personal configuration files for macOS
+
+![Setup Image](images/nvim.png)
 
 ## Setup
 
