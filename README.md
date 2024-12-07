@@ -22,7 +22,9 @@ Personal configuration files for macOS
       ln -s ~/git/dotfiles/p10k.zsh ~/.p10k.zsh
       ln -s ~/git/dotfiles/aerospace ~/.config/aerospace
       ln -s ~/git/dotfiles/sketchybar ~/.config/sketchybar
-      ```
+      ln -s ~/git/dotfiles/nushell/env.nu ~/Library/Application\ Support/nushell/env.nu
+      ln -s ~/git/dotfiles/nushell/config.nu ~/Library/Application\ Support/nushell/config.nu
+   ```
 
 ## Contents
 
@@ -33,6 +35,7 @@ Personal configuration files for macOS
 - **p10k.zsh**: Powerlevel10k theme configuration for Zsh
 - **aerospace**: Configuration for Aerospace tiling application
 - **sketchybar**: Configuration for SketchyBar macOS menu bar customization
+- **nushell**: Configuration files for Nushell modern shell
 
 ## Usage
 
