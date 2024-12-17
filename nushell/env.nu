@@ -57,7 +57,14 @@ $env.PROMPT_MULTILINE_INDICATOR = {|| "::: " }
 # $env.TRANSIENT_PROMPT_INDICATOR_VI_NORMAL = {|| "" }
 # $env.TRANSIENT_PROMPT_MULTILINE_INDICATOR = {|| "" }
 # $env.TRANSIENT_PROMPT_COMMAND_RIGHT = {|| "" }
-$env.PATH = ($env.PATH | split row (char esep) | prepend '/opt/homebrew/bin')
+$env.PATH = (
+  $env.PATH 
+  | split row (char esep) 
+  | append '/opt/homebrew/bin' 
+  | append '/usr/local/bin' 
+  | append '/Users/jakubmazur/.bun/bin'
+  | uniq
+)
 
 # Specifies how environment variables are:
 # - converted from a string to a value on Nushell startup (from_string)
