@@ -63,6 +63,7 @@ $env.PATH = (
   | append '/opt/homebrew/bin' 
   | append '/usr/local/bin' 
   | append '/Users/jakubmazur/.bun/bin'
+  | append '/Users/jakubmazur/.local/bin' # UV Posting
   | uniq
 )
 
@@ -112,3 +113,6 @@ $env.NU_PLUGIN_DIRS = [
 # Starship config
 mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu
+
+# Zoxide
+zoxide init nushell | save -f ~/.zoxide.nu
