@@ -12,7 +12,7 @@ return {
 | .` |/ -_)/ _ \\ V / | || '  \() 
 |_|\_|\___|\___/ \_/  |_||_|_|_|  
                                   
-	        [ @jakmaz ]
+	         [ @jakmaz ]
     ]]
     opts.section.header.val = vim.split(logo, "\n", { trimempty = true })
   end,
