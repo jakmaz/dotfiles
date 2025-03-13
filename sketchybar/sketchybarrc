@@ -6,7 +6,7 @@ PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
 
 ##### Bar Appearance #####
-sketchybar --bar position=top height=40 color=$BAR_COLOR
+sketchybar --bar position=top height=40 color=$BAR_COLOR padding_left=2 padding_right=2
 
 ##### Defaults #####
 default=(
