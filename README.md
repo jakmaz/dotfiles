@@ -18,8 +18,6 @@ Personal configuration files for macOS
       ln -s ~/git/dotfiles/gitconfig ~/.gitconfig
       ln -s ~/git/dotfiles/nvim ~/.config/nvim
       ln -s ~/git/dotfiles/zshrc/.zshrc ~/.zshrc
-      ln -s ~/git/dotfiles/oh-my-zsh-custom ~/.oh-my-zsh/custom
-      ln -s ~/git/dotfiles/p10k.zsh ~/.p10k.zsh
       ln -s ~/git/dotfiles/aerospace ~/.config/aerospace
       ln -s ~/git/dotfiles/sketchybar ~/.config/sketchybar
       ln -s ~/git/dotfiles/nushell/env.nu ~/Library/Application\ Support/nushell/env.nu
@@ -32,8 +30,6 @@ Personal configuration files for macOS
 - **gitconfig**: Global Git configuration
 - **nvim**: Neovim configuration files
 - **zshrc**: Zsh shell configuration
-- **oh-my-zsh-custom**: Custom themes and plugins for Oh My Zsh
-- **p10k.zsh**: Powerlevel10k theme configuration for Zsh
 - **aerospace**: Configuration for Aerospace tiling application
 - **sketchybar**: Configuration for SketchyBar macOS menu bar customization
 - **nushell**: Configuration files for Nushell modern shell
