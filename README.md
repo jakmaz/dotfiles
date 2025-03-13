@@ -12,18 +12,14 @@ Personal configuration files for macOS
    git clone https://github.com/jakmaz/dotfiles.git ~/git/dotfiles
    ```
 
-2. **Create symlinks for configuration files:**
+2. **Use GNU Stow to create symlinks:**
 
    ```bash
-      ln -s ~/git/dotfiles/gitconfig ~/.gitconfig
-      ln -s ~/git/dotfiles/nvim ~/.config/nvim
-      ln -s ~/git/dotfiles/zshrc/.zshrc ~/.zshrc
-      ln -s ~/git/dotfiles/aerospace ~/.config/aerospace
-      ln -s ~/git/dotfiles/sketchybar ~/.config/sketchybar
-      ln -s ~/git/dotfiles/nushell/env.nu ~/Library/Application\ Support/nushell/env.nu
-      ln -s ~/git/dotfiles/nushell/config.nu ~/Library/Application\ Support/nushell/config.nu
-      ln -s ~/git/dotfiles/ghostty ~/.config/ghostty
+   cd ~/git/dotfiles
+   stow .
    ```
+
+   This command will automatically symlink all configuration files into their correct locations based on the `.stowrc` settings.
 
 ## Contents
 
@@ -34,7 +30,3 @@ Personal configuration files for macOS
 - **sketchybar**: Configuration for SketchyBar macOS menu bar customization
 - **nushell**: Configuration files for Nushell modern shell
 - **ghostty**: Configuration for Ghostty terminal emulator
-
-## Usage
-
-Make any changes directly in the `dotfiles` repository and commit them. Use symlinks to keep these configurations active on your system.
