@@ -17,7 +17,7 @@ Personal configuration files for macOS
    ```bash
       ln -s ~/git/dotfiles/gitconfig ~/.gitconfig
       ln -s ~/git/dotfiles/nvim ~/.config/nvim
-      ln -s ~/git/dotfiles/zshrc ~/.zshrc
+      ln -s ~/git/dotfiles/zshrc/.zshrc ~/.zshrc
       ln -s ~/git/dotfiles/oh-my-zsh-custom ~/.oh-my-zsh/custom
       ln -s ~/git/dotfiles/p10k.zsh ~/.p10k.zsh
       ln -s ~/git/dotfiles/aerospace ~/.config/aerospace
