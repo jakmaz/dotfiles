@@ -2,3 +2,4 @@ theme = Oxocarbon
 command = /opt/homebrew/bin/nu
 window-decoration = true
 macos-option-as-alt = true
+macos-titlebar-proxy-icon = hidden
