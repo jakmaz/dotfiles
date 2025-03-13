@@ -28,8 +28,7 @@ sketchybar --default "${default[@]}"
 
 ##### Adding Left Items #####
 source $ITEM_DIR/apple.sh
-source $ITEM_DIR/spaces.sh
-# source $ITEM_DIR/front_app.sh
+source $ITEM_DIR/front_app.sh
 
 # -- Right Side Of Notch Items --
 source $ITEM_DIR/media.sh
@@ -39,7 +38,6 @@ source $ITEM_DIR/calendar.sh
 source $ITEM_DIR/volume.sh
 source $ITEM_DIR/battery.sh
 source $ITEM_DIR/cpu.sh
-source $ITEM_DIR/spaces.sh
 
 
 ##### Force all scripts to run the first time (never do this in a script) #####
