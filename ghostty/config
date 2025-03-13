@@ -1,0 +1,4 @@
+theme = Oxocarbon
+command = /opt/homebrew/bin/nu
+window-decoration = true
+macos-option-as-alt = true

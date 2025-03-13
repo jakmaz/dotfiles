@@ -24,6 +24,7 @@ Personal configuration files for macOS
       ln -s ~/git/dotfiles/sketchybar ~/.config/sketchybar
       ln -s ~/git/dotfiles/nushell/env.nu ~/Library/Application\ Support/nushell/env.nu
       ln -s ~/git/dotfiles/nushell/config.nu ~/Library/Application\ Support/nushell/config.nu
+      ln -s ~/git/dotfiles/ghostty ~/.config/ghostty
    ```
 
 ## Contents
@@ -36,6 +37,7 @@ Personal configuration files for macOS
 - **aerospace**: Configuration for Aerospace tiling application
 - **sketchybar**: Configuration for SketchyBar macOS menu bar customization
 - **nushell**: Configuration files for Nushell modern shell
+- **ghostty**: Configuration for Ghostty terminal emulator
 
 ## Usage
 
