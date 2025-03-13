@@ -901,7 +901,28 @@ use ~/.cache/starship/init.nu
 # Zoxide
 source ~/.zoxide.nu
 
+# Carapace
+source ~/.cache/carapace/init.nu
+
 # Aliases
 alias lg = lazygit
 alias ld = lazydocker
 alias moviessync = rsync -av --progress --ignore-existing `/Volumes/Jakub's SSD/Movies/` /Volumes/main-pool/Upload/Movies/
+
+alias bd = bun run dev           # Start development server
+alias bb = bun run build         # Build your project
+alias bs = bun run start         # Run the production server
+alias bo = bun outdated          # Check for outdated packages
+alias ba = bun add               # Add new dependencies
+
+# Additional Helpful Aliases
+alias bt = bun run test          # Run tests (if configured)
+alias bl = bun run lint          # Lint your code (if configured)
+alias bp = bun run preview       # Preview the production build (if available)
+alias bv = bun --version         # Display Bun version
+alias bnew = bun create next-app # Scaffold a new Next.js project with Bun
+
+# Shadcn Aliases
+alias bsi = bunx --bun shadcn@latest init
+alias bsa = bunx --bun shadcn@latest add
+
