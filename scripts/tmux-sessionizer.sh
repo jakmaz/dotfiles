@@ -4,12 +4,12 @@ if [[ $# -eq 1 ]]; then
   selected=$1
 else
   selected=$(
-    find ~/git -mindepth 1 -maxdepth 1 -type d |
+    find ~/git -mindepth 1 -maxdepth 1 -type d -exec basename {} \; |
       fzf \
         --margin=2,10% \
         --border=rounded \
         --layout=reverse \
-        --preview 'tree -C {} | head -100' \
+        --preview 'tree -C ~/git/{} | head -100' \
         --preview-window=right:50% \
         --info=inline
   )
