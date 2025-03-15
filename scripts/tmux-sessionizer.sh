@@ -1,21 +1,23 @@
 #!/usr/bin/env bash
 
 if [[ $# -eq 1 ]]; then
-  selected=$1
+  selected="$HOME/git/$1" # Ensure full path if argument is passed
 else
   selected=$(
-    find ~/git -mindepth 1 -maxdepth 1 -type d -exec basename {} \; |
+    find ~/git -mindepth 1 -maxdepth 1 -type d -print |
+      sed "s|$HOME/git/||" | # Show only project names in fzf
       fzf \
         --margin=2,10% \
         --border=rounded \
         --layout=reverse \
-        --preview 'tree -C ~/git/{} | head -100' \
+        --preview 'tree -C -I "node_modules" ~/git/{} | head -100' \
         --preview-window=right:50% \
         --info=inline
   )
+  selected="$HOME/git/$selected" # Convert back to full path
 fi
 
-if [[ -z $selected ]]; then
+if [[ -z $selected || ! -d $selected ]]; then
   exit 0
 fi
 
