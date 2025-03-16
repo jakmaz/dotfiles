@@ -21,7 +21,7 @@ return {
         ---@type snacks.dashboard.Item[]
         keys = {
           { icon = " ", key = "o", desc = "Open in Finder", action = ":lua vim.fn.system('^open .')" },
-          { icon = " ", key = "e", desc = "Explore Files", action = ":Neotree" },
+          { icon = " ", key = "e", desc = "Explore Files", action = ":lua Snacks.dashboard.pick('explorer')" },
           { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
           { icon = " ", key = "f", desc = "Find Files", action = ":lua Snacks.dashboard.pick('files')" },
           { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
