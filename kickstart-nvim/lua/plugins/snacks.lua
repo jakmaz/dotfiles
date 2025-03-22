@@ -2,42 +2,17 @@ return {
   'folke/snacks.nvim',
   priority = 1000,
   lazy = false,
-  ---@type snacks.Config
   opts = {
     bigfile = { enabled = true },
     lazygit = { enabled = true },
-    dashboard = {
-      enabled = true,
-      preset = {
-        header = [[
-      )                             
-  ( /(                             
-  )\())   (        )   (      )    
-((_)\   ))\  (   /((  )\    (     
-  _((_) /((_) )\ (_))\((_)   )\  ' 
-| \| |(_))  ((_)_)((_)(_) _((_))  
-| .` |/ -_)/ _ \\ V / | || '  \() 
-|_|\_|\___|\___/ \_/  |_||_|_|_|  
-                                  
-[ @jakmaz ]
-]],
-
-        ---@type snacks.dashboard.Item[]
-        keys = {
-          { icon = ' ', key = 'e', desc = 'Explore Files', action = ":lua Snacks.dashboard.pick('explorer')" },
-          { icon = ' ', key = 'r', desc = 'Recent Files', action = ":lua Snacks.dashboard.pick('oldfiles')" },
-          { icon = ' ', key = 'f', desc = 'Find Files', action = ":lua Snacks.dashboard.pick('files')" },
-          { icon = ' ', key = 'g', desc = 'Find Text', action = ":lua Snacks.dashboard.pick('live_grep')" },
-          { icon = '󰒲 ', key = 'l', desc = 'Lazy', action = ':Lazy', enabled = package.loaded.lazy ~= nil },
-          { icon = ' ', key = 'q', desc = 'Quit', action = ':qa' },
-        },
-      },
-    },
+    git = { enabled = true },
+    gitbrowse = { enabled = true },
+    health = { enabled = true },
+    image = { enabled = true },
+    input = { enabled = true },
     explorer = { enabled = true },
     scratch = { enabled = true },
     indent = { enabled = false },
-    input = { enabled = false },
-    picker = { enabled = true },
     notifier = { enabled = true },
     quickfile = { enabled = false },
     scope = { enabled = false },
@@ -76,7 +51,7 @@ return {
       desc = 'Command History',
     },
     {
-      '<leader>n',
+      '<leader>on',
       function()
         Snacks.picker.notifications()
       end,

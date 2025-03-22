@@ -16,6 +16,7 @@ return {
       { '<leader>r', group = 'Rename' },
       { '<leader>s', group = 'Search' },
       { '<leader>w', group = 'Workspace' },
+      { '<leader>f', group = 'Find' },
       { '<leader>t', group = 'Toggle' },
       { '<leader>h', group = 'Git Hunk', mode = { 'n', 'v' } },
       { '<leader>g', group = 'Git' },
