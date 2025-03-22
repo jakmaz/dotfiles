@@ -1,6 +1,7 @@
 theme = Oxocarbon
 command = /opt/homebrew/bin/nu
 window-decoration = true
+window-padding-color = background
 macos-option-as-alt = true
 macos-titlebar-proxy-icon = hidden
 keybind = global:cmd+/=toggle_quick_terminal
