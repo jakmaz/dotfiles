@@ -44,14 +44,7 @@ return {
       desc = 'Grep',
     },
     {
-      '<leader>:',
-      function()
-        Snacks.picker.command_history()
-      end,
-      desc = 'Command History',
-    },
-    {
-      '<leader>on',
+      '<leader>ln',
       function()
         Snacks.picker.notifications()
       end,
@@ -195,7 +188,7 @@ return {
       desc = 'Registers',
     },
     {
-      '<leader>s/',
+      '<leader>ls',
       function()
         Snacks.picker.search_history()
       end,
@@ -216,7 +209,7 @@ return {
       desc = 'Buffer Lines',
     },
     {
-      '<leader>sc',
+      '<leader>lc',
       function()
         Snacks.picker.command_history()
       end,
@@ -415,7 +408,7 @@ return {
       desc = 'Select Scratch Buffer',
     },
     {
-      '<leader>n',
+      '<leader>lN',
       function()
         Snacks.notifier.show_history()
       end,

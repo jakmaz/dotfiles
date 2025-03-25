@@ -23,6 +23,7 @@ return {
       { '<leader>o', group = 'Other' },
       { '<leader>u', group = 'Ui' },
       { '<leader>b', group = 'Buffers' },
+      { '<leader>l', group = 'Logs' },
     },
   },
 }
