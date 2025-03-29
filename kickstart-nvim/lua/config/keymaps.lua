@@ -4,10 +4,10 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Quit neovim
-vim.keymap.set('n', '<leader>q', '<cmd>qa<CR>', { desc = 'Quit all' })
+vim.keymap.set('n', '<leader>q', '<cmd>qa<CR>', { desc = 'Quit All' })
 
 -- Yank whole text
-vim.keymap.set('n', '<leader>cy', ':%y+<CR>', { desc = 'Yank entire buffer to clipboard' })
+vim.keymap.set('n', '<leader>cy', ':%y+<CR>', { desc = 'Yank Entire Buffer' })
 
 -- Keybinds to make split navigation easier.
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })

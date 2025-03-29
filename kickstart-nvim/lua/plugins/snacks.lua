@@ -3,16 +3,16 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
+    input = { enabled = true },
     bigfile = { enabled = true },
     lazygit = { enabled = true },
     git = { enabled = true },
     gitbrowse = { enabled = true },
     health = { enabled = true },
     image = { enabled = true },
-    input = { enabled = true },
     explorer = { enabled = true },
     scratch = { enabled = true },
-    indent = { enabled = false },
+    indent = { enabled = true },
     notifier = { enabled = true },
     quickfile = { enabled = false },
     scope = { enabled = false },
@@ -394,14 +394,14 @@ return {
       desc = 'Toggle Zoom',
     },
     {
-      '<leader>.',
+      '<leader>us',
       function()
         Snacks.scratch()
       end,
       desc = 'Toggle Scratch Buffer',
     },
     {
-      '<leader>S',
+      '<leader>uS',
       function()
         Snacks.scratch.select()
       end,
