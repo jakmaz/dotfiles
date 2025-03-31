@@ -56,6 +56,4 @@ vim.opt.scrolloff = 10
 -- See `:help 'confirm'`
 vim.opt.confirm = true
 
-
-vim.diagnostic.config({ virtual_lines = { current_line = true } })
-
+vim.diagnostic.config { virtual_lines = { current_line = true } }
