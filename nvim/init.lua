@@ -1,39 +1,8 @@
--- Set <space> as the leader key
--- See `:help mapleader`
---  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 require 'config.options'
 require 'config.keymaps'
 require 'config.autocmds'
-
--- LSP configuration
-vim.lsp.config('*', {
-  capabilities = {
-    textDocument = {
-      semanticTokens = {
-        multilineTokenSupport = true,
-      },
-    },
-  },
-  root_markers = { '.git' },
-})
-
--- Diagnostic configuration
-vim.diagnostic.config {
-  severity_sort = true,
-  float = { border = 'rounded', source = 'if_many' },
-  virtual_text = {
-    current_line = true,
-    source = 'if_many',
-    spacing = 2,
-    format = function(diagnostic)
-      return diagnostic.message
-    end,
-  },
-}
-vim.lsp.enable 'luals'
+require 'config.lspconfig'
+require 'config.diagnostics'
 
 -- Install `lazy.nvim` plugin manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
