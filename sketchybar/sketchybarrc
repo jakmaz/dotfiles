@@ -1,22 +1,34 @@
 # !/bin/bash
 
-source "$CONFIG_DIR/colors.sh" # Load all colors
-
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
 
-##### Bar Appearance #####
-sketchybar --bar position=top height=40 color=$BAR_COLOR padding_left=2 padding_right=2
+##### Colors #####
+BAR_COLOR=0xff161616
+ITEM_BG_COLOR=0xff262626
+ITEM_LABEL_COLOR=0xffffffff
+ITEM_ICON_COLOR=0xffffffff
 
-##### Defaults #####
+##### Bar Appearance #####
+bar=(
+  position=top
+  height=40
+  color=$BAR_COLOR
+  padding_left=2
+  padding_right=2
+)
+
+sketchybar --bar "${bar[@]}"
+
+#### Defaults #####
 default=(
+  background.color=$ITEM_BG_COLOR
+  icon.color=$ITEM_ICON_COLOR
+  label.color=$ITEM_LABEL_COLOR
   padding_left=5
   padding_right=5
   icon.font="Hack Nerd Font:Bold:17.0"
   label.font="Hack Nerd Font:Bold:14.0"
-  icon.color=$WHITE
-  label.color=$WHITE
-  background.color=$ITEM_BG_COLOR
   background.corner_radius=5
   background.height=26
   icon.padding_left=10
@@ -24,16 +36,17 @@ default=(
   label.padding_left=4
   label.padding_right=10
 )
+
 sketchybar --default "${default[@]}"
 
 ##### Adding Left Items #####
 source $ITEM_DIR/apple.sh
 source $ITEM_DIR/front_app.sh
 
-# -- Right Side Of Notch Items --
+##### Adding Center Items #####
 source $ITEM_DIR/media.sh
 
-# --- Right Side Items ---
+##### Adding Right Items #####
 source $ITEM_DIR/calendar.sh
 source $ITEM_DIR/volume.sh
 source $ITEM_DIR/battery.sh
@@ -42,5 +55,4 @@ source $ITEM_DIR/cpu.sh
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update
-
 
