@@ -58,3 +58,11 @@ vim.opt.confirm = true
 
 --- Used for bufferlien
 vim.opt.termguicolors = true
+
+-- Tabs & Indentation
+vim.opt.tabstop = 2        -- Number of visual spaces per TAB
+vim.opt.softtabstop = 2    -- Number of spaces per TAB when editing
+vim.opt.shiftwidth = 2     -- Number of spaces to use for each step of (auto)indent
+vim.opt.expandtab = true   -- Use spaces instead of tabs
+vim.opt.smartindent = true -- Auto-indents new lines
+vim.opt.autoindent = true  -- Copy indent from current line when starting a new one
