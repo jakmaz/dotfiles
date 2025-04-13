@@ -10,13 +10,14 @@ return {
     'williamboman/mason-lspconfig.nvim',
     opts = {
       ensure_installed = {
-        'lua_ls',        -- Lua (great for editing Neovim config)
-        'pyright',       -- Python
-        'ts_ls',         -- TypeScript / JavaScript
-        'rust_analyzer', -- Rust
-        'clangd',        -- C / C++
-        'tailwindcss',   -- Tailwind CSS
-        'marksman',      -- Markdown
+        'lua_ls',               -- Lua (great for editing Neovim config)
+        'pyright',              -- Python
+        'ts_ls',                -- TypeScript / JavaScript
+        'rust_analyzer',        -- Rust
+        'clangd',               -- C / C++
+        'tailwindcss',          -- Tailwind CSS
+        'marksman',             -- Markdown
+        'java_language_server', -- Java
       },
     },
   },
@@ -61,6 +62,9 @@ return {
 
       -- Markdown
       lspconfig.marksman.setup {}
+
+      -- Java
+      lspconfig.java_language_server.setup {}
     end,
   },
 }
