@@ -66,3 +66,6 @@ vim.opt.shiftwidth = 2     -- Number of spaces to use for each step of (auto)ind
 vim.opt.expandtab = true   -- Use spaces instead of tabs
 vim.opt.smartindent = true -- Auto-indents new lines
 vim.opt.autoindent = true  -- Copy indent from current line when starting a new one
+
+-- Disable line wrap
+vim.opt.wrap = false
