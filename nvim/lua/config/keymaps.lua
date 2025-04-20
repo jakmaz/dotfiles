@@ -8,12 +8,14 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Quit neovim
 vim.keymap.set('n', '<leader>q', '<cmd>qa<CR>', { desc = 'Quit All' })
 
+-- Save on Ctrl+S
+vim.keymap.set({ 'n', 'i' }, '<C-s>', '<cmd>w<CR>', { desc = 'Save File' })
+
 -- Yank whole text
 vim.keymap.set('n', '<leader>cy', ':%y+<CR>', { desc = 'Yank Entire Buffer' })
 
 -- Select whole text
 vim.keymap.set("n", "<leader>cs", "ggVG", { desc = "Select Entire Buffer" })
-
 
 -- Keybinds to make split navigation easier.
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
@@ -58,3 +60,9 @@ vim.keymap.set(
   copy_all_diagnostics,
   { desc = "Copy All Diagnostics" }
 )
+
+-- Center screen after scrolling or searching (from prime)
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down and center" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up and center" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result centered" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result centered" })
