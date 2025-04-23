@@ -16,6 +16,9 @@ return {
       'query',
       'vim',
       'vimdoc',
+      'javascript',
+      'typescript',
+      'tsx',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,
