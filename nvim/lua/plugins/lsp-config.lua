@@ -13,6 +13,7 @@ return {
         'lua_ls', -- Lua (great for editing Neovim config)
         'pyright', -- Python
         'ts_ls', -- TypeScript / JavaScript
+        'eslint', -- Nextjs Linting
         'rust_analyzer', -- Rust
         'clangd', -- C / C++
         'tailwindcss', -- Tailwind CSS
@@ -46,6 +47,7 @@ return {
       }
       lspconfig.pyright.setup {}
       lspconfig.ts_ls.setup {}
+      lspconfig.eslint.setup {}
       lspconfig.rust_analyzer.setup {}
       lspconfig.clangd.setup {}
       lspconfig.tailwindcss.setup {}
