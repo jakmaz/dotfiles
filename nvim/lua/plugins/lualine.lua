@@ -4,13 +4,14 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   opts = {
     options = {
-      component_separators = { left = '', right = '' },
-      section_separators = { left = '', right = '' },
+      component_separators = '',
+      section_separators = '',
       globalstatus = true,
       disabled_filetypes = { statusline = { 'snacks_dashboard' } },
     },
+
     sections = {
-      lualine_a = { 'mode' },
+      lualine_a = {},
       lualine_b = { 'branch', 'diff', 'diagnostics' },
       lualine_c = { 'filename' },
       lualine_x = { 'encoding', 'filetype' },
