@@ -51,7 +51,7 @@ return {
       lspconfig.rust_analyzer.setup {}
       lspconfig.clangd.setup {}
       lspconfig.tailwindcss.setup {}
-      lspconfig.harper_ls.setup {}
+      lspconfig.harper_ls.setup { filetypes = { 'markdown' } }
       lspconfig.java_language_server.setup {}
     end,
   },
