@@ -21,15 +21,15 @@ return {
       }
     end,
     formatters_by_ft = {
-      lua = { "stylua" },
-      javascript = { "prettier" },
-      typescript = { "prettier" },
-      markdown = { "prettier" },
+      lua = { 'stylua' },
+      javascript = { 'prettier' },
+      typescript = { 'prettier' },
+      markdown = { 'prettier' },
     },
     formatters = {
       prettier = {
-        prepend_args = { "--prose-wrap", "always" },
-      }
-    }
+        prepend_args = { '--prose-wrap', 'always', '--print-width', '180' },
+      },
+    },
   },
 }
