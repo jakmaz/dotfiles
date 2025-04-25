@@ -12,7 +12,7 @@ return { -- Collection of various small independent plugins/modules
         find_left = 'zF', -- Find surrounding (to the left)
         highlight = 'zh', -- Highlight surrounding
         replace = 'zr', -- Replace surrounding
-        update_n_lines = 'sn', -- Update `n_lines`
+        update_n_lines = 'zn', -- Update `n_lines`
       },
     }
   end,
