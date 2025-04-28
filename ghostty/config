@@ -6,3 +6,4 @@ macos-option-as-alt = true
 macos-titlebar-proxy-icon = hidden
 keybind = global:cmd+/=toggle_quick_terminal
 macos-titlebar-style = hidden
+font-size = 16
