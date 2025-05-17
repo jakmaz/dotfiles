@@ -1,13 +1,13 @@
 return {
   -- Mason: installs and manages external tools like LSP servers
   {
-    'williamboman/mason.nvim',
+    'mason-org/mason.nvim',
     opts = {},
   },
 
   -- Mason-LSPConfig: tells Mason which servers to install and links them to lspconfig
   {
-    'williamboman/mason-lspconfig.nvim',
+    'mason-org/mason-lspconfig.nvim',
     opts = {
       ensure_installed = {
         'lua_ls', -- Lua (great for editing Neovim config)
