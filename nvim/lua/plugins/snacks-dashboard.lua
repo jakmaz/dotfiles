@@ -19,7 +19,12 @@ return {
 
         keys = {
           { icon = ' ', key = 'e', desc = 'Explore Files', action = ":lua Snacks.dashboard.pick('explorer')" },
-          { icon = ' ', key = 'r', desc = 'Recent Files', action = ":lua Snacks.dashboard.pick('oldfiles')" },
+          {
+            icon = ' ',
+            key = 'r',
+            desc = 'Recent Files',
+            action = ':lua Snacks.picker.recent({filter = {cwd = true}})',
+          },
           { icon = ' ', key = 'f', desc = 'Find Files', action = ":lua Snacks.dashboard.pick('files')" },
           { icon = ' ', key = 'g', desc = 'Find Text', action = ":lua Snacks.dashboard.pick('live_grep')" },
           { icon = '󰒲 ', key = 'l', desc = 'Lazy', action = ':Lazy', enabled = package.loaded.lazy ~= nil },
