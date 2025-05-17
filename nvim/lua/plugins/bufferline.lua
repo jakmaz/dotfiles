@@ -1,7 +1,7 @@
 return {
   'akinsho/bufferline.nvim',
-  -- Keys break plugin for some reason and can be only fixed with verylazy event
-  event = 'VeryLazy',
+  event = 'VeryLazy', -- Ensures keys work by using 'VeryLazy'
+
   keys = {
     { '<leader>bp', '<Cmd>BufferLineTogglePin<CR>', desc = 'Toggle Pin' },
     { '<leader>bP', '<Cmd>BufferLineGroupClose ungrouped<CR>', desc = 'Delete Non-Pinned Buffers' },
@@ -9,27 +9,25 @@ return {
     { '<leader>bl', '<Cmd>BufferLineCloseLeft<CR>', desc = 'Delete Buffers to the Left' },
     { '<S-Left>', '<cmd>BufferLineCyclePrev<cr>', desc = 'Prev Buffer' },
     { '<S-Right>', '<cmd>BufferLineCycleNext<cr>', desc = 'Next Buffer' },
-    { 'M', '<cmd>BufferLineCyclePrev<cr>', desc = 'Prev Buffer' },
-    { 'I', '<cmd>BufferLineCycleNext<cr>', desc = 'Next Buffer' },
-    { '[B', '<cmd>BufferLineMovePrev<cr>', desc = 'Move buffer prev' },
-    { ']B', '<cmd>BufferLineMoveNext<cr>', desc = 'Move buffer next' },
+    { 'M', '<cmd>BufferLineCyclePrev<cr>', desc = 'Prev Buffer (Alt)' },
+    { 'I', '<cmd>BufferLineCycleNext<cr>', desc = 'Next Buffer (Alt)' },
+    { '[B', '<cmd>BufferLineMovePrev<cr>', desc = 'Move Buffer Prev' },
+    { ']B', '<cmd>BufferLineMoveNext<cr>', desc = 'Move Buffer Next' },
   },
+
   dependencies = 'nvim-tree/nvim-web-devicons',
+
   opts = {
     options = {
-      -- stylua: ignore
       close_command = function(n) Snacks.bufdelete(n) end,
-      -- stylua: ignore
       right_mouse_command = function(n) Snacks.bufdelete(n) end,
       diagnostics = 'nvim_lsp',
-      diagnostics_indicator = function(count, level, diagnostics_dict, context)
+      diagnostics_indicator = function(count, level, _, _)
         local icon = level:match 'error' and ' ' or ' '
         return ' ' .. icon .. count
       end,
       offsets = {
-        {
-          filetype = 'snacks_layout_box',
-        },
+        { filetype = 'snacks_layout_box' },
       },
       always_show_bufferline = false,
       hover = {
@@ -40,3 +38,4 @@ return {
     },
   },
 }
+
