@@ -15,5 +15,20 @@ return { -- Collection of various small independent plugins/modules
         update_n_lines = 'zn', -- Update `n_lines`
       },
     }
+    require('mini.move').setup {
+      mappings = {
+        -- Move visual selection in Visual mode using Alt + Arrow keys
+        left = '<M-Left>',
+        right = '<M-Right>',
+        down = '<M-Down>',
+        up = '<M-Up>',
+
+        -- Move current line in Normal mode using Alt + Arrow keys
+        line_left = '<M-Left>',
+        line_right = '<M-Right>',
+        line_down = '<M-Down>',
+        line_up = '<M-Up>',
+      },
+    }
   end,
 }
