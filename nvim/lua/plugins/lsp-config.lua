@@ -20,6 +20,11 @@ return {
         'harper_ls', -- Spell check
         'java_language_server', -- Java
       },
+      automatic_enable = {
+        exclude = {
+          'harper_ls',
+        },
+      },
     },
   },
 
@@ -28,31 +33,7 @@ return {
     'neovim/nvim-lspconfig',
     config = function()
       local lspconfig = require 'lspconfig'
-
-      -- Lua (for Neovim configuration)
-      lspconfig.lua_ls.setup {
-        settings = {
-          Lua = {
-            runtime = { version = 'LuaJIT' },
-            diagnostics = {
-              globals = { 'vim' },
-            },
-            workspace = {
-              library = vim.api.nvim_get_runtime_file('', true),
-              checkThirdParty = false,
-            },
-            telemetry = { enable = false },
-          },
-        },
-      }
-      lspconfig.pyright.setup {}
-      lspconfig.ts_ls.setup {}
-      -- lspconfig.eslint.setup {}
-      lspconfig.rust_analyzer.setup {}
-      lspconfig.clangd.setup {}
-      lspconfig.tailwindcss.setup {}
       lspconfig.harper_ls.setup { filetypes = { 'markdown' } }
-      lspconfig.java_language_server.setup {}
     end,
   },
 }
