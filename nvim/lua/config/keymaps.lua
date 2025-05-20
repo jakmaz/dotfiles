@@ -55,3 +55,8 @@ vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Scroll down and center' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center' })
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Next search result centered' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Previous search result centered' })
+
+-- Map Ctrl-h and Ctrl-k to replicate default actions of Ctrl-o and Ctrl-i
+vim.keymap.set('n', '<C-h>', '<C-o>', { desc = 'Jump back in jump list (same as Ctrl-o)' })
+vim.keymap.set('n', '<C-k>', '<C-i>', { desc = 'Jump forward in jump list (same as Ctrl-i)' })
+
