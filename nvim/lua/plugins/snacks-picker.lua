@@ -5,6 +5,7 @@ return {
       enabled = true,
       sources = {
         explorer = {
+          auto_close = true,
           layout = {
             { preview = true },
             layout = {
@@ -26,8 +27,8 @@ return {
             list = {
               keys = { ['<Right>'] = 'confirm', ['<Left>'] = 'explorer_close' },
               wo = {
-                number = true, -- Enable line numbers
-                relativenumber = true, -- Enable relative line numbers
+                number = true,
+                relativenumber = true,
               },
             },
           },
@@ -36,4 +37,3 @@ return {
     },
   },
 }
-

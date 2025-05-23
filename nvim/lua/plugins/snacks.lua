@@ -22,7 +22,7 @@ return {
   },
   keys = {
     -- Top Pickers & Explorer
-    { '<leader><space>', function() Snacks.picker.files() end, desc = 'Smart Find' },
+    { '<leader><space>', function() Snacks.picker.files() end, desc = 'Find' },
     { '<leader>,', function() Snacks.picker.buffers() end, desc = 'Buffers' },
     { '<leader>/', function() Snacks.picker.grep() end, desc = 'Grep' },
     { '<leader>ln', function() Snacks.picker.notifications() end, desc = 'Notification History' },
