@@ -56,7 +56,9 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Scroll up and center' })
 vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Next search result centered' })
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Previous search result centered' })
 
--- Map Ctrl-h and Ctrl-k to replicate default actions of Ctrl-o and Ctrl-i
+-- Map Ctrl-h and Ctrl-k to replicate default actions of Ctrl-o and Ctrl-i which are used by harpoon
 vim.keymap.set('n', '<C-h>', '<C-o>', { desc = 'Jump back in jump list (same as Ctrl-o)' })
 vim.keymap.set('n', '<C-k>', '<C-i>', { desc = 'Jump forward in jump list (same as Ctrl-i)' })
 
+-- Map Ctrl-a to switch to the last buffer
+vim.keymap.set('n', '<C-a>', '<C-^>', { desc = 'Switch to last buffer' })
