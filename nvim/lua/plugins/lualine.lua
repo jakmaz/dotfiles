@@ -13,8 +13,8 @@ return {
       lualine_a = {},
       lualine_b = { 'branch', 'diff', 'diagnostics' },
       lualine_c = { { 'filename', path = 1 } },
-      lualine_x = { 'encoding', 'filetype' },
-      lualine_y = { 'progress' },
+      lualine_x = { 'filetype' },
+      lualine_y = { 'location' },
       lualine_z = {},
     },
     inactive_sections = {
