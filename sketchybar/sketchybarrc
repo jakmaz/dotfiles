@@ -44,7 +44,7 @@ source $ITEM_DIR/apple.sh
 source $ITEM_DIR/front_app.sh
 
 ##### Adding Center Items #####
-source $ITEM_DIR/media.sh
+source $ITEM_DIR/spotify.sh
 
 ##### Adding Right Items #####
 source $ITEM_DIR/calendar.sh
