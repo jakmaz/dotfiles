@@ -62,3 +62,21 @@ vim.keymap.set('n', '<C-k>', '<C-i>', { desc = 'Jump forward in jump list (same 
 
 -- Map Ctrl-a to switch to the last buffer
 vim.keymap.set('n', '<C-a>', '<C-^>', { desc = 'Switch to last buffer' })
+
+-- Bind "(" for navigating to the previous error diagnostic using the new API
+vim.keymap.set('n', '(', function()
+  vim.diagnostic.jump {
+    count = -1, -- Negative count moves to the previous diagnostic
+    severity = vim.diagnostic.severity.ERROR, -- Filter diagnostics by severity
+    float = true, -- Show diagnostics in a floating window
+  }
+end, { desc = 'Go to previous error diagnostic' })
+
+-- Bind ")" for navigating to the next error diagnostic using the new API
+vim.keymap.set('n', ')', function()
+  vim.diagnostic.jump {
+    count = 1, -- Positive count moves to the next diagnostic
+    severity = vim.diagnostic.severity.ERROR, -- Filter diagnostics by severity
+    float = true, -- Show diagnostics in a floating window
+  }
+end, { desc = 'Go to next error diagnostic' })
