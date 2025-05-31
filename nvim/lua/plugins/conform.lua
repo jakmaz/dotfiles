@@ -5,9 +5,7 @@ return {
   keys = {
     {
       '<leader>cf',
-      function()
-        require('conform').format { async = true, lsp_format = 'fallback' }
-      end,
+      function() require('conform').format { async = true, lsp_format = 'fallback' } end,
       mode = '',
       desc = 'Format buffer',
     },
@@ -25,11 +23,6 @@ return {
       javascript = { 'prettier' },
       typescript = { 'prettier' },
       markdown = { 'prettier' },
-    },
-    formatters = {
-      prettier = {
-        prepend_args = { '--prose-wrap', 'always', '--print-width', '140' },
-      },
     },
   },
 }
