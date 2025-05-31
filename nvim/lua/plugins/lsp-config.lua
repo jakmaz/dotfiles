@@ -12,7 +12,6 @@ return {
       ensure_installed = {
         'lua_ls', -- Lua (great for editing Neovim config)
         'pyright', -- Python
-        'ts_ls', -- TypeScript / JavaScript
         'eslint', -- Nextjs Linting
         'rust_analyzer', -- Rust
         'clangd', -- C / C++
