@@ -18,7 +18,7 @@ vim.keymap.set('n', '<leader>cy', ':%y+<CR>', { desc = 'Yank Entire Buffer' })
 vim.keymap.set('n', '<leader>cs', 'ggVG', { desc = 'Select Entire Buffer' })
 
 -- Lsp actions
-vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code Action' })
+vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = 'Code Action' })
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = 'Rename' })
 
 -- Function to copy all diagnostics to the clipboard
