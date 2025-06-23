@@ -120,15 +120,6 @@ const rules: KarabinerRules[] = [
 
     // w = "Window"
     w: {
-      semicolon: {
-        description: "Window: Hide",
-        to: [
-          {
-            key_code: "h",
-            modifiers: ["right_command"],
-          },
-        ],
-      },
       y: window("previous-display"),
       o: window("next-display"),
       k: window("top-half"),
@@ -184,74 +175,60 @@ const rules: KarabinerRules[] = [
       },
     },
 
-    // o = "System"
-    f: {
-      u: {
-        to: [
-          {
-            key_code: "volume_increment",
-          },
-        ],
-      },
-      j: {
-        to: [
-          {
-            key_code: "volume_decrement",
-          },
-        ],
-      },
-      i: {
-        to: [
-          {
-            key_code: "display_brightness_increment",
-          },
-        ],
-      },
-      k: {
-        to: [
-          {
-            key_code: "display_brightness_decrement",
-          },
-        ],
-      },
-      l: {
-        to: [
-          {
-            key_code: "q",
-            modifiers: ["right_control", "right_command"],
-          },
-        ],
-      },
-      p: {
+    // z = Audio / Media
+    z: {
+      m: {
         to: [
           {
             key_code: "play_or_pause",
           },
         ],
       },
-      semicolon: {
+      n: {
+        to: [
+          {
+            key_code: "volume_decrement",
+          },
+        ],
+      },
+      e: {
+        to: [
+          {
+            key_code: "volume_increment",
+          },
+        ],
+      },
+      i: {
         to: [
           {
             key_code: "fastforward",
           },
         ],
       },
-      e: open(
-        `raycast://extensions/thomas/elgato-key-light/toggle?launchType=background`
-      ),
-      // "D"o not disturb toggle
-      d: open(
-        `raycast://extensions/yakitrak/do-not-disturb/toggle?launchType=background`
-      ),
-      // "T"heme
-      t: open(`raycast://extensions/raycast/system/toggle-system-appearance`),
-      c: open("raycast://extensions/raycast/system/open-camera"),
-      // 'v'oice
-      v: {
+    },
+
+    // x = System
+    x: {
+      n: {
         to: [
           {
-            key_code: "spacebar",
-            modifiers: ["left_option"],
+            key_code: "display_brightness_decrement",
+          },
+        ],
+      },
+      e: {
+        to: [
+          {
+            key_code: "display_brightness_increment",
+          },
+        ],
+      },
+      // Logout
+      o: {
+        to: [
+          {
+            key_code: "q",
+            modifiers: ["right_control", "right_command"],
           },
         ],
       },
@@ -352,19 +329,6 @@ const rules: KarabinerRules[] = [
         ],
       },
     },
-
-    // c = Capture
-    // c: {
-    // p: {
-    //   to: [{ key_code: "play_or_pause" }],
-    // },
-    // n: {
-    //   to: [{ key_code: "fastforward" }],
-    // },
-    // b: {
-    //   to: [{ key_code: "rewind" }],
-    // },
-    // },
 
     // r = "Raycast"
     r: {
