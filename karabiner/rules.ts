@@ -341,13 +341,12 @@ const rules: KarabinerRules[] = [
         "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
       ),
       c: open("raycast://extensions/raycast/raycast/confetti"),
-      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      k: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
+      h: open("raycast://extensions/nhojb/brew/search"),
+      comma: open("raycast://extensions/vercel/vercast/search-deployments"),
+      period: open(
+        "raycast://extensions/raycast/github/my-latest-repositories"
       ),
-      h: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
-      ),
+      l: open("raycast://extensions/raycast/raycast-focus/start-focus-session"),
     },
   }),
 ];

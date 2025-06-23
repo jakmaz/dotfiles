@@ -2884,61 +2884,85 @@
        {
         "to": [
          {
-          "shell_command": "open raycast://extensions/raycast/raycast-ai/ai-chat"
+          "shell_command": "open raycast://extensions/nhojb/brew/search"
          }
         ],
-        "description": "Open raycast://extensions/raycast/raycast-ai/ai-chat",
-        "type": "basic",
-        "from": {
-         "key_code": "a",
-         "modifiers": {
-          "optional": [
-           "any"
-          ]
-         }
-        },
-        "conditions": [
-         {
-          "type": "variable_if",
-          "name": "hyper_sublayer_r",
-          "value": 1
-         }
-        ]
-       },
-       {
-        "to": [
-         {
-          "shell_command": "open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
-         }
-        ],
-        "description": "Open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1",
-        "type": "basic",
-        "from": {
-         "key_code": "k",
-         "modifiers": {
-          "optional": [
-           "any"
-          ]
-         }
-        },
-        "conditions": [
-         {
-          "type": "variable_if",
-          "name": "hyper_sublayer_r",
-          "value": 1
-         }
-        ]
-       },
-       {
-        "to": [
-         {
-          "shell_command": "open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
-         }
-        ],
-        "description": "Open raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2",
+        "description": "Open raycast://extensions/nhojb/brew/search",
         "type": "basic",
         "from": {
          "key_code": "h",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_r",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open raycast://extensions/vercel/vercast/search-deployments"
+         }
+        ],
+        "description": "Open raycast://extensions/vercel/vercast/search-deployments",
+        "type": "basic",
+        "from": {
+         "key_code": "comma",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_r",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open raycast://extensions/raycast/github/my-latest-repositories"
+         }
+        ],
+        "description": "Open raycast://extensions/raycast/github/my-latest-repositories",
+        "type": "basic",
+        "from": {
+         "key_code": "period",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_r",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open raycast://extensions/raycast/raycast-focus/start-focus-session"
+         }
+        ],
+        "description": "Open raycast://extensions/raycast/raycast-focus/start-focus-session",
+        "type": "basic",
+        "from": {
+         "key_code": "l",
          "modifiers": {
           "optional": [
            "any"
