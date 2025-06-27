@@ -7,3 +7,13 @@
 [user]
 	name = Jakub Mazur
 	email = jakmaz.dev@icloud.com
+
+[fetch]
+    prune = true
+[pull]
+    rebase = true
+[rebase]
+    autoStash = true
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore
