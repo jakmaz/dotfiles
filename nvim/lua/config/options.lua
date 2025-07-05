@@ -6,16 +6,14 @@ vim.opt.relativenumber = true
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
+-- Use bash as the default shell
+vim.opt.shell = '/bin/bash'
+
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
 -- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
+vim.schedule(function() vim.opt.clipboard = 'unnamedplus' end)
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -62,12 +60,12 @@ vim.opt.confirm = true
 vim.opt.termguicolors = true
 
 -- Tabs & Indentation
-vim.opt.tabstop = 2        -- Number of visual spaces per TAB
-vim.opt.softtabstop = 2    -- Number of spaces per TAB when editing
-vim.opt.shiftwidth = 2     -- Number of spaces to use for each step of (auto)indent
-vim.opt.expandtab = true   -- Use spaces instead of tabs
+vim.opt.tabstop = 2 -- Number of visual spaces per TAB
+vim.opt.softtabstop = 2 -- Number of spaces per TAB when editing
+vim.opt.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
+vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.smartindent = true -- Auto-indents new lines
-vim.opt.autoindent = true  -- Copy indent from current line when starting a new one
+vim.opt.autoindent = true -- Copy indent from current line when starting a new one
 
 -- Disable line wrap
 vim.opt.wrap = false
