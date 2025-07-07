@@ -38,3 +38,5 @@ yabai -m rule --add app="^Zen$" --space 2 --manage on                           
 yabai -m rule --add app="^Firefox Developer Edition$" --space 3 --manage on        # Firefox Dev -> Code
 yabai -m rule --add app="^Ghostty$" --space 3 --manage on                          # Ghostty -> Code
 yabai -m rule --add app=".*" --space 1 --manage on                                 # Other apps -> Home
+
+yabai -m signal --add event=display_changed action="nu ~/.config/yabai/scripts/gaps.nu"
