@@ -18,7 +18,7 @@ return {
       { '<leader>w', group = 'Workspace' },
       { '<leader>f', group = 'Find' },
       { '<leader>t', group = 'Toggle' },
-      { '<leader>h', group = 'Git Hunk', mode = { 'n', 'v' } },
+      { '<leader>gh', group = 'Git Hunk', mode = { 'n', 'v' } },
       { '<leader>g', group = 'Git' },
       { '<leader>o', group = 'Other' },
       { '<leader>u', group = 'Ui' },

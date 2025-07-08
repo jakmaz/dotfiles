@@ -22,10 +22,10 @@ return {
   },
   keys = {
     -- Top Pickers & Explorer
-    { '<leader><space>', function() Snacks.picker.files() end, desc = 'Find' },
+    { '<leader>i', function() Snacks.picker.files() end, desc = 'Find File' },
     { '<leader>,', function() Snacks.picker.buffers() end, desc = 'Buffers' },
     { '<leader>/', function() Snacks.picker.grep() end, desc = 'Grep' },
-    { '<leader>ln', function() Snacks.picker.notifications() end, desc = 'Notification History' },
+    { '<leader>ln', function() Snacks.picker.notifications() end, desc = 'Notification Picker' },
     { '<leader>e', function() Snacks.explorer() end, desc = 'File Explorer' },
     -- find
     { '<leader>fb', function() Snacks.picker.buffers() end, desc = 'Buffers' },
