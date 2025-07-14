@@ -1,7 +1,7 @@
 let display = (yabai -m query --displays | from json | get 0)
 let width = $display.frame.w
 
-if $width <= 1440 {
+if $width <= 1710 {
     # MacBook Air display
     yabai -m config top_padding 0
     yabai -m config bottom_padding 5
