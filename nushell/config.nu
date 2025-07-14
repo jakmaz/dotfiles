@@ -926,3 +926,5 @@ alias bnew = bun create next-app # Scaffold a new Next.js project with Bun
 alias bsi = bunx --bun shadcn@latest init
 alias bsa = bunx --bun shadcn@latest add
 
+# Other aliases
+alias oc = opencode
