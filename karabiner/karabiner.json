@@ -121,7 +121,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -229,7 +229,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -337,7 +337,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -445,7 +445,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -553,7 +553,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -589,7 +589,7 @@
           "shell_command": "open -a 'Zen.app'"
          }
         ],
-        "description": "Open -a 'Zen.app'",
+        "description": "Open Zen",
         "type": "basic",
         "from": {
          "key_code": "t",
@@ -662,7 +662,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -698,7 +698,7 @@
           "shell_command": "open -a 'Ghostty.app'"
          }
         ],
-        "description": "Open -a 'Ghostty.app'",
+        "description": "Open Ghostty",
         "type": "basic",
         "from": {
          "key_code": "s",
@@ -771,7 +771,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -804,7 +804,7 @@
        {
         "to": [
          {
-          "shell_command": "open raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
+          "shell_command": "open -g raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
          }
         ],
         "description": "Open raycast://extensions/stellate/mxstbr-commands/create-notion-todo",
@@ -880,7 +880,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -990,7 +990,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -1023,7 +1023,7 @@
        {
         "to": [
          {
-          "shell_command": "open https://github.com/jakmaz"
+          "shell_command": "open -g https://github.com/jakmaz"
          }
         ],
         "description": "Open https://github.com/jakmaz",
@@ -1047,7 +1047,7 @@
        {
         "to": [
          {
-          "shell_command": "open https://x.com"
+          "shell_command": "open -g https://x.com"
          }
         ],
         "description": "Open https://x.com",
@@ -1071,7 +1071,7 @@
        {
         "to": [
          {
-          "shell_command": "open https://reddit.com"
+          "shell_command": "open -g https://reddit.com"
          }
         ],
         "description": "Open https://reddit.com",
@@ -1177,7 +1177,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -1213,7 +1213,7 @@
           "shell_command": "open -a 'Firefox.app'"
          }
         ],
-        "description": "Open -a 'Firefox.app'",
+        "description": "Open Firefox",
         "type": "basic",
         "from": {
          "key_code": "t",
@@ -1237,7 +1237,7 @@
           "shell_command": "open -a 'Messenger.app'"
          }
         ],
-        "description": "Open -a 'Messenger.app'",
+        "description": "Open Messenger",
         "type": "basic",
         "from": {
          "key_code": "n",
@@ -1261,7 +1261,7 @@
           "shell_command": "open -a 'WhatsApp.app'"
          }
         ],
-        "description": "Open -a 'WhatsApp.app'",
+        "description": "Open WhatsApp",
         "type": "basic",
         "from": {
          "key_code": "e",
@@ -1285,7 +1285,7 @@
           "shell_command": "open -a 'Mail.app'"
          }
         ],
-        "description": "Open -a 'Mail.app'",
+        "description": "Open Mail",
         "type": "basic",
         "from": {
          "key_code": "i",
@@ -1309,7 +1309,7 @@
           "shell_command": "open -a 'Vesktop.app'"
          }
         ],
-        "description": "Open -a 'Vesktop.app'",
+        "description": "Open Vesktop",
         "type": "basic",
         "from": {
          "key_code": "o",
@@ -1333,7 +1333,7 @@
           "shell_command": "open -a 'Obsidian.app'"
          }
         ],
-        "description": "Open -a 'Obsidian.app'",
+        "description": "Open Obsidian",
         "type": "basic",
         "from": {
          "key_code": "h",
@@ -1436,7 +1436,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -1773,13 +1773,13 @@
       ]
      },
      {
-      "description": "Hyper Key sublayer \"z\"",
+      "description": "Hyper Key sublayer \"d\"",
       "manipulators": [
        {
-        "description": "Toggle Hyper sublayer z",
+        "description": "Toggle Hyper sublayer d",
         "type": "basic",
         "from": {
-         "key_code": "z",
+         "key_code": "d",
          "modifiers": {
           "optional": [
            "any"
@@ -1789,7 +1789,7 @@
         "to_after_key_up": [
          {
           "set_variable": {
-           "name": "hyper_sublayer_z",
+           "name": "hyper_sublayer_d",
            "value": 0
           }
          }
@@ -1797,7 +1797,7 @@
         "to": [
          {
           "set_variable": {
-           "name": "hyper_sublayer_z",
+           "name": "hyper_sublayer_d",
            "value": 1
           }
          }
@@ -1888,29 +1888,6 @@
        {
         "to": [
          {
-          "key_code": "play_or_pause"
-         }
-        ],
-        "type": "basic",
-        "from": {
-         "key_code": "m",
-         "modifiers": {
-          "optional": [
-           "any"
-          ]
-         }
-        },
-        "conditions": [
-         {
-          "type": "variable_if",
-          "name": "hyper_sublayer_z",
-          "value": 1
-         }
-        ]
-       },
-       {
-        "to": [
-         {
           "key_code": "volume_decrement"
          }
         ],
@@ -1926,7 +1903,7 @@
         "conditions": [
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 1
          }
         ]
@@ -1949,7 +1926,7 @@
         "conditions": [
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 1
          }
         ]
@@ -1957,9 +1934,10 @@
        {
         "to": [
          {
-          "key_code": "fastforward"
+          "shell_command": "open -g raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background"
          }
         ],
+        "description": "Open raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background",
         "type": "basic",
         "from": {
          "key_code": "i",
@@ -1972,7 +1950,151 @@
         "conditions": [
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open -g raycast://extensions/fedevitaledev/music/previous-track?launchType=background"
+         }
+        ],
+        "description": "Open raycast://extensions/fedevitaledev/music/previous-track?launchType=background",
+        "type": "basic",
+        "from": {
+         "key_code": "h",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_d",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open -g raycast://extensions/fedevitaledev/music/next-track?launchType=background"
+         }
+        ],
+        "description": "Open raycast://extensions/fedevitaledev/music/next-track?launchType=background",
+        "type": "basic",
+        "from": {
+         "key_code": "comma",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_d",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open -g raycast://extensions/fedevitaledev/music/play-library-album"
+         }
+        ],
+        "description": "Open raycast://extensions/fedevitaledev/music/play-library-album",
+        "type": "basic",
+        "from": {
+         "key_code": "l",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_d",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open -g raycast://extensions/fedevitaledev/music/start-playlist"
+         }
+        ],
+        "description": "Open raycast://extensions/fedevitaledev/music/start-playlist",
+        "type": "basic",
+        "from": {
+         "key_code": "u",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_d",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open -g raycast://extensions/fedevitaledev/music/favorite?launchType=background"
+         }
+        ],
+        "description": "Open raycast://extensions/fedevitaledev/music/favorite?launchType=background",
+        "type": "basic",
+        "from": {
+         "key_code": "y",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_d",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open -g raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background"
+         }
+        ],
+        "description": "Open raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background",
+        "type": "basic",
+        "from": {
+         "key_code": "period",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_d",
           "value": 1
          }
         ]
@@ -2067,7 +2189,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -2255,7 +2377,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -2495,7 +2617,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -2755,7 +2877,7 @@
          },
          {
           "type": "variable_if",
-          "name": "hyper_sublayer_z",
+          "name": "hyper_sublayer_d",
           "value": 0
          },
          {
@@ -2783,7 +2905,7 @@
        {
         "to": [
          {
-          "shell_command": "open raycast://extensions/raycast/clipboard-history/clipboard-history"
+          "shell_command": "open -g raycast://extensions/raycast/clipboard-history/clipboard-history"
          }
         ],
         "description": "Open raycast://extensions/raycast/clipboard-history/clipboard-history",
@@ -2807,7 +2929,7 @@
        {
         "to": [
          {
-          "shell_command": "open raycast://extensions/raycast/file-search/search-files"
+          "shell_command": "open -g raycast://extensions/raycast/file-search/search-files"
          }
         ],
         "description": "Open raycast://extensions/raycast/file-search/search-files",
@@ -2831,7 +2953,7 @@
        {
         "to": [
          {
-          "shell_command": "open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+          "shell_command": "open -g raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
          }
         ],
         "description": "Open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
@@ -2855,7 +2977,7 @@
        {
         "to": [
          {
-          "shell_command": "open raycast://extensions/raycast/raycast/confetti"
+          "shell_command": "open -g raycast://extensions/raycast/raycast/confetti"
          }
         ],
         "description": "Open raycast://extensions/raycast/raycast/confetti",
@@ -2879,7 +3001,7 @@
        {
         "to": [
          {
-          "shell_command": "open raycast://extensions/nhojb/brew/search"
+          "shell_command": "open -g raycast://extensions/nhojb/brew/search"
          }
         ],
         "description": "Open raycast://extensions/nhojb/brew/search",
@@ -2903,7 +3025,7 @@
        {
         "to": [
          {
-          "shell_command": "open raycast://extensions/vercel/vercast/search-deployments"
+          "shell_command": "open -g raycast://extensions/vercel/vercast/search-deployments"
          }
         ],
         "description": "Open raycast://extensions/vercel/vercast/search-deployments",
@@ -2927,7 +3049,7 @@
        {
         "to": [
          {
-          "shell_command": "open raycast://extensions/raycast/github/my-latest-repositories"
+          "shell_command": "open -g raycast://extensions/raycast/github/my-latest-repositories"
          }
         ],
         "description": "Open raycast://extensions/raycast/github/my-latest-repositories",
@@ -2951,7 +3073,7 @@
        {
         "to": [
          {
-          "shell_command": "open raycast://extensions/raycast/raycast-focus/start-focus-session"
+          "shell_command": "open -g raycast://extensions/raycast/raycast-focus/start-focus-session"
          }
         ],
         "description": "Open raycast://extensions/raycast/raycast-focus/start-focus-session",

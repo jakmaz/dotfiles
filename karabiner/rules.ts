@@ -170,15 +170,8 @@ const rules: KarabinerRules[] = [
       },
     },
 
-    // z = Audio / Media
-    z: {
-      m: {
-        to: [
-          {
-            key_code: "play_or_pause",
-          },
-        ],
-      },
+    // d = Music
+    d: {
       n: {
         to: [
           {
@@ -193,13 +186,23 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      i: {
-        to: [
-          {
-            key_code: "fastforward",
-          },
-        ],
-      },
+      i: open(
+        "raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background"
+      ),
+      h: open(
+        "raycast://extensions/fedevitaledev/music/previous-track?launchType=background"
+      ),
+      comma: open(
+        "raycast://extensions/fedevitaledev/music/next-track?launchType=background"
+      ),
+      l: open("raycast://extensions/fedevitaledev/music/play-library-album"),
+      u: open("raycast://extensions/fedevitaledev/music/start-playlist"),
+      y: open(
+        "raycast://extensions/fedevitaledev/music/favorite?launchType=background"
+      ),
+      period: open(
+        "raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background"
+      ),
     },
 
     // x = System
