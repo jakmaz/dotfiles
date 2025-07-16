@@ -14,9 +14,10 @@ macos-option-as-alt = true
 macos-titlebar-proxy-icon = "hidden"
 macos-titlebar-style = "hidden"
 
-# Clipboard behavior
-copy-on-select = "clipboard"
-
 # Keybindings
 keybind = "global:cmd+/=toggle_quick_terminal"  # Toggle quick terminal
 keybind = "super+s=text:\x1b:w\n"               # Send ":w" (e.g., for saving in vim)
+
+# Other
+confirm-close-surface = true
+copy-on-select = "clipboard"
