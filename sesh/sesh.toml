@@ -1,3 +1,2 @@
-[default_session]
-startup_command = "source ~/.config/sesh/scripts/default.sh"
-
+# [default_session]
+# startup_command = "source ~/.config/sesh/scripts/default.sh"
