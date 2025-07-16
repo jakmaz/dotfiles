@@ -1,10 +1,8 @@
 #!/bin/sh
 
-# Some events send additional information specific to the event in the $INFO
-# variable. E.g. the front_app_switched event sends the name of the newly
-# focused application in the $INFO variable:
-# https://felixkratz.github.io/SketchyBar/config/events#events-and-scripting
+source "$CONFIG_DIR/plugins/icon_map.sh"  # source the script so __icon_map is loaded
 
 if [ "$SENDER" = "front_app_switched" ]; then
-  sketchybar --set $NAME label="$INFO" icon="$($CONFIG_DIR/plugins/icon_map_fn.sh "$INFO")"
+  __icon_map "$INFO"                 # call the function which sets icon_result
+  sketchybar --set "$NAME" label="$INFO" icon="$icon_result"
 fi
