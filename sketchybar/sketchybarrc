@@ -23,11 +23,13 @@ sketchybar --bar "${bar[@]}"
 #### Defaults #####
 default=(
   background.color=$ITEM_BG_COLOR
+  background.border_color=0x36ffffff
+  background.border_width=1
   icon.color=$ITEM_ICON_COLOR
   label.color=$ITEM_LABEL_COLOR
   padding_left=5
   padding_right=5
-  icon.font="Hack Nerd Font:Bold:17.0"
+  icon.font="Hack Nerd Font:Bold:14.0"
   label.font="Hack Nerd Font:Bold:14.0"
   background.corner_radius=5
   background.height=26
