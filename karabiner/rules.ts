@@ -79,8 +79,10 @@ const rules: KarabinerRules[] = [
     // b = "B"rowse
     b: {
       m: open("https://github.com/jakmaz"),
-      t: open("https://x.com"),
+      o: open("https://jakmaz.com"),
       r: open("https://reddit.com"),
+      y: open("https://www.youtube.com"),
+      l: open("https://www.linkedin.com"),
     },
 
     // A = App
@@ -91,38 +93,19 @@ const rules: KarabinerRules[] = [
       i: app("Mail"),
       o: app("Vesktop"),
       h: app("Obsidian"),
-      // ,: app("Preview"),
-      // .: app("Finder"),
-      // f: app("Finder"0
-      // p: app("Spotify"),
-      // // "W"hatsApp has been replaced by Texts
-      // w: open("Texts"),
+      comma: app("Preview"),
+      period: app("Finder"),
     },
-
-    // TODO: This doesn't quite work yet.
-    // l = "Layouts" via Raycast's custom window management
-    // l: {
-    //   // Coding layout
-    //   c: shell`
-    //     open -a "Visual Studio Code.app
-    //     sleep 0.2
-    //     open -g "raycast://customWindowManagementCommand?position=topLeft&relativeWidth=0.5"
-    //     open -a "Terminal.app"
-    //     sleep 0.2
-    //     open -g "raycast://customWindowManagementCommand?position=topRight&relativeWidth=0.5"
-    //   `,
-    // },
 
     // w = "Window"
     w: {
       y: window("previous-display"),
-      o: window("next-display"),
       k: window("top-half"),
       j: window("bottom-half"),
       h: window("left-half"),
       l: window("right-half"),
       f: window("maximize"),
-      u: {
+      e: {
         description: "Window: Previous Tab",
         to: [
           {
@@ -131,7 +114,7 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      i: {
+      n: {
         description: "Window: Next Tab",
         to: [
           {
@@ -140,16 +123,16 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      n: {
+      o: {
         description: "Window: Next Window",
         to: [
           {
             key_code: "grave_accent_and_tilde",
-            modifiers: ["right_command"],
+            modifiers: ["left_command"],
           },
         ],
       },
-      b: {
+      m: {
         description: "Window: Back",
         to: [
           {
@@ -159,7 +142,7 @@ const rules: KarabinerRules[] = [
         ],
       },
       // Note: No literal connection. Both f and n are already taken.
-      m: {
+      i: {
         description: "Window: Forward",
         to: [
           {
@@ -362,7 +345,7 @@ fs.writeFileSync(
           complex_modifications: {
             rules,
           },
-          virtual_hid_keyboard: { keyboard_type_v2: "iso" },
+          virtual_hid_keyboard: { keyboard_type_v2: "ansi" },
         },
       ],
     },
