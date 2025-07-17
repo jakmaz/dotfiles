@@ -155,14 +155,26 @@ function generateSubLayerVariableName(key: KeyCode) {
 }
 
 /**
- * Shortcut for "open" shell command
+ * Shortcut for "open" shell command - brings app to foreground
  */
 export function open(...what: string[]): LayerCommand {
   return {
     to: what.map((w) => ({
-      shell_command: `open -g ${w}`,
+      shell_command: `open ${w}`,
     })),
     description: `Open ${what.join(" & ")}`,
+  };
+}
+
+/**
+ * Shortcut for opening Raycast commands in background
+ */
+export function raycast(...commands: string[]): LayerCommand {
+  return {
+    to: commands.map((cmd) => ({
+      shell_command: `open -g raycast://extensions/${cmd}`,
+    })),
+    description: `Raycast: ${commands.join(" & ")}`,
   };
 }
 

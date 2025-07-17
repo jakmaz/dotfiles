@@ -807,7 +807,7 @@
           "shell_command": "open -g raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
          }
         ],
-        "description": "Open raycast://extensions/stellate/mxstbr-commands/create-notion-todo",
+        "description": "Raycast: stellate/mxstbr-commands/create-notion-todo",
         "type": "basic",
         "from": {
          "key_code": "spacebar",
@@ -1023,7 +1023,7 @@
        {
         "to": [
          {
-          "shell_command": "open -g https://github.com/jakmaz"
+          "shell_command": "open https://github.com/jakmaz"
          }
         ],
         "description": "Open https://github.com/jakmaz",
@@ -1047,7 +1047,7 @@
        {
         "to": [
          {
-          "shell_command": "open -g https://jakmaz.com"
+          "shell_command": "open https://jakmaz.com"
          }
         ],
         "description": "Open https://jakmaz.com",
@@ -1071,7 +1071,7 @@
        {
         "to": [
          {
-          "shell_command": "open -g https://reddit.com"
+          "shell_command": "open https://reddit.com"
          }
         ],
         "description": "Open https://reddit.com",
@@ -1095,7 +1095,7 @@
        {
         "to": [
          {
-          "shell_command": "open -g https://www.youtube.com"
+          "shell_command": "open https://www.youtube.com"
          }
         ],
         "description": "Open https://www.youtube.com",
@@ -1119,7 +1119,7 @@
        {
         "to": [
          {
-          "shell_command": "open -g https://www.linkedin.com"
+          "shell_command": "open https://www.linkedin.com"
          }
         ],
         "description": "Open https://www.linkedin.com",
@@ -2009,7 +2009,7 @@
           "shell_command": "open -g raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background"
          }
         ],
-        "description": "Open raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background",
+        "description": "Raycast: fedevitaledev/music/toggle-play-pause?launchType=background",
         "type": "basic",
         "from": {
          "key_code": "i",
@@ -2033,7 +2033,7 @@
           "shell_command": "open -g raycast://extensions/fedevitaledev/music/previous-track?launchType=background"
          }
         ],
-        "description": "Open raycast://extensions/fedevitaledev/music/previous-track?launchType=background",
+        "description": "Raycast: fedevitaledev/music/previous-track?launchType=background",
         "type": "basic",
         "from": {
          "key_code": "h",
@@ -2057,7 +2057,7 @@
           "shell_command": "open -g raycast://extensions/fedevitaledev/music/next-track?launchType=background"
          }
         ],
-        "description": "Open raycast://extensions/fedevitaledev/music/next-track?launchType=background",
+        "description": "Raycast: fedevitaledev/music/next-track?launchType=background",
         "type": "basic",
         "from": {
          "key_code": "comma",
@@ -2081,7 +2081,7 @@
           "shell_command": "open -g raycast://extensions/fedevitaledev/music/play-library-album"
          }
         ],
-        "description": "Open raycast://extensions/fedevitaledev/music/play-library-album",
+        "description": "Raycast: fedevitaledev/music/play-library-album",
         "type": "basic",
         "from": {
          "key_code": "l",
@@ -2105,7 +2105,7 @@
           "shell_command": "open -g raycast://extensions/fedevitaledev/music/start-playlist"
          }
         ],
-        "description": "Open raycast://extensions/fedevitaledev/music/start-playlist",
+        "description": "Raycast: fedevitaledev/music/start-playlist",
         "type": "basic",
         "from": {
          "key_code": "u",
@@ -2129,7 +2129,7 @@
           "shell_command": "open -g raycast://extensions/fedevitaledev/music/favorite?launchType=background"
          }
         ],
-        "description": "Open raycast://extensions/fedevitaledev/music/favorite?launchType=background",
+        "description": "Raycast: fedevitaledev/music/favorite?launchType=background",
         "type": "basic",
         "from": {
          "key_code": "y",
@@ -2153,7 +2153,7 @@
           "shell_command": "open -g raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background"
          }
         ],
-        "description": "Open raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background",
+        "description": "Raycast: fedevitaledev/music/add-to-playlist?launchType=background",
         "type": "basic",
         "from": {
          "key_code": "period",
@@ -2980,7 +2980,7 @@
           "shell_command": "open -g raycast://extensions/raycast/clipboard-history/clipboard-history"
          }
         ],
-        "description": "Open raycast://extensions/raycast/clipboard-history/clipboard-history",
+        "description": "Raycast: raycast/clipboard-history/clipboard-history",
         "type": "basic",
         "from": {
          "key_code": "n",
@@ -3004,7 +3004,7 @@
           "shell_command": "open -g raycast://extensions/raycast/file-search/search-files"
          }
         ],
-        "description": "Open raycast://extensions/raycast/file-search/search-files",
+        "description": "Raycast: raycast/file-search/search-files",
         "type": "basic",
         "from": {
          "key_code": "e",
@@ -3028,7 +3028,7 @@
           "shell_command": "open -g raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
          }
         ],
-        "description": "Open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
+        "description": "Raycast: raycast/emoji-symbols/search-emoji-symbols",
         "type": "basic",
         "from": {
          "key_code": "i",
@@ -3052,7 +3052,7 @@
           "shell_command": "open -g raycast://extensions/raycast/raycast/confetti"
          }
         ],
-        "description": "Open raycast://extensions/raycast/raycast/confetti",
+        "description": "Raycast: raycast/raycast/confetti",
         "type": "basic",
         "from": {
          "key_code": "c",
@@ -3076,7 +3076,7 @@
           "shell_command": "open -g raycast://extensions/nhojb/brew/search"
          }
         ],
-        "description": "Open raycast://extensions/nhojb/brew/search",
+        "description": "Raycast: nhojb/brew/search",
         "type": "basic",
         "from": {
          "key_code": "h",
@@ -3100,7 +3100,7 @@
           "shell_command": "open -g raycast://extensions/vercel/vercast/search-deployments"
          }
         ],
-        "description": "Open raycast://extensions/vercel/vercast/search-deployments",
+        "description": "Raycast: vercel/vercast/search-deployments",
         "type": "basic",
         "from": {
          "key_code": "comma",
@@ -3124,7 +3124,7 @@
           "shell_command": "open -g raycast://extensions/raycast/github/my-latest-repositories"
          }
         ],
-        "description": "Open raycast://extensions/raycast/github/my-latest-repositories",
+        "description": "Raycast: raycast/github/my-latest-repositories",
         "type": "basic",
         "from": {
          "key_code": "period",
@@ -3148,7 +3148,7 @@
           "shell_command": "open -g raycast://extensions/raycast/raycast-focus/start-focus-session"
          }
         ],
-        "description": "Open raycast://extensions/raycast/raycast-focus/start-focus-session",
+        "description": "Raycast: raycast/raycast-focus/start-focus-session",
         "type": "basic",
         "from": {
          "key_code": "l",

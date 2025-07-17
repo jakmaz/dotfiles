@@ -1,6 +1,13 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { createHyperSubLayers, app, open, window, shell } from "./utils";
+import {
+  createHyperSubLayers,
+  app,
+  open,
+  raycast,
+  window,
+  shell,
+} from "./utils";
 
 const rules: KarabinerRules[] = [
   // Define the Hyper key itself
@@ -72,9 +79,7 @@ const rules: KarabinerRules[] = [
     t: app("Zen"),
     s: app("Ghostty"),
 
-    spacebar: open(
-      "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-    ),
+    spacebar: raycast("stellate/mxstbr-commands/create-notion-todo"),
 
     // b = "B"rowse
     b: {
@@ -169,22 +174,14 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      i: open(
-        "raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background"
-      ),
-      h: open(
-        "raycast://extensions/fedevitaledev/music/previous-track?launchType=background"
-      ),
-      comma: open(
-        "raycast://extensions/fedevitaledev/music/next-track?launchType=background"
-      ),
-      l: open("raycast://extensions/fedevitaledev/music/play-library-album"),
-      u: open("raycast://extensions/fedevitaledev/music/start-playlist"),
-      y: open(
-        "raycast://extensions/fedevitaledev/music/favorite?launchType=background"
-      ),
-      period: open(
-        "raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background"
+      i: raycast("fedevitaledev/music/toggle-play-pause?launchType=background"),
+      h: raycast("fedevitaledev/music/previous-track?launchType=background"),
+      comma: raycast("fedevitaledev/music/next-track?launchType=background"),
+      l: raycast("fedevitaledev/music/play-library-album"),
+      u: raycast("fedevitaledev/music/start-playlist"),
+      y: raycast("fedevitaledev/music/favorite?launchType=background"),
+      period: raycast(
+        "fedevitaledev/music/add-to-playlist?launchType=background"
       ),
     },
 
@@ -313,21 +310,15 @@ const rules: KarabinerRules[] = [
 
     // r = "Raycast"
     r: {
-      n: open(
-        "raycast://extensions/raycast/clipboard-history/clipboard-history"
-      ),
-      e: open("raycast://extensions/raycast/file-search/search-files"),
+      n: raycast("raycast/clipboard-history/clipboard-history"),
+      e: raycast("raycast/file-search/search-files"),
       // n: open("raycast://script-commands/dismiss-notifications"),
-      i: open(
-        "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-      ),
-      c: open("raycast://extensions/raycast/raycast/confetti"),
-      h: open("raycast://extensions/nhojb/brew/search"),
-      comma: open("raycast://extensions/vercel/vercast/search-deployments"),
-      period: open(
-        "raycast://extensions/raycast/github/my-latest-repositories"
-      ),
-      l: open("raycast://extensions/raycast/raycast-focus/start-focus-session"),
+      i: raycast("raycast/emoji-symbols/search-emoji-symbols"),
+      c: raycast("raycast/raycast/confetti"),
+      h: raycast("nhojb/brew/search"),
+      comma: raycast("vercel/vercast/search-deployments"),
+      period: raycast("raycast/github/my-latest-repositories"),
+      l: raycast("raycast/raycast-focus/start-focus-session"),
     },
   }),
 ];
