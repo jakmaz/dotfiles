@@ -18,6 +18,7 @@ return {
         'tailwindcss', -- Tailwind CSS
         'harper_ls', -- Spell check
         'java_language_server', -- Java
+        'tinymist', -- Typst
       },
       automatic_enable = {
         exclude = {
