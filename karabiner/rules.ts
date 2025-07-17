@@ -133,7 +133,7 @@ const rules: KarabinerRules[] = [
         to: [
           {
             key_code: "grave_accent_and_tilde",
-            modifiers: ["left_command"],
+            modifiers: ["right_command"],
           },
         ],
       },
@@ -152,6 +152,15 @@ const rules: KarabinerRules[] = [
         to: [
           {
             key_code: "close_bracket",
+            modifiers: ["right_command"],
+          },
+        ],
+      },
+      d: {
+        description: "Window: Close",
+        to: [
+          {
+            key_code: "w",
             modifiers: ["right_command"],
           },
         ],

@@ -1767,7 +1767,7 @@
          {
           "key_code": "grave_accent_and_tilde",
           "modifiers": [
-           "left_command"
+           "right_command"
           ]
          }
         ],
@@ -1828,6 +1828,33 @@
         "type": "basic",
         "from": {
          "key_code": "i",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_w",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "description": "Window: Close",
+        "to": [
+         {
+          "key_code": "w",
+          "modifiers": [
+           "right_command"
+          ]
+         }
+        ],
+        "type": "basic",
+        "from": {
+         "key_code": "d",
          "modifiers": {
           "optional": [
            "any"
