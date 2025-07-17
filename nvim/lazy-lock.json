@@ -1,4 +1,5 @@
 {
+  "avante.nvim": { "branch": "main", "commit": "b4c9246461c1fed048cec22330bf36f5c0df2e8f" },
   "better-type-hover": { "branch": "master", "commit": "c91a5406775f9379a1abc16a869935beba13cfc2" },
   "blink-ripgrep.nvim": { "branch": "main", "commit": "0a55b323c1011a26ca216a823fe24075068b0bee" },
   "blink.cmp": { "branch": "main", "commit": "586ee87534f5bf65f1c8dea2d1da2a57e8cddd36" },
