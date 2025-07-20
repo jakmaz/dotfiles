@@ -928,3 +928,4 @@ alias bsa = bunx --bun shadcn@latest add
 
 # Other aliases
 alias oc = opencode
+alias nf = neofetch
