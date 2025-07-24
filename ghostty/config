@@ -15,9 +15,12 @@ macos-titlebar-proxy-icon = "hidden"
 macos-titlebar-style = "hidden"
 
 # Keybindings
-keybind = "global:cmd+/=toggle_quick_terminal"  # Toggle quick terminal
-keybind = "super+s=text:\x1b:w\n"               # Send ":w" (e.g., for saving in vim)
+# keybind = "global:cmd+/=toggle_quick_terminal"  # Toggle quick terminal
+# keybind = "super+s=text:\x1b:w\n"               # Send ":w" (e.g., for saving in vim)
 
 # Other
 confirm-close-surface = true
 copy-on-select = "clipboard"
+
+# shaders
+custom-shader = ghostty-shaders/bloom.glsl
