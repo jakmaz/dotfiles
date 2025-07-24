@@ -23,4 +23,4 @@ confirm-close-surface = true
 copy-on-select = "clipboard"
 
 # shaders
-custom-shader = ghostty-shaders/bloom.glsl
+# custom-shader = ghostty-shaders/bloom.glsl
