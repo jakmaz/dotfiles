@@ -13,7 +13,7 @@ INFO=$(osascript -e '
 ')
 
 if [ -z "$INFO" ]; then
-  sketchybar --set "$NAME" icon="" label="[jakmaz] "
+  sketchybar --set "$NAME" label="[jakmaz]" icon.drawing=off
 else
-  sketchybar --set "$NAME" icon="󰝚 " label="$INFO" drawing=on
+  sketchybar --set "$NAME" icon="󰝚 " label="$INFO" icon.drawing=on
 fi
