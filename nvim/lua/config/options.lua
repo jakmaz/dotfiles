@@ -59,6 +59,13 @@ vim.opt.confirm = true
 --- Used for bufferlien
 vim.opt.termguicolors = true
 
+-- Auto-reload files when changed externally
+vim.opt.autoread = true
+
+-- Tmux focus events support
+vim.opt.title = true
+vim.opt.titlestring = 'nvim - %{expand("%:t")}'
+
 -- Tabs & Indentation
 vim.opt.tabstop = 2 -- Number of visual spaces per TAB
 vim.opt.softtabstop = 2 -- Number of spaces per TAB when editing

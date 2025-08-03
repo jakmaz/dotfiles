@@ -6,7 +6,23 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Auto-reload files changed outside of Neovim
-vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter' }, {
-  desc = 'Auto check for file changes on focus or buffer enter',
-  callback = function() vim.cmd 'checktime' end,
+local autoread_group = vim.api.nvim_create_augroup('AutoRead', { clear = true })
+
+vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter', 'CursorHold' }, {
+  group = autoread_group,
+  desc = 'Auto check for file changes',
+  callback = function()
+    if vim.fn.mode() ~= 'c' then
+      vim.cmd('checktime')
+    end
+  end,
+})
+
+-- Notification when file changes on disk
+vim.api.nvim_create_autocmd('FileChangedShellPost', {
+  group = autoread_group,
+  desc = 'Notify when file changed on disk',
+  callback = function()
+    vim.notify('File changed on disk. Buffer reloaded.', vim.log.levels.INFO)
+  end,
 })
