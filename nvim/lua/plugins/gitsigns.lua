@@ -8,12 +8,18 @@ return {
       topdelete = { text = '‾' },
       changedelete = { text = '~' },
     },
+    signcolumn = true,
+    linehl = false,
+    current_line_blame = false,
+    current_line_blame_opts = {
+      virt_text = true,
+      virt_text_pos = 'eol',
+      delay = 0, -- Instant blame
+    },
     on_attach = function(buffer)
       local gs = package.loaded.gitsigns
 
-      local function map(mode, l, r, desc)
-        vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc })
-      end
+      local function map(mode, l, r, desc) vim.keymap.set(mode, l, r, { buffer = buffer, desc = desc }) end
 
       -- stylua: ignore start
       map("n", "]h", function()
@@ -43,6 +49,19 @@ return {
       map("n", "<leader>ghd", gs.diffthis, "Diff This")
       map("n", "<leader>ghD", function() gs.diffthis("~") end, "Diff This ~")
       map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "GitSigns Select Hunk")
+
+      -- Toggle keymaps
+      map("n", "<leader>gtl", function()
+        gs.toggle_linehl()
+        gs.toggle_signs()
+      end, "Toggle Line Highlight & Signs")
+      map("n", "<leader>gtb", gs.toggle_current_line_blame, "Toggle Current Line Blame")
     end,
   },
+  config = function(_, opts)
+    require('gitsigns').setup(opts)
+
+    -- Ensure the sign column appears before the number column
+    vim.opt.signcolumn = 'yes'
+  end,
 }
