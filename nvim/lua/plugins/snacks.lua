@@ -13,12 +13,29 @@ return {
     explorer = { enabled = true },
     scratch = { enabled = true },
     indent = { enabled = true },
-    notifier = { enabled = true },
+    notifier = {
+      enabled = true,
+      style = {
+        border = 'single', -- Remove rounded borders
+      },
+    },
     quickfile = { enabled = true },
     scope = { enabled = false },
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = false },
+    -- Global style settings to remove rounded borders
+    styles = {
+      notification = {
+        border = 'single',
+      },
+      input = {
+        border = 'single',
+      },
+      float = {
+        border = 'single',
+      },
+    },
   },
   keys = {
     -- Top Pickers & Explorer
