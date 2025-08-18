@@ -32,9 +32,6 @@ return {
       input = {
         border = 'single',
       },
-      float = {
-        border = 'single',
-      },
     },
   },
   keys = {
