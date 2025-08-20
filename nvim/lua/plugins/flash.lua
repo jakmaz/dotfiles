@@ -14,11 +14,8 @@ return {
     -- vim.cmd("colorscheme tokyonight") -- Replace with your colorscheme, if needed
 
     -- Configure Flash labels
-    require("flash").setup {
-      labels = "arstgmneio"
+    require('flash').setup {
+      labels = 'arstgmneio',
     }
-
-    -- Now, customize Flash colors
-    vim.api.nvim_set_hl(0, "FlashLabel", { fg = "#ffffff", bold = true })
   end,
 }
