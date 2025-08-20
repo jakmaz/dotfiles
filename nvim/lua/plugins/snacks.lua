@@ -13,14 +13,9 @@ return {
     explorer = { enabled = true },
     scratch = { enabled = true },
     indent = { enabled = true },
-    notifier = {
-      enabled = true,
-      style = {
-        border = 'single', -- Remove rounded borders
-      },
-    },
+    notifier = { enabled = true },
     quickfile = { enabled = true },
-    scope = { enabled = false },
+    scope = { enabled = true },
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = false },
