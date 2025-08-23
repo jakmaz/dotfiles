@@ -1,0 +1,163 @@
+# Oxocarbon Dark color palette
+# ---
+# base00 "#161616" bg
+# base01 "#262626" bg-2
+# base02 "#393939" ui
+# base03 "#525252" ui-2
+# base04 "#dde1e6" tx-2
+# base05 "#f2f4f8" tx
+# base06 "#ffffff" bright
+# base07 "#08bdba" cyan-special
+# base08 "#3ddbd9" cyan
+# base09 "#78a9ff" blue
+# base0A "#ee5396" pink
+# base0B "#33b1ff" light-blue
+# base0C "#ff7eb6" magenta
+# base0D "#42be65" green
+# base0E "#be95ff" purple
+# base0F "#82cfff" ice-blue
+
+[mgr]
+cwd = { fg = "#f2f4f8", bold = true } # base05
+
+# Hovered
+hovered = { bg = "#262626" } # base01
+preview_hovered = { underline = true }
+
+# Find
+find_keyword = { fg = "#ee5396", reversed = true } # base0A
+find_position = { fg = "#525252", bold = true, italic = true } # base03
+
+# Marker
+marker_copied = { fg = "#42be65", bg = "#42be65" } # base0D
+marker_cut = { fg = "#ee5396", bg = "#ee5396" } # base0A
+marker_marked = { fg = "#08bdba", bg = "#08bdba" } # base07
+marker_selected = { fg = "#3ddbd9", bg = "#3ddbd9" } # base08
+
+# Count
+count_copied = { fg = "#42be65", bold = true, reversed = true } # base0D
+count_cut = { fg = "#ee5396", bold = true, reversed = true } # base0A
+count_selected = { fg = "#3ddbd9", bold = true, reversed = true } # base08
+
+# Border
+border_symbol = "│"
+border_style = { fg = "#393939" } # base02
+
+[tabs]
+active = { fg = "#f2f4f8", bg = "#525252", bold = true } # base05, base03
+inactive = { fg = "#dde1e6", bg = "#393939" } # base04, base02
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+# Normal mode
+normal_main = { fg = "#f2f4f8", bg = "#525252", bold = true } # base05, base03
+normal_alt = { fg = "#dde1e6", bg = "#393939" } # base04, base02
+
+# Select mode
+select_main = { fg = "#161616", bg = "#3ddbd9", bold = true } # base00, base08
+select_alt = { fg = "#3ddbd9", bg = "#262626" } # base08, base01
+
+# Unset mode
+unset_main = { fg = "#161616", bg = "#3ddbd9", bold = true } # base00, base08
+unset_alt = { fg = "#3ddbd9", bg = "#262626" } # base08, base01
+
+[status]
+overall = { fg = "#f2f4f8" } # base05
+
+# Permissions
+perm_type = { fg = "#78a9ff" } # base09
+perm_read = { fg = "#33b1ff" } # base0B
+perm_write = { fg = "#ee5396" } # base0A
+perm_exec = { fg = "#42be65" } # base0D
+perm_sep = { fg = "#dde1e6" } # base04
+
+# Progress
+progress_label = { fg = "#161616" } # base00
+progress_normal = { fg = "#3ddbd9", bg = "#08bdba" } # base08, base07
+progress_error = { bg = "#ee5396" } # base0A
+
+[which]
+cols = 3
+mask = { bg = "#262626" } # base01
+cand = { fg = "#33b1ff", bold = true } # base0B
+rest = { fg = "#33b1ff", italic = true } # base0B
+desc = { fg = "#525252" } # base03
+separator = " "
+separator_style = { }
+
+[confirm]
+border = { fg = "#525252" } # base03
+title = { fg = "#525252", bold = true } # base03
+content = { fg = "#f2f4f8", bold = true } # base05
+list = { fg = "#f2f4f8" } # base05
+btn_yes = { fg = "#f2f4f8", bg = "#525252", bold = true } # base05, base03
+btn_no = { fg = "#dde1e6", bg = "#393939" } # base04, base02
+
+[spot]
+border = { fg = "#525252" } # base03
+title = { fg = "#525252", bold = true } # base03
+tbl_col = { fg = "#dde1e6" } # base04
+tbl_cell = { bg = "#262626" } # base01
+
+[notify]
+# Notification title
+title_info = { fg = "#78a9ff" } # base09
+title_warn = { fg = "#ff7eb6" } # base0C
+title_error = { fg = "#ee5396" } # base0A
+
+[pick]
+border = { fg = "#525252", bold = true } # base03
+active = { fg = "#f2f4f8" } # base05
+inactive = { fg = "#dde1e6" } # base04
+
+[input]
+border = { fg = "#525252" } # base03
+title = { fg = "#525252", bold = true } # base03
+value = { fg = "#f2f4f8" } # base05
+selected = { bg = "#262626" } # base01
+
+[cmp]
+border = { fg = "#525252", bold = true } # base03
+active = { fg = "#dde1e6", bg = "#262626" } # base04, base01
+inactive = { fg = "#dde1e6" } # base04
+
+[tasks]
+border = { fg = "#525252" } # base03
+title = { fg = "#525252", bold = true } # base03
+hovered = { bg = "#262626" } # base01
+
+[help]
+on = { fg = "#78a9ff" } # base09
+run = { fg = "#3ddbd9" } # base08
+desc = { fg = "#525252", italic = true } # base03
+hovered = { bg = "#262626" } # base01
+footer = { fg = "#f2f4f8", bg = "#393939", bold = true } # base05, base02
+
+[filetype]
+rules = [
+  # Images
+  { mime = "image/*", fg = "#be95ff" }, # base0E (purple)
+
+  # Media
+  { mime = "video/*", fg = "#33b1ff" }, # base0B (light-blue)
+  { mime = "audio/*", fg = "#33b1ff" }, # base0B (light-blue)
+
+  # Broken symbolic link
+  { name = "*", is = "orphan", fg = "#525252", crossed = true }, # base03
+  { name = "*/", is = "orphan", fg = "#525252", crossed = true }, # base03
+
+  # Symbolic links
+  { name = "*", is = "link", fg = "#3ddbd9" }, # base08 (cyan)
+  { name = "*/", is = "link", fg = "#3ddbd9" }, # base08 (cyan)
+
+  # Executable
+  { name = "*", is = "exec", fg = "#42be65" }, # base0D (green)
+
+  # Empty files
+  { mime = "inode/empty", fg = "#525252" }, # base03
+
+  # Fallback
+  { name = "*", fg = "#dde1e6" }, # base04
+  { name = "*/", fg = "#f2f4f8" } # base05
+]
