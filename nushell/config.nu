@@ -904,6 +904,9 @@ source ~/.zoxide.nu
 # Carapace
 source ~/.cache/carapace/init.nu
 
+# Autin
+source ~/.local/share/atuin/init.nu
+
 # Aliases
 alias lg = lazygit
 alias ld = lazydocker
@@ -929,3 +932,4 @@ alias bsa = bunx --bun shadcn@latest add
 # Other aliases
 alias oc = opencode
 alias nf = neofetch
+alias cd = z
