@@ -1,21 +1,22 @@
-# Oxocarbon Dark color palette
+# Oxocarbon Dark color palette (based on oxocarbon fennel code)
 # ---
 # base00 "#161616" bg
-# base01 "#262626" bg-2
-# base02 "#393939" ui
-# base03 "#525252" ui-2
-# base04 "#dde1e6" tx-2
-# base05 "#f2f4f8" tx
+# base01 "#262626" bg-2 (blend-hex base00 base06 0.085)
+# base02 "#393939" ui (blend-hex base00 base06 0.18)
+# base03 "#525252" ui-2 (blend-hex base00 base06 0.3)
+# base04 "#dde1e6" tx-2 (blend-hex base00 base06 0.82)
+# base05 "#f2f4f8" tx (blend-hex base00 base06 0.95)
 # base06 "#ffffff" bright
 # base07 "#08bdba" cyan-special
 # base08 "#3ddbd9" cyan
 # base09 "#78a9ff" blue
-# base0A "#ee5396" pink
-# base0B "#33b1ff" light-blue
-# base0C "#ff7eb6" magenta
-# base0D "#42be65" green
-# base0E "#be95ff" purple
-# base0F "#82cfff" ice-blue
+# base10 "#ee5396" pink/error
+# base11 "#33b1ff" light-blue
+# base12 "#ff7eb6" magenta
+# base13 "#42be65" green
+# base14 "#be95ff" purple
+# base15 "#82cfff" ice-blue
+# blend  "#131313" blend color for UI
 
 [mgr]
 cwd = { fg = "#f2f4f8", bold = true } # base05
@@ -25,19 +26,19 @@ hovered = { bg = "#262626" } # base01
 preview_hovered = { underline = true }
 
 # Find
-find_keyword = { fg = "#ee5396", reversed = true } # base0A
+find_keyword = { fg = "#ee5396", reversed = true } # base10 (error/pink)
 find_position = { fg = "#525252", bold = true, italic = true } # base03
 
-# Marker
-marker_copied = { fg = "#42be65", bg = "#42be65" } # base0D
-marker_cut = { fg = "#ee5396", bg = "#ee5396" } # base0A
-marker_marked = { fg = "#08bdba", bg = "#08bdba" } # base07
-marker_selected = { fg = "#3ddbd9", bg = "#3ddbd9" } # base08
+# Marker - using semantic colors from oxocarbon
+marker_copied = { fg = "#42be65", bg = "#42be65" } # base13 (green)
+marker_cut = { fg = "#ee5396", bg = "#ee5396" } # base10 (error/pink)
+marker_marked = { fg = "#08bdba", bg = "#08bdba" } # base07 (cyan-special)
+marker_selected = { fg = "#3ddbd9", bg = "#3ddbd9" } # base08 (cyan)
 
 # Count
-count_copied = { fg = "#42be65", bold = true, reversed = true } # base0D
-count_cut = { fg = "#ee5396", bold = true, reversed = true } # base0A
-count_selected = { fg = "#3ddbd9", bold = true, reversed = true } # base08
+count_copied = { fg = "#42be65", bold = true, reversed = true } # base13 (green)
+count_cut = { fg = "#ee5396", bold = true, reversed = true } # base10 (error/pink)
+count_selected = { fg = "#3ddbd9", bold = true, reversed = true } # base08 (cyan)
 
 # Border
 border_symbol = "│"
@@ -54,7 +55,7 @@ sep_outer = { open = "", close = "" }
 normal_main = { fg = "#f2f4f8", bg = "#525252", bold = true } # base05, base03
 normal_alt = { fg = "#dde1e6", bg = "#393939" } # base04, base02
 
-# Select mode
+# Select mode - using cyan colors like oxocarbon
 select_main = { fg = "#161616", bg = "#3ddbd9", bold = true } # base00, base08
 select_alt = { fg = "#3ddbd9", bg = "#262626" } # base08, base01
 
@@ -69,23 +70,23 @@ overall = { fg = "#f2f4f8" } # base05
 sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 
-# Permissions
-perm_type = { fg = "#78a9ff" } # base09
-perm_read = { fg = "#33b1ff" } # base0B
-perm_write = { fg = "#ee5396" } # base0A
-perm_exec = { fg = "#42be65" } # base0D
+# Permissions - following oxocarbon semantic assignments
+perm_type = { fg = "#78a9ff" } # base09 (blue)
+perm_read = { fg = "#82cfff" } # base15 (ice-blue) 
+perm_write = { fg = "#ee5396" } # base10 (error/pink)
+perm_exec = { fg = "#42be65" } # base13 (green)
 perm_sep = { fg = "#dde1e6" } # base04
 
 # Progress
 progress_label = { fg = "#161616" } # base00
 progress_normal = { fg = "#3ddbd9", bg = "#08bdba" } # base08, base07
-progress_error = { bg = "#ee5396" } # base0A
+progress_error = { bg = "#ee5396" } # base10 (error/pink)
 
 [which]
 cols = 3
 mask = { bg = "#262626" } # base01
-cand = { fg = "#33b1ff", bold = true } # base0B
-rest = { fg = "#33b1ff", italic = true } # base0B
+cand = { fg = "#33b1ff", bold = true } # base11 (light-blue)
+rest = { fg = "#33b1ff", italic = true } # base11 (light-blue)
 desc = { fg = "#525252" } # base03
 separator = " "
 separator_style = { }
@@ -105,10 +106,10 @@ tbl_col = { fg = "#dde1e6" } # base04
 tbl_cell = { bg = "#262626" } # base01
 
 [notify]
-# Notification title
-title_info = { fg = "#78a9ff" } # base09
-title_warn = { fg = "#ff7eb6" } # base0C
-title_error = { fg = "#ee5396" } # base0A
+# Notification title - using oxocarbon semantic colors
+title_info = { fg = "#78a9ff" } # base09 (blue)
+title_warn = { fg = "#be95ff" } # base14 (purple) - oxocarbon uses this for warnings
+title_error = { fg = "#ee5396" } # base10 (error/pink)
 
 [pick]
 border = { fg = "#525252", bold = true } # base03
@@ -132,36 +133,36 @@ title = { fg = "#525252", bold = true } # base03
 hovered = { bg = "#262626" } # base01
 
 [help]
-on = { fg = "#78a9ff" } # base09
-run = { fg = "#3ddbd9" } # base08
+on = { fg = "#78a9ff" } # base09 (blue)
+run = { fg = "#3ddbd9" } # base08 (cyan)
 desc = { fg = "#525252", italic = true } # base03
 hovered = { bg = "#262626" } # base01
 footer = { fg = "#f2f4f8", bg = "#393939", bold = true } # base05, base02
 
 [filetype]
 rules = [
-  # Images
-  { mime = "image/*", fg = "#be95ff" }, # base0E (purple)
+  # Images - using purple like oxocarbon
+  { mime = "image/*", fg = "#be95ff" }, # base14 (purple)
 
-  # Media
-  { mime = "video/*", fg = "#33b1ff" }, # base0B (light-blue)
-  { mime = "audio/*", fg = "#33b1ff" }, # base0B (light-blue)
+  # Media - using light-blue
+  { mime = "video/*", fg = "#33b1ff" }, # base11 (light-blue)
+  { mime = "audio/*", fg = "#33b1ff" }, # base11 (light-blue)
 
   # Broken symbolic link
   { name = "*", is = "orphan", fg = "#525252", crossed = true }, # base03
   { name = "*/", is = "orphan", fg = "#525252", crossed = true }, # base03
 
-  # Symbolic links
+  # Symbolic links - using cyan like oxocarbon Directory
   { name = "*", is = "link", fg = "#3ddbd9" }, # base08 (cyan)
   { name = "*/", is = "link", fg = "#3ddbd9" }, # base08 (cyan)
 
-  # Executable
-  { name = "*", is = "exec", fg = "#42be65" }, # base0D (green)
+  # Executable - using green
+  { name = "*", is = "exec", fg = "#42be65" }, # base13 (green)
 
   # Empty files
   { mime = "inode/empty", fg = "#525252" }, # base03
 
-  # Fallback
-  { name = "*", fg = "#dde1e6" }, # base04
-  { name = "*/", fg = "#f2f4f8" } # base05
+  # Fallback - following oxocarbon Normal colors
+  { name = "*", fg = "#dde1e6" }, # base04 (normal text)
+  { name = "*/", fg = "#f2f4f8" } # base05 (primary text)
 ]
