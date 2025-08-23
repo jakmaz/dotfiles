@@ -65,6 +65,10 @@ unset_alt = { fg = "#3ddbd9", bg = "#262626" } # base08, base01
 [status]
 overall = { fg = "#f2f4f8" } # base05
 
+# Completely flat status bar (no separators)
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
 # Permissions
 perm_type = { fg = "#78a9ff" } # base09
 perm_read = { fg = "#33b1ff" } # base0B
