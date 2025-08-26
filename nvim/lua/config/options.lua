@@ -3,6 +3,7 @@ vim.opt.number = true
 
 -- Use relative numbers
 vim.opt.relativenumber = true
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
@@ -56,7 +57,7 @@ vim.opt.scrolloff = 10
 -- See `:help 'confirm'`
 vim.opt.confirm = true
 
---- Used for bufferlien
+--- Better colors
 vim.opt.termguicolors = true
 
 -- Auto-reload files when changed externally
@@ -76,3 +77,9 @@ vim.opt.autoindent = true -- Copy indent from current line when starting a new o
 
 -- Disable line wrap
 vim.opt.wrap = false
+
+-- Disable native statusline (lualine will manage it)
+vim.opt.laststatus = 0
+
+-- Disable swapfile
+vim.opt.swapfile = false
