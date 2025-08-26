@@ -1,5 +1,6 @@
 # Theme and appearance
 theme = "Oxocarbon"
+font-family = "JetBrains Mono"
 font-size = 16
 bold-is-bright = true
 window-decoration = true
