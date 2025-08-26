@@ -9,6 +9,16 @@
       "type": "local",
       "command": ["npx", "anki-mcp-server"],
       "enabled": true
+    },
+    "obsidian": {
+      "type": "local",
+      "command": ["uvx", "mcp-obsidian"],
+      "enabled": true,
+      "environment": {
+        "OBSIDIAN_API_KEY": "4e0bfeb9c3cb471f23acb6f401f639aa312f8a49dd522fbf49f4d65359488ed4",
+        "OBSIDIAN_HOST": "127.0.0.1",
+        "OBSIDIAN_PORT": "27124"
+      }
     }
   }
 }
