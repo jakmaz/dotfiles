@@ -933,3 +933,14 @@ alias bsa = bunx --bun shadcn@latest add
 alias oc = opencode
 alias nf = neofetch
 alias cd = z
+
+# Yazi function with directory changing capability
+def --env y [...args] {
+	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
+	yazi ...$args --cwd-file $tmp
+	let cwd = (open $tmp)
+	if $cwd != "" and $cwd != $env.PWD {
+		cd $cwd
+	}
+	rm -fp $tmp
+}
