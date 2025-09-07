@@ -20,9 +20,13 @@ return {
     end,
     formatters_by_ft = {
       lua = { 'stylua' },
-      javascript = { 'prettier' },
-      typescript = { 'prettier' },
-      markdown = { 'prettier' },
+      javascript = { 'biome-check' },
+      typescript = { 'biome-check' },
+      javascriptreact = { 'biome-check' },
+      typescriptreact = { 'biome-check' },
+      markdown = { 'biome-check' },
+      json = { 'biome-check' },
+      css = { 'biome-check' },
     },
   },
 }

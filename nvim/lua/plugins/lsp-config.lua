@@ -19,6 +19,7 @@ return {
         'harper_ls', -- Spell check
         'java_language_server', -- Java
         'tinymist', -- Typst
+        'biome', -- Lint, format for json, yaml, markdown, etc.
       },
       automatic_enable = {
         exclude = {
