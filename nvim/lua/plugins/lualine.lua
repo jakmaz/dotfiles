@@ -14,17 +14,18 @@ return {
       lualine_b = { 'branch', 'diff', 'diagnostics' },
       lualine_c = { { 'filename', path = 1 } },
       lualine_x = {
+        -- Supermaven status
         {
           function()
             local toggle = Snacks.toggle.get 'supermaven'
             if toggle and toggle:get() then
-              return ''
+              return '󰚩'
             else
-              return ''
+              return '󰚩'
             end
           end,
           color = function()
-            local toggle = Snacks.toggle.get('supermaven')
+            local toggle = Snacks.toggle.get 'supermaven'
             if toggle and toggle:get() then
               return nil -- use default lualine text color
             else
@@ -32,10 +33,70 @@ return {
             end
           end,
         },
-        'filetype',
+        -- LSP status
+        {
+          function()
+            local clients = vim.lsp.get_clients { bufnr = 0 }
+            if #clients == 0 then
+              return '󰒋'
+            else
+              return '󰒋'
+            end
+          end,
+          color = function()
+            local clients = vim.lsp.get_clients { bufnr = 0 }
+            if #clients > 0 then
+              return nil
+            else
+              return 'Comment'
+            end
+          end,
+        },
+        -- Formatter status
+        {
+          function()
+            local conform = require 'conform'
+            local formatters = conform.list_formatters(0)
+            if #formatters > 0 then
+              return '󰉣'
+            else
+              return '󰉣'
+            end
+          end,
+          color = function()
+            local conform = require 'conform'
+            local formatters = conform.list_formatters(0)
+            if #formatters > 0 then
+              return nil
+            else
+              return 'Comment'
+            end
+          end,
+        },
+        -- Linter status
+        {
+          function()
+            local lint = require 'lint'
+            local linters = lint.linters_by_ft[vim.bo.filetype] or {}
+            if #linters > 0 then
+              return '󰁨'
+            else
+              return '󰁨'
+            end
+          end,
+          color = function()
+            local lint = require 'lint'
+            local linters = lint.linters_by_ft[vim.bo.filetype] or {}
+            if #linters > 0 then
+              return nil
+            else
+              return 'Comment'
+            end
+          end,
+        },
       },
       lualine_y = {},
-      lualine_z = { 'location' },
+      lualine_z = {},
     },
     inactive_sections = {
       lualine_a = {},
