@@ -24,18 +24,18 @@ return {
             end
           end,
           color = function()
-            local toggle = Snacks.toggle.get 'supermaven'
+            local toggle = Snacks.toggle.get('supermaven')
             if toggle and toggle:get() then
-              return { fg = '#ffffff' }
+              return nil -- use default lualine text color
             else
-              return { fg = '#6272a4' }
+              return 'Comment'
             end
           end,
         },
         'filetype',
       },
-      lualine_y = { 'location' },
-      lualine_z = {},
+      lualine_y = {},
+      lualine_z = { 'location' },
     },
     inactive_sections = {
       lualine_a = {},
