@@ -13,7 +13,27 @@ return {
       lualine_a = {},
       lualine_b = { 'branch', 'diff', 'diagnostics' },
       lualine_c = { { 'filename', path = 1 } },
-      lualine_x = { 'filetype' },
+      lualine_x = {
+        {
+          function()
+            local toggle = Snacks.toggle.get 'supermaven'
+            if toggle and toggle:get() then
+              return ''
+            else
+              return ''
+            end
+          end,
+          color = function()
+            local toggle = Snacks.toggle.get 'supermaven'
+            if toggle and toggle:get() then
+              return { fg = '#ffffff' }
+            else
+              return { fg = '#6272a4' }
+            end
+          end,
+        },
+        'filetype',
+      },
       lualine_y = { 'location' },
       lualine_z = {},
     },

@@ -138,6 +138,22 @@ return {
         Snacks.toggle.inlay_hints():map '<leader>uh'
         Snacks.toggle.indent():map '<leader>ug'
         Snacks.toggle.dim():map '<leader>uD'
+        -- Supermaven toggle
+        local supermaven_toggle = Snacks.toggle.new({
+          id = "supermaven",
+          name = "Supermaven",
+          get = function()
+            return require('supermaven-nvim.api').is_running()
+          end,
+          set = function(state)
+            if state then
+              require('supermaven-nvim.api').start()
+            else
+              require('supermaven-nvim.api').stop()
+            end
+          end,
+        })
+        supermaven_toggle:map '<leader>ua'
       end,
     })
   end,
