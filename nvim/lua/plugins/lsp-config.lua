@@ -20,6 +20,10 @@ return {
         'java_language_server', -- Java
         'tinymist', -- Typst
         'biome', -- Lint, format for json, yaml, markdown, etc.
+        'jsonls', -- JSON (standalone)
+        'yamlls', -- YAML
+        'taplo', -- TOML
+        'bashls', -- Bash/shell scripting
       },
       automatic_enable = {
         exclude = {
