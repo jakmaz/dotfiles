@@ -24,8 +24,17 @@ return {
     },
     presets = {
       bottom_search = true,
-      command_palette = true,
       long_message_to_split = true,
+      -- Remove command_palette if you want normal commands at the bottom
+      command_palette = false,
+    },
+    -- Optional: you can keep bottom_search and style messages without overriding commands
+    cmdline = {
+      format = {
+        cmdline = { view = 'cmdline' }, -- normal commands at bottom
+        search_down = { view = 'cmdline' }, -- normal search at bottom
+        search_up = { view = 'cmdline' },
+      },
     },
   },
   dependencies = {
