@@ -4,6 +4,9 @@ vim.opt.number = true
 -- Use relative numbers
 vim.opt.relativenumber = true
 
+-- Remove tildes in the end of lines
+vim.opt.fillchars = { eob = ' ' }
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
