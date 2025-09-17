@@ -27,6 +27,7 @@ return {
       markdown = { 'biome-check' },
       json = { 'biome-check' },
       css = { 'biome-check' },
+      typst = { 'typstyle' },
     },
   },
 }
