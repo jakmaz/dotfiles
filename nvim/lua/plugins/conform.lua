@@ -28,6 +28,7 @@ return {
       json = { 'biome-check' },
       css = { 'biome-check' },
       typst = { 'typstyle' },
+      sh = { 'beautysh' },
     },
   },
 }
