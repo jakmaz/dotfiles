@@ -13,6 +13,8 @@ return {
     spec = {
       { '<leader>c', group = 'Code', mode = { 'n', 'x' } },
       { '<leader>d', group = 'Document' },
+      { '<leader>n', group = 'Next' },
+      { '<leader>p', group = 'Previous' },
       { '<leader>r', group = 'Replace' },
       { '<leader>s', group = 'Search' },
       { '<leader>w', group = 'Workspace' },

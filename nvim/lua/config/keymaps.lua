@@ -80,3 +80,52 @@ vim.keymap.set('n', ')', function()
     float = true, -- Show diagnostics in a floating window
   }
 end, { desc = 'Go to next error diagnostic' })
+
+-- Navigation keymaps for next/previous functionality
+
+-- Diagnostic Navigation
+vim.keymap.set('n', '<leader>nd', function() vim.diagnostic.jump { count = 1 } end, { desc = 'Next diagnostic' })
+
+vim.keymap.set('n', '<leader>pd', function() vim.diagnostic.jump { count = -1 } end, { desc = 'Previous diagnostic' })
+
+vim.keymap.set(
+  'n',
+  '<leader>ne',
+  function() vim.diagnostic.jump { count = 1, severity = vim.diagnostic.severity.ERROR } end,
+  { desc = 'Next error' }
+)
+
+vim.keymap.set(
+  'n',
+  '<leader>pe',
+  function() vim.diagnostic.jump { count = -1, severity = vim.diagnostic.severity.ERROR } end,
+  { desc = 'Previous error' }
+)
+
+vim.keymap.set(
+  'n',
+  '<leader>nw',
+  function() vim.diagnostic.jump { count = 1, severity = vim.diagnostic.severity.WARN } end,
+  { desc = 'Next warning' }
+)
+
+vim.keymap.set(
+  'n',
+  '<leader>pw',
+  function() vim.diagnostic.jump { count = -1, severity = vim.diagnostic.severity.WARN } end,
+  { desc = 'Previous warning' }
+)
+
+-- Quickfix & Location List Navigation
+vim.keymap.set('n', '<leader>nq', '<cmd>cnext<CR>', { desc = 'Next quickfix item' })
+vim.keymap.set('n', '<leader>pq', '<cmd>cprev<CR>', { desc = 'Previous quickfix item' })
+vim.keymap.set('n', '<leader>nl', '<cmd>lnext<CR>', { desc = 'Next location list item' })
+vim.keymap.set('n', '<leader>pl', '<cmd>lprev<CR>', { desc = 'Previous location list item' })
+
+-- Buffer Navigation
+vim.keymap.set('n', '<leader>nb', '<cmd>bnext<CR>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<leader>pb', '<cmd>bprev<CR>', { desc = 'Previous buffer' })
+
+-- Tab Navigation
+vim.keymap.set('n', '<leader>nt', '<cmd>tabnext<CR>', { desc = 'Next tab' })
+vim.keymap.set('n', '<leader>pt', '<cmd>tabprev<CR>', { desc = 'Previous tab' })
