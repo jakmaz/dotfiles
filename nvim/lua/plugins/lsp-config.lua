@@ -24,6 +24,7 @@ return {
         'yamlls', -- YAML
         'taplo', -- TOML
         'bashls', -- Bash/shell scripting
+        'gopls', -- Go
       },
       automatic_enable = {
         exclude = {
@@ -37,7 +38,7 @@ return {
   {
     'neovim/nvim-lspconfig',
     config = function()
-      vim.lsp.config('harper_ls', { 
+      vim.lsp.config('harper_ls', {
         cmd = { 'harper-ls', '--stdio' },
         filetypes = { 'markdown' },
         root_markers = { '.git' },

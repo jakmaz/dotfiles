@@ -29,6 +29,7 @@ return {
       css = { 'biome-check' },
       typst = { 'typstyle' },
       sh = { 'beautysh' },
+      go = { 'gofumpt', 'goimports' },
     },
   },
 }
