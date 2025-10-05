@@ -8,6 +8,7 @@ $env.PATH = (
   | append '/opt/homebrew/bin' 
   | append '/usr/local/bin' 
   | append '/Users/jakubmazur/.bun/bin'
+  | append '/Users/jakubmazur/go/bin'
   | append '/Users/jakubmazur/.local/bin' # UV Posting
   | uniq
 )
