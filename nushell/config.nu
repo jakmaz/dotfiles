@@ -922,17 +922,14 @@ source ~/.cache/carapace/init.nu
 source ~/.local/share/atuin/init.nu
 
 # Aliases
-alias lg = lazygit
-alias ld = lazydocker
-alias moviessync = rsync -av --progress --ignore-existing `/Volumes/Jakub's SSD/Movies/` /Volumes/main-pool/Upload/Movies/
 
+
+# Bun aliases
 alias bd = bun run dev           # Start development server
 alias bb = bun run build         # Build your project
 alias bs = bun run start         # Run the production server
 alias bo = bun outdated          # Check for outdated packages
 alias ba = bun add               # Add new dependencies
-
-# Additional Helpful Aliases
 alias bt = bun run test          # Run tests (if configured)
 alias bl = bun run lint          # Lint your code (if configured)
 alias bp = bun run preview       # Preview the production build (if available)
@@ -943,7 +940,7 @@ alias bnew = bun create next-app # Scaffold a new Next.js project with Bun
 alias bsi = bunx --bun shadcn@latest init
 alias bsa = bunx --bun shadcn@latest add
 
-# Go development aliases
+# Go aliases
 alias gb = go build              # Build the current package
 alias gr = go run                # Run a Go file
 alias gt = go test               # Run tests
@@ -965,10 +962,37 @@ alias ggen = go generate         # Run code generators
 alias glist = go list            # List packages
 alias genv = go env              # Print Go environment
 
+# Docker aliases
+alias d = docker
+alias dc = docker-compose
+alias dps = docker ps
+alias di = docker images
+alias dex = docker exec -it
+alias dlog = docker logs
+alias dstop = docker stop
+alias drm = docker rm
+alias drmi = docker rmi
+alias dprune = docker system prune
+
+# System/navigation aliases
+alias ll = ls -la
+alias .. = cd ..
+alias ... = cd ../..
+alias .... = cd ../../..
+alias cp = cp -r
+
 # Other aliases
+alias v = nvim
+alias vim = nvim
+alias myip = curl ifconfig.me
+alias ports = netstat -tulpn
+alias path = echo $env.PATH | split row ':'
 alias oc = opencode
 alias nf = neofetch
 alias cd = z
+alias lg = lazygit
+alias ld = lazydocker
+alias moviessync = rsync -av --progress --ignore-existing `/Volumes/Jakub's SSD/Movies/` /Volumes/main-pool/Upload/Movies/
 
 # Yazi function with directory changing capability
 def --env y [...args] {
