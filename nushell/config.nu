@@ -943,6 +943,28 @@ alias bnew = bun create next-app # Scaffold a new Next.js project with Bun
 alias bsi = bunx --bun shadcn@latest init
 alias bsa = bunx --bun shadcn@latest add
 
+# Go development aliases
+alias gb = go build              # Build the current package
+alias gr = go run                # Run a Go file
+alias gt = go test               # Run tests
+alias gta = go test ./...        # Test all packages
+alias gm = go mod                # Go module commands
+alias gmt = go mod tidy          # Clean up dependencies
+alias gmv = go mod verify        # Verify dependencies
+alias gmi = go mod init          # Initialize module
+alias gf = go fmt                # Format code
+alias gc = go clean              # Remove object files
+alias gv = go version            # Show Go version
+alias gi = go install           # Install packages
+alias gg = go get                # Download and install packages
+alias ggu = go get -u            # Update packages
+alias gwork = go work            # Go workspace commands
+alias gvet = go vet              # Examine Go source code
+alias gdoc = go doc              # Show documentation
+alias ggen = go generate         # Run code generators
+alias glist = go list            # List packages
+alias genv = go env              # Print Go environment
+
 # Other aliases
 alias oc = opencode
 alias nf = neofetch

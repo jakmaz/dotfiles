@@ -45,8 +45,8 @@ $env.NU_PLUGIN_DIRS = [
 ]
 
 # Starship config
-mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/starship/init.nu
+# mkdir ~/.cache/starship
+# starship init nu | save -f ~/.cache/starship/init.nu
 
 # Zoxide
 zoxide init nushell | save -f ~/.zoxide.nu
