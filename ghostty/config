@@ -6,6 +6,7 @@ bold-is-bright = true
 window-decoration = true
 window-padding-color = "background"
 window-padding-x = 10
+window-padding-color = extend-always
 
 # Shell
 command = "/opt/homebrew/bin/nu"
