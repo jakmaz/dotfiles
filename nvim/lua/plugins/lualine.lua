@@ -14,6 +14,36 @@ return {
       lualine_b = { 'branch', 'diff', 'diagnostics' },
       lualine_c = { { 'filename', path = 1 } },
       lualine_x = {
+        -- Harpoon files
+        {
+          function()
+            local harpoon = require 'harpoon'
+            local list = harpoon:list()
+            local items = list.items
+
+            if #items == 0 then return '' end
+
+            local result = {}
+            for i = 1, math.min(4, #items) do
+              local item = items[i]
+              if item and item.value then
+                local filename = vim.fn.fnamemodify(item.value, ':t')
+                table.insert(result, filename)
+              end
+            end
+
+            return table.concat(result, ' | ')
+          end,
+          color = function()
+            local harpoon = require 'harpoon'
+            local list = harpoon:list()
+            if #list.items > 0 then
+              return nil
+            else
+              return 'Comment'
+            end
+          end,
+        },
         -- Supermaven status
         {
           function()
