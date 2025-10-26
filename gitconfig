@@ -6,7 +6,7 @@
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [user]
 	name = Jakub Mazur
-	email = jakmaz.dev@icloud.com
+	email = jakmaz.social@icloud.com
 
 [fetch]
     prune = true
