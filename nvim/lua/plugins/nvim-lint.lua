@@ -11,7 +11,6 @@ return {
       javascriptreact = { 'biomejs' },
       json = { 'biomejs' },
       css = { 'biomejs' },
-      go = { 'golangcilint' },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
