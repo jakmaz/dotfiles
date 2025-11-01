@@ -55,6 +55,10 @@ return {
     { '<leader>sB', function() Snacks.picker.grep_buffers() end, desc = 'Grep Open Buffers' },
     { '<leader>sg', function() Snacks.picker.grep() end, desc = 'Grep' },
     { '<leader>sw', function() Snacks.picker.grep_word() end, desc = 'Visual selection or word', mode = { 'n', 'x' } },
+    { '<leader>gi', function() Snacks.picker.gh_issue() end, desc = 'GitHub Issues (open)' },
+    { '<leader>gI', function() Snacks.picker.gh_issue { state = 'all' } end, desc = 'GitHub Issues (all)' },
+    { '<leader>gp', function() Snacks.picker.gh_pr() end, desc = 'GitHub Pull Requests (open)' },
+    { '<leader>gP', function() Snacks.picker.gh_pr { state = 'all' } end, desc = 'GitHub Pull Requests (all)' },
     -- search
     { '<leader>s"', function() Snacks.picker.registers() end, desc = 'Registers' },
     { '<leader>ls', function() Snacks.picker.search_history() end, desc = 'Search History' },
@@ -139,12 +143,10 @@ return {
         Snacks.toggle.indent():map '<leader>ug'
         Snacks.toggle.dim():map '<leader>uD'
         -- Supermaven toggle
-        local supermaven_toggle = Snacks.toggle.new({
-          id = "supermaven",
-          name = "Supermaven",
-          get = function()
-            return require('supermaven-nvim.api').is_running()
-          end,
+        local supermaven_toggle = Snacks.toggle.new {
+          id = 'supermaven',
+          name = 'Supermaven',
+          get = function() return require('supermaven-nvim.api').is_running() end,
           set = function(state)
             if state then
               require('supermaven-nvim.api').start()
@@ -152,7 +154,7 @@ return {
               require('supermaven-nvim.api').stop()
             end
           end,
-        })
+        }
         supermaven_toggle:map '<leader>ua'
       end,
     })
