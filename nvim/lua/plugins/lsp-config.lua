@@ -25,6 +25,7 @@ return {
         'taplo', -- TOML
         'bashls', -- Bash/shell scripting
         'gopls', -- Go
+        'docker_language_server', -- Docker
       },
       automatic_enable = {
         exclude = {

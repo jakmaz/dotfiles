@@ -11,6 +11,13 @@ return {
       javascriptreact = { 'biomejs' },
       json = { 'biomejs' },
       css = { 'biomejs' },
+      sh = { 'shellcheck' },
+      bash = { 'shellcheck' },
+      zsh = { 'shellcheck' },
+      dockerfile = { 'hadolint' },
+      markdown = { 'markdownlint' },
+      yaml = { 'yamllint', 'actionlint' },
+      yml = { 'yamllint' },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
