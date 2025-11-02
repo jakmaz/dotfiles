@@ -6,15 +6,16 @@ return {
       win = {
         input = {
           keys = {
-            ['<C-w>'] = { 'cycle_win', mode = { 'i', 'n' } },
-            ['<C-r>'] = { 'toggle_regex', mode = { 'i', 'n' } },
-            ['<C-p>'] = { 'toggle_preview', mode = { 'i', 'n' } },
+            -- Remap conflicting tmux keybinds
+            ["<C-w>w"] = { "cycle_win", mode = { "i", "n" } },
+            ["<C-r>r"] = { "toggle_regex", mode = { "i", "n" } },
+            ["<C-p>"] = { "toggle_preview", mode = { "i", "n" } },
             -- Disable the conflicting ones
-            ['<a-w>'] = nil,
-            ['<a-r>'] = nil,
-            ['<a-p>'] = nil,
-          },
-        },
+            ["<a-w>"] = nil,
+            ["<a-r>"] = nil,
+            ["<a-p>"] = nil,
+          }
+        }
       },
       sources = {
         explorer = {
