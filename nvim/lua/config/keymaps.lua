@@ -67,8 +67,6 @@ vim.keymap.set('n', '<C-a>', '<C-^>', { desc = 'Switch to last buffer' })
 vim.keymap.set('n', '(', function()
   vim.diagnostic.jump {
     count = -1, -- Negative count moves to the previous diagnostic
-    severity = vim.diagnostic.severity.ERROR, -- Filter diagnostics by severity
-    float = true, -- Show diagnostics in a floating window
   }
 end, { desc = 'Go to previous error diagnostic' })
 
@@ -76,8 +74,6 @@ end, { desc = 'Go to previous error diagnostic' })
 vim.keymap.set('n', ')', function()
   vim.diagnostic.jump {
     count = 1, -- Positive count moves to the next diagnostic
-    severity = vim.diagnostic.severity.ERROR, -- Filter diagnostics by severity
-    float = true, -- Show diagnostics in a floating window
   }
 end, { desc = 'Go to next error diagnostic' })
 
