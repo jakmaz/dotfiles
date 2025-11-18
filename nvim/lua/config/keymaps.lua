@@ -11,6 +11,9 @@ vim.keymap.set('n', '<leader>q', '<cmd>qa<CR>', { desc = 'Quit All' })
 -- Save on Ctrl+S in normal and insert mode, then return to normal mode
 vim.keymap.set({ 'n', 'i' }, '<C-s>', '<cmd>w<CR><Esc>', { desc = 'Save File' })
 
+-- Save without formatting on Ctrl+Shift+S (bypass autocommands)
+vim.keymap.set({ 'n', 'i' }, '<C-S-s>', '<cmd>noautocmd w<CR><Esc>', { desc = 'Save File Without Formatting' })
+
 -- Yank whole text
 vim.keymap.set('n', '<leader>cy', ':%y+<CR>', { desc = 'Yank Entire Buffer' })
 
