@@ -24,7 +24,7 @@ return {
       typescript = { 'biome-check' },
       javascriptreact = { 'biome-check' },
       typescriptreact = { 'biome-check' },
-      markdown = { 'biome-check' },
+      markdown = { 'markdownlint-cli2' },
       json = { 'biome-check' },
       css = { 'biome-check' },
       typst = { 'typstyle' },
