@@ -7,6 +7,7 @@ import {
 	raycast,
 	shell,
 	window,
+	workspace,
 } from "./utils";
 
 const rules: KarabinerRules[] = [
@@ -76,8 +77,8 @@ const rules: KarabinerRules[] = [
 		},
 
 		// Single keystroke
-		t: app("Zen"),
-		s: app("Ghostty"),
+		t: workspace("zen"),
+		s: workspace("ghostty"),
 
 		spacebar: raycast("stellate/mxstbr-commands/create-notion-todo"),
 
@@ -93,18 +94,18 @@ const rules: KarabinerRules[] = [
 
 		// A = App
 		a: {
-			l: app("Firefox Developer Edition"),
-			u: app("Yaak"),
-			y: app("Beekeeper Studio"),
+			l: workspace("firefox"),
+			u: workspace("yaak"),
+			y: workspace("beekeeper"),
 			semocolon: app(""),
-			m: app("Obsidian"),
-			n: app("WhatsApp"),
-			e: app("Messenger"),
-			i: app("Mail"),
+			m: workspace("obsidian"),
+			n: workspace("whatsapp"),
+			e: workspace("messenger"),
+			i: workspace("mail"),
 			o: app("Vesktop"),
-			h: app("Calendar"),
+			h: workspace("calendar"),
 			comma: app("Preview"),
-			period: app("Finder"),
+			period: workspace("finder"),
 		},
 
 		// w = "Window"

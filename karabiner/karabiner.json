@@ -586,10 +586,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Zen.app'"
+          "shell_command": "aerospace workspace zen"
          }
         ],
-        "description": "Open Zen",
+        "description": "Switch to zen workspace",
         "type": "basic",
         "from": {
          "key_code": "t",
@@ -695,10 +695,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Ghostty.app'"
+          "shell_command": "aerospace workspace ghostty"
          }
         ],
-        "description": "Open Ghostty",
+        "description": "Switch to ghostty workspace",
         "type": "basic",
         "from": {
          "key_code": "s",
@@ -1282,10 +1282,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Firefox Developer Edition.app'"
+          "shell_command": "aerospace workspace firefox"
          }
         ],
-        "description": "Open Firefox Developer Edition",
+        "description": "Switch to firefox workspace",
         "type": "basic",
         "from": {
          "key_code": "l",
@@ -1306,10 +1306,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Yaak.app'"
+          "shell_command": "aerospace workspace yaak"
          }
         ],
-        "description": "Open Yaak",
+        "description": "Switch to yaak workspace",
         "type": "basic",
         "from": {
          "key_code": "u",
@@ -1330,10 +1330,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Beekeeper Studio.app'"
+          "shell_command": "aerospace workspace beekeeper"
          }
         ],
-        "description": "Open Beekeeper Studio",
+        "description": "Switch to beekeeper workspace",
         "type": "basic",
         "from": {
          "key_code": "y",
@@ -1378,10 +1378,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Obsidian.app'"
+          "shell_command": "aerospace workspace obsidian"
          }
         ],
-        "description": "Open Obsidian",
+        "description": "Switch to obsidian workspace",
         "type": "basic",
         "from": {
          "key_code": "m",
@@ -1402,10 +1402,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'WhatsApp.app'"
+          "shell_command": "aerospace workspace whatsapp"
          }
         ],
-        "description": "Open WhatsApp",
+        "description": "Switch to whatsapp workspace",
         "type": "basic",
         "from": {
          "key_code": "n",
@@ -1426,10 +1426,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Messenger.app'"
+          "shell_command": "aerospace workspace messenger"
          }
         ],
-        "description": "Open Messenger",
+        "description": "Switch to messenger workspace",
         "type": "basic",
         "from": {
          "key_code": "e",
@@ -1450,10 +1450,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Mail.app'"
+          "shell_command": "aerospace workspace mail"
          }
         ],
-        "description": "Open Mail",
+        "description": "Switch to mail workspace",
         "type": "basic",
         "from": {
          "key_code": "i",
@@ -1498,10 +1498,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Calendar.app'"
+          "shell_command": "aerospace workspace calendar"
          }
         ],
-        "description": "Open Calendar",
+        "description": "Switch to calendar workspace",
         "type": "basic",
         "from": {
          "key_code": "h",
@@ -1546,10 +1546,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Finder.app'"
+          "shell_command": "aerospace workspace finder"
          }
         ],
-        "description": "Open Finder",
+        "description": "Switch to finder workspace",
         "type": "basic",
         "from": {
          "key_code": "period",
