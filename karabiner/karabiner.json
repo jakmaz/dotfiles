@@ -1282,13 +1282,13 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Firefox.app'"
+          "shell_command": "open -a 'Firefox Developer Edition.app'"
          }
         ],
-        "description": "Open Firefox",
+        "description": "Open Firefox Developer Edition",
         "type": "basic",
         "from": {
-         "key_code": "t",
+         "key_code": "l",
          "modifiers": {
           "optional": [
            "any"
@@ -1306,13 +1306,85 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Messenger.app'"
+          "shell_command": "open -a 'Yaak.app'"
          }
         ],
-        "description": "Open Messenger",
+        "description": "Open Yaak",
         "type": "basic",
         "from": {
-         "key_code": "n",
+         "key_code": "u",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_a",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open -a 'Beekeeper Studio.app'"
+         }
+        ],
+        "description": "Open Beekeeper Studio",
+        "type": "basic",
+        "from": {
+         "key_code": "y",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_a",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open -a '.app'"
+         }
+        ],
+        "description": "Open ",
+        "type": "basic",
+        "from": {
+         "key_code": "semocolon",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_a",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open -a 'Obsidian.app'"
+         }
+        ],
+        "description": "Open Obsidian",
+        "type": "basic",
+        "from": {
+         "key_code": "m",
          "modifiers": {
           "optional": [
            "any"
@@ -1334,6 +1406,30 @@
          }
         ],
         "description": "Open WhatsApp",
+        "type": "basic",
+        "from": {
+         "key_code": "n",
+         "modifiers": {
+          "optional": [
+           "any"
+          ]
+         }
+        },
+        "conditions": [
+         {
+          "type": "variable_if",
+          "name": "hyper_sublayer_a",
+          "value": 1
+         }
+        ]
+       },
+       {
+        "to": [
+         {
+          "shell_command": "open -a 'Messenger.app'"
+         }
+        ],
+        "description": "Open Messenger",
         "type": "basic",
         "from": {
          "key_code": "e",
@@ -1402,10 +1498,10 @@
        {
         "to": [
          {
-          "shell_command": "open -a 'Obsidian.app'"
+          "shell_command": "open -a 'Calendar.app'"
          }
         ],
-        "description": "Open Obsidian",
+        "description": "Open Calendar",
         "type": "basic",
         "from": {
          "key_code": "h",

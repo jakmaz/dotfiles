@@ -93,12 +93,16 @@ const rules: KarabinerRules[] = [
 
 		// A = App
 		a: {
-			t: app("Firefox"),
-			n: app("Messenger"),
-			e: app("WhatsApp"),
+			l: app("Firefox Developer Edition"),
+			u: app("Yaak"),
+			y: app("Beekeeper Studio"),
+			semocolon: app(""),
+			m: app("Obsidian"),
+			n: app("WhatsApp"),
+			e: app("Messenger"),
 			i: app("Mail"),
 			o: app("Vesktop"),
-			h: app("Obsidian"),
+			h: app("Calendar"),
 			comma: app("Preview"),
 			period: app("Finder"),
 		},
