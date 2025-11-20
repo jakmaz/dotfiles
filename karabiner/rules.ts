@@ -108,72 +108,20 @@ const rules: KarabinerRules[] = [
 			period: workspace("finder"),
 		},
 
-		// w = "Window" - Rectangle shortcuts
+		// w = "Window"
 		w: {
-			l: {
-				description: "Rectangle: Almost maximize",
+			y: window("previous-display"),
+			k: window("top-half"),
+			j: window("bottom-half"),
+			h: window("left-half"),
+			l: window("right-half"),
+			f: window("maximize"),
+			e: {
+				description: "Window: Previous Tab",
 				to: [
 					{
-						key_code: "l",
-						modifiers: [
-							"left_control",
-							"left_command",
-							"left_shift",
-							"left_option",
-						],
-					},
-				],
-			},
-			u: {
-				description: "Rectangle: Maximize",
-				to: [
-					{
-						key_code: "u",
-						modifiers: [
-							"left_control",
-							"left_command",
-							"left_shift",
-							"left_option",
-						],
-					},
-				],
-			},
-
-			// Position controls (k, comma, period, slash)
-			j: {
-				description: "Rectangle: Left Half",
-				to: [
-					{
-						key_code: "j",
-						modifiers: [
-							"left_control",
-							"left_command",
-							"left_shift",
-							"left_option",
-						],
-					},
-				],
-			},
-			y: {
-				description: "Rectangle: Right Half",
-				to: [
-					{
-						key_code: "y",
-						modifiers: [
-							"left_control",
-							"left_command",
-							"left_shift",
-							"left_option",
-						],
-					},
-				],
-			},
-			m: {
-				description: "Window: Back",
-				to: [
-					{
-						key_code: "open_bracket",
-						modifiers: ["right_command"],
+						key_code: "tab",
+						modifiers: ["right_control", "right_shift"],
 					},
 				],
 			},
@@ -186,20 +134,30 @@ const rules: KarabinerRules[] = [
 					},
 				],
 			},
-			e: {
-				description: "Window: Previous Tab",
-				to: [
-					{
-						key_code: "tab",
-						modifiers: ["right_control", "right_shift"],
-					},
-				],
-			},
 			o: {
 				description: "Window: Next Window",
 				to: [
 					{
 						key_code: "grave_accent_and_tilde",
+						modifiers: ["right_command"],
+					},
+				],
+			},
+			m: {
+				description: "Window: Back",
+				to: [
+					{
+						key_code: "open_bracket",
+						modifiers: ["right_command"],
+					},
+				],
+			},
+			// Note: No literal connection. Both f and n are already taken.
+			i: {
+				description: "Window: Forward",
+				to: [
+					{
+						key_code: "close_bracket",
 						modifiers: ["right_command"],
 					},
 				],
