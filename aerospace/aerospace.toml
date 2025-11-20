@@ -69,10 +69,10 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
-# Global rule: Make all windows floating and send uncategorized apps to home workspace
+# Global rule: Make all windows floating by default
 [[on-window-detected]]
 check-further-callbacks = true
-run = ['layout floating', 'move-node-to-workspace home']
+run = 'layout floating'
 
 # Auto-assign apps to workspaces
 [[on-window-detected]]

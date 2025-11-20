@@ -102,7 +102,7 @@ const rules: KarabinerRules[] = [
 			n: workspace("whatsapp"),
 			e: workspace("messenger"),
 			i: workspace("mail"),
-			o: workspace("home"),
+			o: app("Vesktop"),
 			h: workspace("calendar"),
 			comma: app("Preview"),
 			period: workspace("finder"),

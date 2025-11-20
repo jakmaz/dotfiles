@@ -1474,10 +1474,10 @@
        {
         "to": [
          {
-          "shell_command": "aerospace workspace home"
+          "shell_command": "open -a 'Vesktop.app'"
          }
         ],
-        "description": "Switch to home workspace",
+        "description": "Open Vesktop",
         "type": "basic",
         "from": {
          "key_code": "o",
