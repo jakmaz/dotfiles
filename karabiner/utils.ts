@@ -230,17 +230,3 @@ export function app(name: string): LayerCommand {
     description: `Open ${name}`,
   };
 }
-
-/**
- * Shortcut for Aerospace workspace commands
- */
-export function workspace(name: string): LayerCommand {
-  return {
-    to: [
-      {
-        shell_command: `aerospace workspace ${name}`,
-      },
-    ],
-    description: `Switch to ${name} workspace`,
-  };
-}
