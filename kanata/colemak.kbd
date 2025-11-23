@@ -3,40 +3,41 @@
   danger-enable-cmd yes
   macos-dev-names-include (
     "Apple Internal Keyboard / Trackpad"
+    "Corne"
   )
 )
 
 (defsrc
-  caps q w e r t   y u i o p [ 
-  a s d f g   h j k l ; '
+  tab q w e r t   y u i o p [ 
+  caps a s d f g   h j k l ; '
   lshift z x c v b   n m , . / rshift
   lctrl lalt lmeta spc rmeta ralt
 )
 
 (deflayer colemak
-  esc q w f p b   j l u y ; bspc 
-  a r s t g   h n e i o enter
-  lshift z x c d v   k m , . / '
-  lctrl (layer-while-held hyper) lmeta spc rmeta ralt
+  tab q w f p b   j l u y ; bspc 
+  esc a r s t g   m n e i o enter
+  lshift z x c d v   k h , . / '
+  lctrl (layer-while-held hyper) lmeta spc (layer-while-held symbol) ralt
 )
 
 (deflayer hyper
   _ _ _ _ _ _   _ _ _ _ _ _
-  (layer-toggle app) (layer-toggle sym) _ _ _   left down up right tab _
+  _ (layer-toggle app) - (cmd "open" "-a" "Ghostty") (cmd "open" "-a" "Zen") _   left down up right tab _
   _ _ _ _ _   _ _ _ _ _ _ _
   _ _ _ _ _ _
 )
 
-(deflayer sym
+(deflayer symbol
   _ 1 2 3 4 5   6 7 8 9 0 _
-  _ S-- - [ S-9 [   ] S-0 ] + =
+  _ S-- - S-[ S-9 [   ] S-0 S-] + = _
   _ up S-1 S-2 S-3 S-4   S-6 S-7 S-8 \ grv _
   _ _ _ _ _ _
 )
 
 (deflayer app
   _ _ _ _ _ _   _ _ _ _ _ _
-  _ (cmd "open" "-a" "Spotify") _ (cmd "open" "-a" "Finder") _   _ (cmd "open" "-a" "WhatsApp") _ _ (cmd "open" "-a" "Terminal") _
+  _ (cmd "open" "-a" "Spotify") _ (cmd "open" "-a" "Finder") _   _ (cmd "open" "-a" "WhatsApp") _ _ (cmd "open" "-a" "Terminal") _ _
   _ _ (cmd "open" "-a" "Google Chrome") (cmd "open" "-a" "Visual Studio Code") _   _ _ _ _ _ _ _
   _ _ _ _ _ _
 )
