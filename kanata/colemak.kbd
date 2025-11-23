@@ -1,5 +1,6 @@
 (defcfg
   process-unmapped-keys yes
+  danger-enable-cmd yes
   macos-dev-names-include (
     "Apple Internal Keyboard / Trackpad"
   )
@@ -15,14 +16,21 @@
 (deflayer colemak
   esc q w f p b   j l u y ; bspc 
   a r s t g   m n e i o enter
-  lshift z x c d v h k , . / '
+  lshift z x c d v   k h , . / '
   (layer-while-held nav) lshift
 )
 
 (deflayer nav
   _ _ _ _ _ _   _ _ _ _ _ _
-  _ _ _ _ _   left down up right tab _
+  (layer-toggle app) _ (cmd "open" "-a" "Ghostty") (cmd "open" "-a" "Zen") _   left down up right tab _
   _ _ _ _ _   _ _ _ _ _ _ _
+  _ _
+)
+
+(deflayer app
+  _ _ _ _ _ _   _ _ _ _ _ _
+  _ (cmd "open" "-a" "Spotify") _ (cmd "open" "-a" "Finder") _   _ (cmd "open" "-a" "WhatsApp") _ _ (cmd "open" "-a" "Terminal") _
+  _ _ (cmd "open" "-a" "Google Chrome") (cmd "open" "-a" "Visual Studio Code") _   _ _ _ _ _ _ _
   _ _
 )
 
