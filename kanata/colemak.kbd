@@ -27,7 +27,7 @@
   
   ;; Websites (from browse sublayer)
   github     (cmd "open" "https://github.com/jakmaz")
-  website    (cmd "open" "https://jakmaz.com")
+  portfolio    (cmd "open" "https://jakmaz.com")
   reddit     (cmd "open" "https://reddit.com")
   youtube    (cmd "open" "https://www.youtube.com")
   linkedin   (cmd "open" "https://www.linkedin.com")
@@ -94,30 +94,30 @@
 )
 
 (deflayer hyper
-  _ @zen @whatsapp @rayfile @ghostty _   _ _ _ @terminal _ _
-  _ (layer-toggle app) (layer-toggle system) @ghostty @zen _   left down up right tab _
-  _ _ (layer-toggle capture) (layer-toggle movement) (layer-toggle browse)   _ (layer-toggle music) _ _ _ _ _
-  _ _ _ @raynotodo _ (layer-toggle raycast)
+  _ _ (layer-toggle window) _ (layer-toggle browse) _   _ _ _ @terminal _ _
+  _ (layer-toggle app) (layer-toggle raycast) @ghostty @zen _   left down up right tab _
+  _ _ (layer-toggle system) (layer-toggle capture) (layer-toggle music) _ _ _ _ _ _ _
+  _ _ _ _ _ _
 )
 
 (deflayer symbol
   _ 1 2 3 4 5   6 7 8 9 0 _
   _ S-- - S-[ S-9 [   ] S-0 S-] + = _
-  _ up S-1 S-2 S-3 S-4   S-6 S-7 S-8 \ grv _
-  _ _ _ _ _ _
+  _ S-1 S-2 S-3 S-4 S-5   S-6 S-7 S-8 \ grv _
+  _ _ spc _ _ _
 )
 
 (deflayer app
-  _ @firefox @messenger @whatsapp @mail @vesktop   _ _ _ @terminal @preview @finder
-  _ @spotify _ @github _   _ _ _ _ _ _ _
-  _ _ @chrome @vscode _   _ _ _ _ _ _ _
+  _ _ _ _ _ _  _ @firefox @yaak @beekeper _ _
+  _ _ _ _ _ _  @obsidian @whatsapp @messenger @mail @vesktop _
+  _ _ _ _ _ _  _ @finder @preview @music @podcasts @calendar
   _ _ _ _ _ _
 )
 
 ;; Browse layer (b = "Browse")
 (deflayer browse
   _ _ _ _ _ _   _ _ _ _ _ _
-  _ _ _ _ _   _ @raynewtab _ @website @reddit _ _
+  _ _ _ _ _   @portfolio @raynewtab @reddit _ _ _ _
   _ _ _ _ _   _ @github @youtube _ @linkedin _ _
   _ _ _ _ _ _
 )
@@ -133,16 +133,16 @@
 ;; Music layer (d = "Music")
 (deflayer music
   _ _ _ _ _ _   _ _ _ _ _ _
-  _ _ _ _ _   _ _ @musictoggle @musicfav @musicplay _ _
-  _ _ _ _ _   _ @musicprev @musicnext @musiclib @musicadd _ _
+  _ _ _ _ _ _   @musicprev @musicnext @musiclib @musicadd _ _
+  _ _ _ _ _ _  _ _ _ _ _ _
   _ _ _ _ _ _
 )
 
 ;; System layer (x = "System") 
 (deflayer system
-  _ _ _ _ _ _   _ _ _ _ _ _
-  _ _ _ _ _   _ _ _ @logout _ _ _
-  _ _ _ _ _   _ vold volu brdown brup _ _
+  _ _ _ _ _ _   _ _ _ _ _ @logout
+  _ _ _ _ _ _   _ vold volu @musicplay MediaPlayPause _
+  _ _ _ _ _ _  _ _ _ _ _ _
   _ _ _ _ _ _
 )
 
