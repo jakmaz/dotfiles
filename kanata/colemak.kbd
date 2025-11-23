@@ -31,25 +31,25 @@
   calendar   (cmd "open" "-a" "Calendar")
   
   ;; Websites (from browse sublayer)
-  github     (cmd "open" "https://github.com/jakmaz")
-  portfolio   (cmd "open" "https://jakmaz.com")
-  reddit     (cmd "open" "https://reddit.com")
-  youtube    (cmd "open" "https://www.youtube.com")
-  linkedin   (cmd "open" "https://www.linkedin.com")
+  github     (cmd "open" "-a" "Zen" "https://github.com/jakmaz")
+  reddit     (cmd "open" "-a" "Zen" "https://reddit.com")
+  youtube    (cmd "open" "-a" "Zen" "https://www.youtube.com")
+  linkedin   (cmd "open" "-a" "Zen" "https://www.linkedin.com")
+  portfolio  (cmd "open" "-a" "Zen" "https://jakmaz.com")
   
   ;; Raycast commands
-  raycp        (cmd "open" "raycast://extensions/raycast/clipboard-history/clipboard-history")
-  rayfile      (cmd "open" "raycast://extensions/raycast/file-search/search-files")
-  rayemoji     (cmd "open" "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols")
-  rayconfetti  (cmd "open" "raycast://extensions/raycast/raycast/confetti")
-  raydocker    (cmd "open" "raycast://extensions/priithaamer/docker/projects_list")
-  raytranslate (cmd "open" "raycast://extensions/gebeto/translate/quick-translate")
-  raybrew      (cmd "open" "raycast://extensions/nhojb/brew/search")
-  rayvercel    (cmd "open" "raycast://extensions/vercel/vercast/search-deployments")
-  raygithub    (cmd "open" "raycast://extensions/raycast/github/my-latest-repositories")
-  rayfocus     (cmd "open" "raycast://extensions/raycast/raycast-focus/start-focus-session")
-  raynewtab    (cmd "open" "raycast://extensions/Keyruu/zen-browser/new-tab")
-  raynotodo    (cmd "open" "raycast://extensions/stellate/mxstbr-commands/create-notion-todo")
+  raycp        (cmd "open" "-g" "raycast://extensions/raycast/clipboard-history/clipboard-history")
+  rayfile      (cmd "open" "-g" "raycast://extensions/raycast/file-search/search-files")
+  rayemoji     (cmd "open" "-g" "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols")
+  rayconfetti  (cmd "open" "-g" "raycast://extensions/raycast/raycast/confetti")
+  raydocker    (cmd "open" "-g" "raycast://extensions/priithaamer/docker/projects_list")
+  raytranslate (cmd "open" "-g" "raycast://extensions/gebeto/translate/quick-translate")
+  raybrew      (cmd "open" "-g" "raycast://extensions/nhojb/brew/search")
+  rayvercel    (cmd "open" "-g" "raycast://extensions/vercel/vercast/search-deployments")
+  raygithub    (cmd "open" "-g" "raycast://extensions/raycast/github/my-latest-repositories")
+  rayfocus     (cmd "open" "-g" "raycast://extensions/raycast/raycast-focus/start-focus-session")
+  raynewtab    (cmd "open" "-g" "raycast://extensions/Keyruu/zen-browser/new-tab")
+  raynotodo    (cmd "open" "-g" "raycast://extensions/stellate/mxstbr-commands/create-notion-todo")
   
   ;; Window management
   wnext      (multi lctrl tab)
@@ -106,18 +106,18 @@
   lctrl (layer-while-held hyper) lmeta spc (layer-while-held symbol) ralt
 )
 
-(deflayer hyper
-  _ _ (layer-toggle window) _ (layer-toggle browse) _   _ _ _ @terminal _ _
-  _ (layer-toggle app) (layer-toggle raycast) @ghostty @zen _   left down up right tab _
-  _ _ (layer-toggle system) (layer-toggle capture) (layer-toggle music) _ _ _ _ _ _ _
-  _ _ _ _ _ _
-)
-
 (deflayer symbol
   _ 1 2 3 4 5   6 7 8 9 0 _
   _ S-- - S-[ S-9 [   ] S-0 S-] + = _
   _ S-1 S-2 S-3 S-4 S-5   S-6 S-7 S-8 \ grv _
   _ _ spc _ _ _
+)
+
+(deflayer hyper
+  _ _ (layer-toggle window) _ _ (layer-toggle browse)  _ _ _ @terminal _ _
+  _ (layer-toggle app) (layer-toggle raycast) @ghostty @zen _   left down up right tab _
+  _ _ (layer-toggle system) (layer-toggle capture) (layer-toggle music) _ _ _ _ _ _ _
+  _ _ _ _ _ _
 )
 
 (deflayer app
@@ -130,8 +130,8 @@
 ;; Browse layer (b = "Browse")
 (deflayer browse
   _ _ _ _ _ _   _ _ _ _ _ _
-  _ _ _ _ _   @portfolio @raynewtab @reddit _ _ _ _
-  _ _ _ _ _   _ @github @youtube _ @linkedin _ _
+  _ _ _ _ _ _  @portfolio @raynewtab @reddit _ _ _
+  _ _ _ _ _ _  _ @github @youtube @linkedin _ _
   _ _ _ _ _ _
 )
 
@@ -146,7 +146,7 @@
 ;; Music layer (d = "Music")
 (deflayer music
   _ _ _ _ _ _   _ _ _ _ _ _
-  _ _ _ _ _ _   @musicprev @musicnext @musiclib @musicadd _ _
+  _ _ _ _ _ _   _ @musicprev @musicnext @musiclib @musicadd _
   _ _ _ _ _ _  _ _ _ _ _ _
   _ _ _ _ _ _
 )
