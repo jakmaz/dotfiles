@@ -24,6 +24,11 @@
   terminal   (cmd "open" "-a" "Terminal")
   chrome     (cmd "open" "-a" "Google Chrome")
   vscode     (cmd "open" "-a" "Visual Studio Code")
+  yaak       (cmd "open" "-a" "Yaak")
+  beekeper   (cmd "open" "-a" "Beekeeper Studio")
+  music      (cmd "open" "-a" "Music")
+  podcasts   (cmd "open" "-a" "Podcasts")
+  calendar   (cmd "open" "-a" "Calendar")
   
   ;; Websites (from browse sublayer)
   github     (cmd "open" "https://github.com/jakmaz")
@@ -51,6 +56,12 @@
   wforward   (multi lmeta ])
   wback      (multi lmeta [)
   wnextwin   (multi lmeta grv)
+  wtophalf   (cmd "open" "raycast://extensions/raycast/window-management/top-half")
+  wbottomhalf (cmd "open" "raycast://extensions/raycast/window-management/bottom-half")
+  wlefthalf  (cmd "open" "raycast://extensions/raycast/window-management/left-half")
+  wright     (cmd "open" "raycast://extensions/raycast/window-management/right-half")
+  wmaximize  (cmd "open" "raycast://extensions/raycast/window-management/maximize")
+  wprevdisplay (cmd "open" "raycast://extensions/raycast/window-management/previous-display")
   
   ;; Music controls (using Raycast)
   musictoggle (cmd "open" "raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background")
@@ -124,9 +135,9 @@
 
 ;; Window management layer (w = "Window")
 (deflayer window
-  _ _ _ _ _ _   _ _ _ _ _ _
-  _ _ _ _ _   _ @wnext @wprev @wnextwin _ _ _
-  _ _ _ _ _   _ @wback _ @wforward @wclose _ _
+  _ _ _ _ _ _   @wprevdisplay @wtophalf _ _ _ _
+  _ _ _ _ _   _ @wnext @wprev @wnextwin @wmaximize _ _
+  _ _ _ _ _   _ @wback @wbottomhalf @wforward @wclose @wlefthalf @wright
   _ _ _ _ _ _
 )
 
