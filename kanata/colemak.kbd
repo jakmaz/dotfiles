@@ -1,3 +1,7 @@
+;; Kanata config
+;; All the keycodes can be found here
+;; https://github.com/jtroo/kanata/blob/main/parser/src/keys/mod.rs
+
 (defcfg
   process-unmapped-keys yes
   danger-enable-cmd yes
@@ -29,14 +33,14 @@
   music      (cmd "open" "-a" "Music")
   podcasts   (cmd "open" "-a" "Podcasts")
   calendar   (cmd "open" "-a" "Calendar")
-  
+
   ;; Websites (from browse sublayer)
   github     (cmd "open" "-a" "Zen" "https://github.com/jakmaz")
   reddit     (cmd "open" "-a" "Zen" "https://reddit.com")
   youtube    (cmd "open" "-a" "Zen" "https://www.youtube.com")
   linkedin   (cmd "open" "-a" "Zen" "https://www.linkedin.com")
   portfolio  (cmd "open" "-a" "Zen" "https://jakmaz.com")
-  
+
   ;; Raycast commands
   raycp        (cmd "open" "-g" "raycast://extensions/raycast/clipboard-history/clipboard-history")
   rayfile      (cmd "open" "-g" "raycast://extensions/raycast/file-search/search-files")
@@ -50,7 +54,7 @@
   rayfocus     (cmd "open" "-g" "raycast://extensions/raycast/raycast-focus/start-focus-session")
   raynewtab    (cmd "open" "-g" "raycast://extensions/Keyruu/zen-browser/new-tab")
   raynotodo    (cmd "open" "-g" "raycast://extensions/stellate/mxstbr-commands/create-notion-todo")
-  
+ 
   ;; Window management
   wnext      (multi lctrl tab)
   wprev      (multi lctrl S-tab)
@@ -64,32 +68,34 @@
   wright     (cmd "open" "raycast://extensions/raycast/window-management/right-half")
   wmaximize  (cmd "open" "raycast://extensions/raycast/window-management/maximize")
   wprevdisplay (cmd "open" "raycast://extensions/raycast/window-management/previous-display")
-  
+
   ;; Music controls (using Raycast)
-  musictoggle (cmd "open" "raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background")
-  musicprev   (cmd "open" "raycast://extensions/fedevitaledev/music/previous-track?launchType=background")
-  musicnext   (cmd "open" "raycast://extensions/fedevitaledev/music/next-track?launchType=background")
-  musicfav    (cmd "open" "raycast://extensions/fedevitaledev/music/favorite?launchType=background")
-  musiclib    (cmd "open" "raycast://extensions/fedevitaledev/music/play-library-album")
-  musicplay   (cmd "open" "raycast://extensions/fedevitaledev/music/start-playlist")
-  musicadd    (cmd "open" "raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background")
-  
+  musictoggle (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background")
+  musicprev   (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/previous-track?launchType=background")
+  musicnext   (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/next-track?launchType=background")
+  musicfav    (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/favorite?launchType=background")
+  musiclib    (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/play-library-album")
+  musicplay   (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/start-playlist")
+  musicadd    (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background")
+ 
   ;; Screenshots (using your Shottr setup)
   screencap   (multi lctrl lshift lmeta lalt m)
   screenwin   (multi lctrl lshift lmeta lalt n)
   screensel   (multi lctrl lshift lmeta lalt e)
   screenapp   (multi lctrl lshift lmeta lalt i)
   screenocr   (multi lctrl lshift lmeta lalt o)
-  
+ 
   ;; Movement/Navigation
   pagedown    pgdn
   pageup      pgup
   homerowmove (multi lctrl f)
   homerowscroll (multi lctrl j)
   homerowdict (multi rshift rmeta d)
-  
+ 
   ;; System
-  logout      (multi lctrl lmeta q)
+  lock       (multi lctrl lmeta q)
+  sleep      (cmd "pmset" "sleepnow")
+  bluetooth  (cmd "open" "-g" "raycast://extensions/VladCuciureanu/toothpick/manage-bluetooth-connections")
 )
 
 (defsrc
@@ -120,6 +126,7 @@
   _ _ _ _ _ _
 )
 
+;; App layer (a = "App")
 (deflayer app
   _ _ _ _ _ _  _ @firefox @yaak @beekeper _ _
   _ _ _ _ _ _  @obsidian @whatsapp @messenger @mail @vesktop _
@@ -153,9 +160,9 @@
 
 ;; System layer (x = "System") 
 (deflayer system
-  _ _ _ _ _ _   _ _ _ _ _ @logout
-  _ _ _ _ _ _   _ vold volu @musicplay MediaPlayPause _
-  _ _ _ _ _ _  _ _ _ _ _ _
+  _ _ _ _ _ _   _ brdown brup _ _ _
+  _ _ _ _ _ _   _ vold volu @musictoggle pp _
+  _ _ _ _ _ _  _ @sleep @lock dnd _ _
   _ _ _ _ _ _
 )
 
