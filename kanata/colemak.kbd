@@ -7,6 +7,78 @@
   )
 )
 
+;; ===== ALIASES =====
+(defalias
+  ;; Apps (from your Karabiner config)
+  zen        (cmd "open" "-a" "Zen")
+  ghostty    (cmd "open" "-a" "Ghostty")
+  firefox    (cmd "open" "-a" "Firefox")
+  messenger  (cmd "open" "-a" "Messenger")
+  whatsapp   (cmd "open" "-a" "WhatsApp")
+  mail       (cmd "open" "-a" "Mail")
+  vesktop    (cmd "open" "-a" "Vesktop")
+  obsidian   (cmd "open" "-a" "Obsidian")
+  preview    (cmd "open" "-a" "Preview")
+  finder     (cmd "open" "-a" "Finder")
+  spotify    (cmd "open" "-a" "Spotify")
+  terminal   (cmd "open" "-a" "Terminal")
+  chrome     (cmd "open" "-a" "Google Chrome")
+  vscode     (cmd "open" "-a" "Visual Studio Code")
+  
+  ;; Websites (from browse sublayer)
+  github     (cmd "open" "https://github.com/jakmaz")
+  website    (cmd "open" "https://jakmaz.com")
+  reddit     (cmd "open" "https://reddit.com")
+  youtube    (cmd "open" "https://www.youtube.com")
+  linkedin   (cmd "open" "https://www.linkedin.com")
+  
+  ;; Raycast commands
+  raycp      (cmd "open" "raycast://extensions/raycast/clipboard-history/clipboard-history")
+  rayfile    (cmd "open" "raycast://extensions/raycast/file-search/search-files")
+  rayemoji   (cmd "open" "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols")
+  rayconfetti (cmd "open" "raycast://extensions/raycast/raycast/confetti")
+  raybrew    (cmd "open" "raycast://extensions/nhojb/brew/search")
+  rayvercel  (cmd "open" "raycast://extensions/vercel/vercast/search-deployments")
+  raygithub  (cmd "open" "raycast://extensions/raycast/github/my-latest-repositories")
+  rayfocus   (cmd "open" "raycast://extensions/raycast/raycast-focus/start-focus-session")
+  raynewtab  (cmd "open" "raycast://extensions/Keyruu/zen-browser/new-tab")
+  raynotodo  (cmd "open" "raycast://extensions/stellate/mxstbr-commands/create-notion-todo")
+  
+  ;; Window management
+  wnext      (multi lctrl tab)
+  wprev      (multi lctrl S-tab)
+  wclose     (multi lmeta w)
+  wforward   (multi lmeta ])
+  wback      (multi lmeta [)
+  wnextwin   (multi lmeta grv)
+  
+  ;; Music controls (using Raycast)
+  musictoggle (cmd "open" "raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background")
+  musicprev   (cmd "open" "raycast://extensions/fedevitaledev/music/previous-track?launchType=background")
+  musicnext   (cmd "open" "raycast://extensions/fedevitaledev/music/next-track?launchType=background")
+  musicfav    (cmd "open" "raycast://extensions/fedevitaledev/music/favorite?launchType=background")
+  musiclib    (cmd "open" "raycast://extensions/fedevitaledev/music/play-library-album")
+  musicplay   (cmd "open" "raycast://extensions/fedevitaledev/music/start-playlist")
+  musicadd    (cmd "open" "raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background")
+  
+  ;; Screenshots (using your Shottr setup)
+  screencap   (multi lctrl lshift lmeta lalt m)
+  screenwin   (multi lctrl lshift lmeta lalt n)
+  screensel   (multi lctrl lshift lmeta lalt e)
+  screenapp   (multi lctrl lshift lmeta lalt i)
+  screenocr   (multi lctrl lshift lmeta lalt o)
+  
+  ;; Movement/Navigation
+  pagedown    pgdn
+  pageup      pgup
+  homerowmove (multi lctrl f)
+  homerowscroll (multi lctrl j)
+  homerowdict (multi rshift rmeta d)
+  
+  ;; System
+  logout      (multi lctrl lmeta q)
+)
+
 (defsrc
   tab q w e r t   y u i o p [ 
   caps a s d f g   h j k l ; '
@@ -22,10 +94,10 @@
 )
 
 (deflayer hyper
-  _ _ _ _ _ _   _ _ _ _ _ _
-  _ (layer-toggle app) - (cmd "open" "-a" "Ghostty") (cmd "open" "-a" "Zen") _   left down up right tab _
-  _ _ _ _ _   _ _ _ _ _ _ _
-  _ _ _ _ _ _
+  _ @zen @whatsapp @rayfile @ghostty _   _ _ _ @terminal _ _
+  _ (layer-toggle app) (layer-toggle system) @ghostty @zen _   left down up right tab _
+  _ _ (layer-toggle capture) (layer-toggle movement) (layer-toggle browse)   _ (layer-toggle music) _ _ _ _ _
+  _ _ _ @raynotodo _ (layer-toggle raycast)
 )
 
 (deflayer symbol
@@ -36,9 +108,65 @@
 )
 
 (deflayer app
+  _ @firefox @messenger @whatsapp @mail @vesktop   _ _ _ @terminal @preview @finder
+  _ @spotify _ @github _   _ _ _ _ _ _ _
+  _ _ @chrome @vscode _   _ _ _ _ _ _ _
+  _ _ _ _ _ _
+)
+
+;; Browse layer (b = "Browse")
+(deflayer browse
   _ _ _ _ _ _   _ _ _ _ _ _
-  _ (cmd "open" "-a" "Spotify") _ (cmd "open" "-a" "Finder") _   _ (cmd "open" "-a" "WhatsApp") _ _ (cmd "open" "-a" "Terminal") _ _
-  _ _ (cmd "open" "-a" "Google Chrome") (cmd "open" "-a" "Visual Studio Code") _   _ _ _ _ _ _ _
+  _ _ _ _ _   _ @raynewtab _ @website @reddit _ _
+  _ _ _ _ _   _ @github @youtube _ @linkedin _ _
+  _ _ _ _ _ _
+)
+
+;; Window management layer (w = "Window")
+(deflayer window
+  _ _ _ _ _ _   _ _ _ _ _ _
+  _ _ _ _ _   _ @wnext @wprev @wnextwin _ _ _
+  _ _ _ _ _   _ @wback _ @wforward @wclose _ _
+  _ _ _ _ _ _
+)
+
+;; Music layer (d = "Music")
+(deflayer music
+  _ _ _ _ _ _   _ _ _ _ _ _
+  _ _ _ _ _   _ _ @musictoggle @musicfav @musicplay _ _
+  _ _ _ _ _   _ @musicprev @musicnext @musiclib @musicadd _ _
+  _ _ _ _ _ _
+)
+
+;; System layer (x = "System") 
+(deflayer system
+  _ _ _ _ _ _   _ _ _ _ _ _
+  _ _ _ _ _   _ _ _ @logout _ _ _
+  _ _ _ _ _   _ vold volu brdown brup _ _
+  _ _ _ _ _ _
+)
+
+;; Movement layer (v = "moVe")
+(deflayer movement
+  _ _ _ _ _ _   _ _ _ _ _ _
+  _ _ _ _ _   _ _ @homerowscroll @pageup _ _ _
+  _ _ _ _ _   _ @homerowmove _ @pagedown @homerowdict _ _
+  _ _ _ _ _ _
+)
+
+;; Capture layer (c = "Capture")
+(deflayer capture
+  _ _ _ _ _ _   _ _ _ _ _ _
+  _ _ _ _ _   _ _ @screensel @screenapp @screenocr _ _
+  _ _ _ _ _   _ @screencap @screenwin _ _ _ _
+  _ _ _ _ _ _
+)
+
+;; Raycast layer (r = "Raycast")
+(deflayer raycast
+  _ _ _ _ _ _   _ _ _ _ _ _
+  _ _ _ _ _   _ @raycp @rayfile @rayemoji @rayconfetti _ _
+  _ _ _ _ _   _ @raybrew @raygithub @rayfocus @rayvercel _ _
   _ _ _ _ _ _
 )
 
