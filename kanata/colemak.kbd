@@ -85,13 +85,26 @@
   screenapp   (multi lctrl lshift lmeta lalt i)
   screenocr   (multi lctrl lshift lmeta lalt o)
  
-  ;; Movement/Navigation
-  pagedown    pgdn
-  pageup      pgup
-  homerowmove (multi lctrl f)
-  homerowscroll (multi lctrl j)
-  homerowdict (multi rshift rmeta d)
- 
+   ;; Movement/Navigation
+   homerowmove   (multi lctrl f)
+   homerowscroll (multi lctrl j)
+   homerowdict   (multi rshift rmeta d)
+   
+   ;; Document navigation (awkward shortcuts)
+   docstart      (multi lmeta home)
+   docend        (multi lmeta end)
+   wordleft      (multi lalt left)
+   wordright     (multi lalt right)
+   linestart     (multi lmeta left)
+   lineend       (multi lmeta right)
+   paragraphup   (multi lalt up)
+   paragraphdown (multi lalt down)
+   
+   ;; Selection shortcuts
+   selectword    (multi lalt lshift right)
+   selectline    (multi lshift lmeta right)
+   selectall     (multi lmeta a)
+
   ;; System
   lock       (multi lctrl lmeta q)
   sleep      (cmd "pmset" "sleepnow")
@@ -122,7 +135,7 @@
 (deflayer hyper
   _ _ (layer-toggle window) _ _ (layer-toggle browse)  _ _ _ @terminal _ _
   _ (layer-toggle app) (layer-toggle raycast) @ghostty @zen _   left down up right tab _
-  _ _ (layer-toggle system) (layer-toggle capture) (layer-toggle music) _ _ _ _ _ _ _
+  _ _ (layer-toggle system) (layer-toggle capture) (layer-toggle music) (layer-toggle movement) _ _ _ _ _ _
   _ _ _ _ _ _
 )
 
@@ -166,11 +179,11 @@
   _ _ _ _ _ _
 )
 
-;; Movement layer (v = "moVe")
+;; Movement layer (v = "moVe") - Advanced/less common operations
 (deflayer movement
-  _ _ _ _ _ _   _ _ _ _ _ _
-  _ _ _ _ _   _ _ @homerowscroll @pageup _ _ _
-  _ _ _ _ _   _ @homerowmove _ @pagedown @homerowdict _ _
+  _ _ _ _ _ _       @paragraphup _ @selectline @selectall @paragraphdown _
+  _ _ _ _ _ _       home pgdn pgup end _ _
+  _ _ _ _ _ _       @homerowmove @homerowscroll @homerowdict _ _ _
   _ _ _ _ _ _
 )
 
