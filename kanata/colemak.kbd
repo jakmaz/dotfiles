@@ -1,0 +1,29 @@
+(defcfg
+  process-unmapped-keys yes
+  macos-dev-names-include (
+    "Apple Internal Keyboard / Trackpad"
+  )
+)
+
+(defsrc
+  caps q w e r t   y u i o p [ 
+  a s d f g   h j k l ; '
+  lshift z x c v b   n m , . / rshift
+  lalt grv
+)
+
+(deflayer colemak
+  esc q w f p b   j l u y ; bspc 
+  a r s t g   m n e i o enter
+  lshift z x c d v h k , . / '
+  (layer-while-held nav) lshift
+)
+
+(deflayer nav
+  _ _ _ _ _ _   _ _ _ _ _ _
+  _ _ _ _ _   left down up right tab _
+  _ _ _ _ _   _ _ _ _ _ _ _
+  _ _
+)
+
+
