@@ -31,17 +31,44 @@ Personal configuration files for macOS
 
 ## Contents
 
-- **aerospace**: Configuration for Aerospace tiling window manager
-- **atuin**: Configuration for Atuin shell history sync
-- **ghostty**: Configuration for Ghostty terminal emulator with custom shaders
-- **gitconfig**: Global Git configuration
-- **hammerspoon**: Lua configuration for Hammerspoon macOS automation
-- **karabiner**: Configuration for Karabiner-Elements key remapping
-- **nushell**: Configuration files for Nushell modern shell
-- **nvim**: Neovim configuration with lazy.nvim plugin manager
-- **opencode**: Configuration for OpenCode AI assistant
-- **sesh**: Configuration for Sesh session manager
-- **sketchybar**: Configuration for SketchyBar macOS menu bar customization
-- **tmux**: Configuration for tmux terminal multiplexer
-- **yabai**: Configuration for yabai tiling window manager
-- **yazi**: Configuration for Yazi file manager
+| Tool | Description | Status |
+|------|-------------|--------|
+| **aerospace** | Tiling window manager | Not used |
+| **atuin** | Shell history sync | Active |
+| **ghostty** | Terminal emulator with custom shaders | Active |
+| **gitconfig** | Global Git configuration | Active |
+| **hammerspoon** | macOS automation | Not used |
+| **kanata** | Keyboard remapping with Colemak and hyper layers | Active |
+| **karabiner** | Key remapping | Not used |
+| **nushell** | Modern shell | Active |
+| **nvim** | Neovim with lazy.nvim | Active |
+| **opencode** | AI assistant | Active |
+| **sesh** | Session manager | Active |
+| **sketchybar** | Menu bar customization | Active |
+| **tmux** | Terminal multiplexer | Active |
+| **yabai** | Tiling window manager | Not used |
+| **yazi** | File manager | Active |
+| **zellij** | Terminal workspace manager | Not used |
+
+## Workflow
+
+This is a minimalist developer setup focused on simplicity and efficiency. I use Neovim as my primary editor with a Colemak keyboard layout on a custom mechanical keyboard for optimal typing comfort and reduced finger movement.
+
+### Keyboard Layout and Input Management
+
+The keyboard setup uses **Kanata** for key mapping with a hyper layer system. When holding the hyper key, I enter sublayer selection mode where pressing specific keys activates different function groups:
+
+- **Apps layer** - Quick launch for frequently used applications
+- **Window management** - Controls for window positioning and switching
+- **Capture layer** - Screenshot and screen recording tools using Shottr
+- **System layer** - Volume, brightness, and system controls
+- **Browse layer** - Direct links to websites and web tools
+- **Music layer** - Media playback controls
+- **Movement layer** - Advanced text navigation shortcuts
+- **Raycast layer** - Quick access to Raycast extensions
+
+This hyper layer approach eliminates the need for complex key combinations while keeping everything accessible from the home position.
+
+### Window Management
+
+After experimenting with various tiling window managers including yabai and aerospace, I've settled on a simple single-screen workflow. Most tasks are handled with full-screen applications launched via keyboard shortcuts. For the rare occasions when multiple apps are needed simultaneously, I use Rectangle for basic window positioning.
