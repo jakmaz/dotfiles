@@ -11,9 +11,7 @@
   )
 )
 
-;; ===== ALIASES =====
 (defalias
-  ;; Apps (from your Karabiner config)
   zen        (cmd "open" "-a" "Zen")
   ghostty    (cmd "open" "-a" "Ghostty")
   firefox    (cmd "open" "-a" "Firefox")
@@ -34,14 +32,14 @@
   podcasts   (cmd "open" "-a" "Podcasts")
   calendar   (cmd "open" "-a" "Calendar")
 
-  ;; Websites (from browse sublayer)
+  ;; browse
   github     (cmd "open" "-a" "Zen" "https://github.com/jakmaz")
+  raindrop   (cmd "open" "-a" "Zen" "https://app.raindrop.io/my/0")
   reddit     (cmd "open" "-a" "Zen" "https://reddit.com")
   youtube    (cmd "open" "-a" "Zen" "https://www.youtube.com")
   linkedin   (cmd "open" "-a" "Zen" "https://www.linkedin.com")
   portfolio  (cmd "open" "-a" "Zen" "https://jakmaz.com")
 
-  ;; Raycast commands
   raycp        (cmd "open" "-g" "raycast://extensions/raycast/clipboard-history/clipboard-history")
   rayfile      (cmd "open" "-g" "raycast://extensions/raycast/file-search/search-files")
   rayemoji     (cmd "open" "-g" "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols")
@@ -53,62 +51,53 @@
   raygithub    (cmd "open" "-g" "raycast://extensions/raycast/github/my-latest-repositories")
   rayfocus     (cmd "open" "-g" "raycast://extensions/raycast/raycast-focus/start-focus-session")
   raynewtab    (cmd "open" "-g" "raycast://extensions/Keyruu/zen-browser/new-tab")
-  raynotodo    (cmd "open" "-g" "raycast://extensions/stellate/mxstbr-commands/create-notion-todo")
- 
-  ;; Window management
-  wnext      (multi lctrl tab)
-  wprev      (multi lctrl S-tab)
-  wclose     (multi lmeta w)
-  wforward   (multi lmeta ])
-  wback      (multi lmeta [)
-  wnextwin   (multi lmeta grv)
-  wtophalf   (cmd "open" "raycast://extensions/raycast/window-management/top-half")
-  wbottomhalf (cmd "open" "raycast://extensions/raycast/window-management/bottom-half")
-  wlefthalf  (cmd "open" "raycast://extensions/raycast/window-management/left-half")
-  wright     (cmd "open" "raycast://extensions/raycast/window-management/right-half")
-  wmaximize  (cmd "open" "raycast://extensions/raycast/window-management/maximize")
+
+  wnext        (multi lctrl tab)
+  wprev        (multi lctrl S-tab)
+  wclose       (multi lmeta w)
+  wforward     (multi lmeta ])
+  wback        (multi lmeta [)
+  wnextwin     (multi lmeta grv)
+  wtophalf     (cmd "open" "raycast://extensions/raycast/window-management/top-half")
+  wbottomhalf  (cmd "open" "raycast://extensions/raycast/window-management/bottom-half")
+  wlefthalf    (cmd "open" "raycast://extensions/raycast/window-management/left-half")
+  wright       (cmd "open" "raycast://extensions/raycast/window-management/right-half")
+  wmaximize    (cmd "open" "raycast://extensions/raycast/window-management/maximize")
   wprevdisplay (cmd "open" "raycast://extensions/raycast/window-management/previous-display")
 
-  ;; Music controls (using Raycast)
   musictoggle (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background")
   musicprev   (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/previous-track?launchType=background")
   musicnext   (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/next-track?launchType=background")
-  musicfav    (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/favorite?launchType=background")
   musiclib    (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/play-library-album")
-  musicplay   (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/start-playlist")
   musicadd    (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background")
- 
-  ;; Screenshots (using your Shottr setup)
-  screencap   (multi lctrl lshift lmeta lalt m)
-  screenwin   (multi lctrl lshift lmeta lalt n)
-  screensel   (multi lctrl lshift lmeta lalt e)
-  screenapp   (multi lctrl lshift lmeta lalt i)
-  screenocr   (multi lctrl lshift lmeta lalt o)
- 
-   ;; Movement/Navigation
-   homerowmove   (multi lctrl f)
-   homerowscroll (multi lctrl j)
-   homerowdict   (multi rshift rmeta d)
-   
-   ;; Document navigation (awkward shortcuts)
-   docstart      (multi lmeta home)
-   docend        (multi lmeta end)
-   wordleft      (multi lalt left)
-   wordright     (multi lalt right)
-   linestart     (multi lmeta left)
-   lineend       (multi lmeta right)
-   paragraphup   (multi lalt up)
-   paragraphdown (multi lalt down)
-   
-   ;; Selection shortcuts
-   selectword    (multi lalt lshift right)
-   selectline    (multi lshift lmeta right)
-   selectall     (multi lmeta a)
 
-  ;; System
-  lock       (multi lctrl lmeta q)
-  sleep      (cmd "pmset" "sleepnow")
-  bluetooth  (cmd "open" "-g" "raycast://extensions/VladCuciureanu/toothpick/manage-bluetooth-connections")
+  ;; capture
+  ssshow     (cmd "open" "shottr://show")
+  ssfull     (cmd "open" "-g" "shottr://grab/fullscreen")
+  ssfulledit (cmd "open" "-g" "shottr://grab/fullscreen?then=edit")
+  ssarea     (cmd "open" "-g" "shottr://grab/area")
+  ssaredit   (cmd "open" "-g" "shottr://grab/area?then=edit")
+  ssappend   (cmd "open" "-g" "shottr://grab/append")
+  sswin      (cmd "open" "-g" "shottr://grab/window")
+  sswinedit  (cmd "open" "-g" "shottr://grab/window?then=edit")
+  ssscroll   (cmd "open" "-g" "shottr://grab/scrolling")
+  ssocr      (cmd "open" "-g" "shottr://ocr")
+  ssrepeat   (cmd "open" "-g" "shottr://grab/repeat")
+  ssdelay    (cmd "open" "-g" "shottr://grab/delayed")
+  ssclip     (cmd "open" "-g" "shottr://load/clipboard")
+  ssrecord   (multi lctrl lshift lmeta lalt m)
+
+  homerowmove   (multi lctrl f)
+  homerowscroll (multi lctrl j)
+  homerowdict   (multi rshift rmeta d)
+  paragraphup   (multi lalt up)
+  paragraphdown (multi lalt down)
+  selectline    (multi lshift lmeta right)
+  selectall     (multi lmeta a)
+
+  lock      (multi lctrl lmeta q)
+  sleep     (cmd "open" "-g" "raycast://extensions/raycast/system/sleep")
+  bluetooth (cmd "open" "-g" "raycast://extensions/VladCuciureanu/toothpick/manage-bluetooth-connections")
 )
 
 (defsrc
@@ -133,37 +122,34 @@
 )
 
 (deflayer hyper
-  _ _ (layer-toggle window) _ _ (layer-toggle browse)  _ _ _ @terminal _ _
+  _ _ (layer-toggle window) _ _ (layer-toggle browse)  _ _ _ _ _ _
   _ (layer-toggle app) (layer-toggle raycast) @ghostty @zen _   left down up right tab _
   _ _ (layer-toggle system) (layer-toggle capture) (layer-toggle music) (layer-toggle movement) _ _ _ _ _ _
   _ _ _ _ _ _
 )
 
-;; App layer (a = "App")
 (deflayer app
   _ _ _ _ _ _  _ @firefox @yaak @beekeper _ _
-  _ _ _ _ _ _  @obsidian @whatsapp @messenger @mail @vesktop _
-  _ _ _ _ _ _  _ @finder @preview @music @podcasts @calendar
+  _ _ _ _ _ _  @vesktop @obsidian @whatsapp @messenger @mail  _
+  _ _ _ _ _ _  @finder @calendar @music @podcasts @preview _
   _ _ _ _ _ _
 )
 
-;; Browse layer (b = "Browse")
+;; browse - b
 (deflayer browse
   _ _ _ _ _ _   _ _ _ _ _ _
-  _ _ _ _ _ _  @portfolio @raynewtab @reddit _ _ _
+  _ _ _ _ _ _  @portfolio @raynewtab @reddit @raindrop _ _
   _ _ _ _ _ _  _ @github @youtube @linkedin _ _
   _ _ _ _ _ _
 )
 
-;; Window management layer (w = "Window")
 (deflayer window
   _ _ _ _ _ _   @wprevdisplay @wtophalf _ _ _ _
   _ _ _ _ _ _  _ @wnext @wprev @wnextwin @wmaximize _
-  _ _ _ _ _    _ @wback @wbottomhalf @wforward @wclose @wlefthalf @wright
+  _ _ _ @wclose _    _ @wback @wbottomhalf @wforward @wclose @wlefthalf @wright
   _ _ _ _ _ _
 )
 
-;; Music layer (d = "Music")
 (deflayer music
   _ _ _ _ _ _   _ _ _ _ _ _
   _ _ _ _ _ _   _ @musicprev @musicnext @musiclib @musicadd _
@@ -171,15 +157,13 @@
   _ _ _ _ _ _
 )
 
-;; System layer (x = "System") 
 (deflayer system
-  _ _ _ _ _ _   _ brdown brup _ _ _
-  _ _ _ _ _ _   _ vold volu @musictoggle pp _
+  _ _ _ _ _ _  _ brdown brup _ _ _
+  _ _ _ _ _ _  _ vold volu @musictoggle pp _
   _ _ _ _ _ _  _ @sleep @lock dnd _ _
   _ _ _ _ _ _
 )
 
-;; Movement layer (v = "moVe") - Advanced/less common operations
 (deflayer movement
   _ _ _ _ _ _       @paragraphup _ @selectline @selectall @paragraphdown _
   _ _ _ _ _ _       home pgdn pgup end _ _
@@ -187,15 +171,14 @@
   _ _ _ _ _ _
 )
 
-;; Capture layer (c = "Capture")
+;; capture - c
 (deflayer capture
-  _ _ _ _ _ _   _ _ _ _ _ _
-  _ _ _ _ _   _ _ @screensel @screenapp @screenocr _ _
-  _ _ _ _ _   _ @screencap @screenwin _ _ _ _
+  _ _ _ _ _ _   @ssrepeat @ssdelay @ssscroll @ssrecord _ _
+  _ _ _ _ _ _   @ssfull @sswin @ssarea @ssshow @ssocr _
+  _ _ _ _ _ _   _ @ssclip @ssappend _ _ _
   _ _ _ _ _ _
 )
 
-;; Raycast layer (r = "Raycast")
 (deflayer raycast
   _ _ _ _ _ _  _ @rayconfetti @rayfocus _ _ _
   _ _ _ _ _ _  _ @raycp @rayfile @rayemoji @raytranslate _
