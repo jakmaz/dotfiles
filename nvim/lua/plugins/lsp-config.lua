@@ -26,12 +26,43 @@ return {
         'bashls', -- Bash/shell scripting
         'gopls', -- Go
         'docker_language_server', -- Docker
+        'terraformls', -- Terraform language server
       },
       automatic_enable = {
         exclude = {
           'harper_ls',
         },
       },
+    },
+  },
+
+  -- Mason-Tool-Installer: automatically installs all tools (linters, formatters, etc.)
+  {
+    'WhoIsSethDaniel/mason-tool-installer.nvim',
+    opts = {
+      ensure_installed = {
+        -- Linters
+        'tflint', -- Terraform linter
+        'trivy', -- Security scanner
+        'shellcheck', -- Shell script linter
+        'hadolint', -- Dockerfile linter
+        'markdownlint-cli2', -- Markdown linter
+        'yamllint', -- YAML linter
+        'actionlint', -- GitHub Actions linter
+        'biome', -- JS/TS/JSON linter
+
+        -- Formatters
+        'stylua', -- Lua formatter
+        'terraform', -- Terraform CLI (includes terraform fmt)
+        'beautysh', -- Shell script formatter
+        'gofumpt', -- Go formatter
+        'goimports', -- Go import formatter
+        'typstyle', -- Typst formatter
+
+        -- Other tools
+      },
+      auto_update = false, -- Set to true if you want automatic updates
+      run_on_start = true, -- Install missing tools when Neovim starts
     },
   },
 

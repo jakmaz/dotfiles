@@ -14,10 +14,11 @@ return {
       sh = { 'shellcheck' },
       bash = { 'shellcheck' },
       zsh = { 'shellcheck' },
-      dockerfile = { 'hadolint' },
+      dockerfile = { 'hadolint', 'trivy' },
       markdown = { 'markdownlint-cli2' },
-      yaml = { 'yamllint' },
-      yml = { 'yamllint' },
+      yaml = { 'yamllint', 'trivy' },
+      yml = { 'yamllint', 'trivy' },
+      terraform = { 'tflint', 'trivy' },
     }
 
     -- Custom function to run actionlint only on GitHub Actions files
