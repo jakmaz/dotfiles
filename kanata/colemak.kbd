@@ -128,6 +128,7 @@
   _ _ _ _ _ _
 )
 
+;; app - a
 (deflayer app
   _ _ _ _ _ _  _ @firefox @yaak @beekeper _ _
   _ _ _ _ _ _  @vesktop @obsidian @whatsapp @messenger @mail  _
@@ -143,6 +144,7 @@
   _ _ _ _ _ _
 )
 
+;; window - w
 (deflayer window
   _ _ _ _ _ _   @wprevdisplay @wtophalf _ _ _ _
   _ _ _ _ _ _  _ @wnext @wprev @wnextwin @wmaximize _
@@ -150,6 +152,7 @@
   _ _ _ _ _ _
 )
 
+;; music - d
 (deflayer music
   _ _ _ _ _ _   _ _ _ _ _ _
   _ _ _ _ _ _   _ @musicprev @musicnext @musiclib @musicadd _
@@ -157,6 +160,7 @@
   _ _ _ _ _ _
 )
 
+;; system - x
 (deflayer system
   _ _ _ _ _ _  _ brdown brup _ _ _
   _ _ _ _ _ _  _ vold volu @musictoggle pp _
@@ -164,6 +168,7 @@
   _ _ _ _ _ _
 )
 
+;; movement - v
 (deflayer movement
   _ _ _ _ _ _       @paragraphup _ @selectline @selectall @paragraphdown _
   _ _ _ _ _ _       home pgdn pgup end _ _
@@ -179,6 +184,7 @@
   _ _ _ _ _ _
 )
 
+;; raycast - r
 (deflayer raycast
   _ _ _ _ _ _  _ @rayconfetti @rayfocus _ _ _
   _ _ _ _ _ _  _ @raycp @rayfile @rayemoji @raytranslate _
