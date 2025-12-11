@@ -14,6 +14,11 @@
 				"OBSIDIAN_HOST": "127.0.0.1",
 				"OBSIDIAN_PORT": "27124"
 			}
+		},
+		"context7": {
+			"type": "local",
+			"command": ["bunx", "-y", "@upstash/context7-mcp"],
+			"enabled": true
 		}
 	}
 }
