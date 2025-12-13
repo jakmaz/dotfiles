@@ -992,6 +992,11 @@ alias nf = neofetch
 alias cd = z
 alias lg = lazygit
 alias ld = lazydocker
+def brewup [] {
+    brew update
+    brew upgrade
+    brew cleanup
+}
 alias moviessync = rsync -av --progress --ignore-existing `/Volumes/Jakub's SSD/Movies/` /Volumes/main-pool/Upload/Movies/
 
 # Yazi function with directory changing capability
