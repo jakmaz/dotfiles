@@ -1,5 +1,16 @@
 #!/usr/bin/env sh
 
+# Handle hover events
+if [ "$SENDER" = "mouse.entered" ]; then
+    # Mouse entered: Add subtle background
+    sketchybar --set "$NAME" background.color=0x20ffffff
+    exit 0
+elif [ "$SENDER" = "mouse.exited" ]; then
+    # Mouse exited: Remove background
+    sketchybar --set "$NAME" background.color=0x00000000
+    exit 0
+fi
+
 # Handle click events
 if [ "$SENDER" = "mouse.clicked" ]; then
     case "$BUTTON" in
