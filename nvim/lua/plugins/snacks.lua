@@ -21,11 +21,8 @@ return {
     words = { enabled = false },
     -- Global style settings to remove rounded borders
     styles = {
-      notification = {
-        border = 'single',
-      },
-      input = {
-        border = 'single',
+      float = {
+        backdrop = false,
       },
     },
   },
@@ -132,9 +129,8 @@ return {
       callback = function()
         -- Create some toggle mappings
         Snacks.toggle.option('wrap', { name = 'Wrap' }):map '<leader>uw'
-        Snacks.toggle.option('relativenumber', { name = 'Relative Number' }):map '<leader>ul'
+        Snacks.toggle.option('relativenumber', { name = 'Relative Number' }):map '<leader>uL'
         Snacks.toggle.diagnostics():map '<leader>ud'
-        Snacks.toggle.line_number():map '<leader>uL'
         Snacks.toggle
           .option('conceallevel', { off = 0, on = vim.o.conceallevel > 0 and vim.o.conceallevel or 2 })
           :map '<leader>uc'
@@ -143,6 +139,21 @@ return {
         Snacks.toggle.inlay_hints():map '<leader>uh'
         Snacks.toggle.indent():map '<leader>ug'
         Snacks.toggle.dim():map '<leader>uD'
+        -- Colorizer toggle
+        local colorizer_toggle = Snacks.toggle.new {
+          id = 'colorizer',
+          name = 'Colorizer',
+          get = function()
+            -- Check if colorizer is attached to the current buffer
+            local colorizer = require('colorizer')
+            local bufnr = vim.api.nvim_get_current_buf()
+            return colorizer.is_buffer_attached(bufnr)
+          end,
+          set = function(state)
+            vim.cmd('ColorizerToggle')
+          end,
+        }
+        colorizer_toggle:map '<leader>ul'
         -- Supermaven toggle
         local supermaven_toggle = Snacks.toggle.new {
           id = 'supermaven',
