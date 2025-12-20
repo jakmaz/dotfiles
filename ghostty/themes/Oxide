@@ -1,0 +1,29 @@
+# Oxide Dark Theme for Ghostty
+# Based on oxide.nvim dark color palette
+# Core colors
+background = #141414
+foreground = #e0e4e8
+cursor-color = #e0e4e8
+cursor-text = #0f0f0f
+selection-background = #232323
+selection-foreground = #e0e4e8
+# Standard ANSI colors (0-15)
+palette = 0=#141414
+palette = 1=#ff6370
+palette = 2=#42be65
+palette = 3=#ffcc02
+palette = 4=#33b1ff
+palette = 5=#be95ff
+palette = 6=#08bdba
+palette = 7=#c8cdd2
+palette = 8=#4a4a4a
+palette = 9=#ff6370
+palette = 10=#42be65
+palette = 11=#ffcc02
+palette = 12=#33b1ff
+palette = 13=#be95ff
+palette = 14=#08bdba
+palette = 15=#f2f4f8
+# Extended colors for completeness
+palette = 16=#ff9500
+palette = 17=#ee5396

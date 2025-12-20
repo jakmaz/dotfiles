@@ -6,6 +6,7 @@
   "bullets.vim": { "branch": "master", "commit": "89294b8930e660936374fb763ac48a1ac51dd29c" },
   "cellular-automaton.nvim": { "branch": "main", "commit": "1606e9d5d04ff254023c3f3c62842d065708d6d3" },
   "conform.nvim": { "branch": "master", "commit": "ffe26e8df8115c9665d24231f8a49fadb2d611ce" },
+  "darkmatter-nvim": { "branch": "main", "commit": "5663ddc9d8580c0c43b996e01bfe1a335789e9c9" },
   "dial.nvim": { "branch": "master", "commit": "f97c0c7fa7d5111bc04a91d0f693900fb2d95861" },
   "flash.nvim": { "branch": "main", "commit": "fcea7ff883235d9024dc41e638f164a450c14ca2" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
