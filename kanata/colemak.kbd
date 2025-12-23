@@ -15,12 +15,12 @@
   zen        (cmd "open" "-a" "Zen")
   ghostty    (cmd "open" "-a" "Ghostty")
   firefox    (cmd "open" "-a" "Firefox")
-  messenger  (cmd "open" "-a" "Messenger")
   whatsapp   (cmd "open" "-a" "WhatsApp")
   mail       (cmd "open" "-a" "Mail")
   vesktop    (cmd "open" "-a" "Vesktop")
   obsidian   (cmd "open" "-a" "Obsidian")
   preview    (cmd "open" "-a" "Preview")
+  reminders  (cmd "open" "-a" "Reminders")
   finder     (cmd "open" "-a" "Finder")
   spotify    (cmd "open" "-a" "Spotify")
   terminal   (cmd "open" "-a" "Terminal")
@@ -51,6 +51,8 @@
   raygithub    (cmd "open" "-g" "raycast://extensions/raycast/github/my-latest-repositories")
   rayfocus     (cmd "open" "-g" "raycast://extensions/raycast/raycast-focus/start-focus-session")
   raynewtab    (cmd "open" "-g" "raycast://extensions/Keyruu/zen-browser/new-tab")
+  raytasks     (cmd "open" "-g" "raycast://extensions/raycast/apple-reminders/my-reminders")
+  rayaddtask   (cmd "open" "-g" "raycast://extensions/raycast/apple-reminders/create-reminder")
 
   wnext        (multi lctrl tab)
   wprev        (multi lctrl S-tab)
@@ -131,7 +133,7 @@
 ;; app - a
 (deflayer app
   _ _ _ _ _ _  _ @firefox @yaak @beekeper _ _
-  _ _ _ _ _ _  @vesktop @obsidian @whatsapp @messenger @mail  _
+  _ _ _ _ _ _  @vesktop @obsidian @whatsapp @mail @reminders _
   _ _ _ _ _ _  @finder @calendar @music @podcasts @preview _
   _ _ _ _ _ _
 )
@@ -186,7 +188,7 @@
 
 ;; raycast - r
 (deflayer raycast
-  _ _ _ _ _ _  _ @rayconfetti @rayfocus _ _ _
+  _ _ _ _ _ _  _ @rayconfetti @rayfocus @raytasks @rayaddtask _
   _ _ _ _ _ _  _ @raycp @rayfile @rayemoji @raytranslate _
   _ _ _ _ _ _  _ @raybrew @raygithub @rayvercel @raydocker _
   _ _ _ _ _ _
