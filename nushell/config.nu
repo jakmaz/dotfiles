@@ -932,6 +932,7 @@ alias bo = bun outdated          # Check for outdated packages
 alias ba = bun add               # Add new dependencies
 alias bt = bun run test          # Run tests (if configured)
 alias bl = bun run lint          # Lint your code (if configured)
+alias bf = bun run format        # Format your code (if configured)
 alias bp = bun run preview       # Preview the production build (if available)
 alias bv = bun --version         # Display Bun version
 alias bnew = bun create next-app # Scaffold a new Next.js project with Bun
