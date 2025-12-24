@@ -60,12 +60,15 @@
   wforward     (multi lmeta ])
   wback        (multi lmeta [)
   wnextwin     (multi lmeta grv)
-  wtophalf     (cmd "open" "raycast://extensions/raycast/window-management/top-half")
-  wbottomhalf  (cmd "open" "raycast://extensions/raycast/window-management/bottom-half")
-  wlefthalf    (cmd "open" "raycast://extensions/raycast/window-management/left-half")
-  wright       (cmd "open" "raycast://extensions/raycast/window-management/right-half")
-  wmaximize    (cmd "open" "raycast://extensions/raycast/window-management/maximize")
-  wprevdisplay (cmd "open" "raycast://extensions/raycast/window-management/previous-display")
+  wspacel      (multi lctrl left)
+  wspacer      (multi lctrl right)
+  wleft        (cmd "open" "-g" "rectangle://execute-action?name=left-half")
+  wright       (cmd "open" "-g" "rectangle://execute-action?name=right-half") 
+  wtop         (cmd "open" "-g" "rectangle://execute-action?name=top-half")
+  wbottom      (cmd "open" "-g" "rectangle://execute-action?name=bottom-half")
+  wmax         (cmd "open" "-g" "rectangle://execute-action?name=maximize")
+  walmost      (cmd "open" "-g" "rectangle://execute-action?name=almost-maximize")
+  wcenter      (cmd "open" "-g" "rectangle://execute-action?name=center")
 
   musictoggle (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/toggle-play-pause?launchType=background")
   musicprev   (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/previous-track?launchType=background")
@@ -100,6 +103,19 @@
   lock      (multi lctrl lmeta q)
   sleep     (cmd "open" "-g" "raycast://extensions/raycast/system/sleep")
   bluetooth (cmd "open" "-g" "raycast://extensions/VladCuciureanu/toothpick/manage-bluetooth-connections")
+
+  ;; ai
+  chat          (cmd "open" "-g" "raycast://extensions/raycast/raycast-ai/ai-chat")
+  aiscreenshot  (cmd "open" "-g" "raycast://extensions/raycast/raycast-ai/send-screen-to-ai-chat")
+
+  ;; folders
+  downloads        (cmd "open" "-g" "raycast://extensions/timothy_boye/open-folders/downloads")
+  documents        (cmd "open" "-g" "raycast://extensions/timothy_boye/open-folders/documents")
+  git              (cmd "open" "-g" "")
+  home             (cmd "open" "-g" "")
+  managefiles      (cmd "open" "-g" "raycast://extensions/erics118/file-manager/manage-files")
+  recents          (cmd "open" "-g" "raycast://extensions/GastroGeek/recents/recents")
+  managedownloads  (cmd "open" "-g" "raycast://extensions/thomas/downloads-manager/manage-downloads")
 )
 
 (defsrc
@@ -124,7 +140,7 @@
 )
 
 (deflayer hyper
-  _ _ (layer-toggle window) _ _ (layer-toggle browse)  _ _ _ _ _ _
+  _ _ (layer-toggle window) (layer-toggle files) (layer-toggle ai) (layer-toggle browse)  _ _ _ _ _ _
   _ (layer-toggle app) (layer-toggle raycast) @ghostty @zen _   left down up right tab _
   _ _ (layer-toggle system) (layer-toggle capture) (layer-toggle music) (layer-toggle movement) _ _ _ _ _ _
   _ _ _ _ _ _
@@ -138,6 +154,21 @@
   _ _ _ _ _ _
 )
 
+;; ai - p
+(deflayer ai
+  _ _ _ _ _ _  _ _ _ _ _ _
+  _ _ _ _ _ _  _ @chat @aiscreenshot _ _ _
+  _ _ _ _ _ _  _ _ _ _ _ _
+  _ _ _ _ _ _
+)
+
+;; files/folders - f
+(deflayer files
+  _ _ _ _ _ _  _ @downloads @documents @git @home _
+  _ _ _ _ _ _  _ @managedownloads @managefiles @recents _ _
+  _ _ _ _ _ _  _ _ _ _ _ _
+  _ _ _ _ _ _
+)
 ;; browse - b
 (deflayer browse
   _ _ _ _ _ _   _ _ _ _ _ _
@@ -148,9 +179,9 @@
 
 ;; window - w
 (deflayer window
-  _ _ _ _ _ _   @wprevdisplay @wtophalf _ _ _ _
-  _ _ _ _ _ _  _ @wnext @wprev @wnextwin @wmaximize _
-  _ _ _ @wclose _    _ @wback @wbottomhalf @wforward @wclose @wlefthalf @wright
+  _ _ _ _ _ _        @wspacel _ _ @wspacer _ _
+  _ _ _ _ _ _        @wback @wnext @wprev @wforward _ _
+  _ _ _ @wclose _ _  @wleft @wbottom @wtop @wright @walmost @wmax
   _ _ _ _ _ _
 )
 
