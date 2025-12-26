@@ -941,6 +941,23 @@ alias bnew = bun create next-app # Scaffold a new Next.js project with Bun
 alias bsi = bunx --bun shadcn@latest init
 alias bsa = bunx --bun shadcn@latest add
 
+# Npm aliases (equivalent to Bun aliases but with 'n' prefix)
+alias nd = npm run dev           # Start development server
+alias nb = npm run build         # Build your project
+alias ns = npm run start         # Run the production server
+alias no = npm outdated          # Check for outdated packages
+alias na = npm install           # Install dependencies (or npm add for specific packages)
+alias nt = npm run test          # Run tests (if configured)
+alias nl = npm run lint          # Lint your code (if configured)
+alias nf = npm run format        # Format your code (if configured)
+alias np = npm run preview       # Preview the production build (if available)
+alias nv = npm --version         # Display npm version
+alias nnew = npx create-next-app # Scaffold a new Next.js project with npm
+
+# Shadcn Aliases for npm
+alias nsi = npx shadcn@latest init
+alias nsa = npx shadcn@latest add
+
 # Go aliases
 alias gb = go build              # Build the current package
 alias gr = go run                # Run a Go file
