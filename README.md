@@ -4,31 +4,6 @@ Personal configuration files for macOS
 
 ![Setup Image](images/nvim.png)
 
-## Setup
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/jakmaz/dotfiles.git ~/git/dotfiles
-   ```
-
-2. **Use GNU Stow to create symlinks:**
-
-   ```bash
-   cd ~/git/dotfiles
-   stow .
-   ```
-
-   This command will automatically symlink all configuration files into their correct locations based on the `.stowrc` settings.
-
-3. **Configure Hammerspoon (if using):**
-
-   After stowing the dotfiles, you need to tell Hammerspoon to use the configuration file from the `.config` directory:
-
-   ```bash
-   defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
-   ```
-
 ## Contents
 
 | Tool | Description | Status |
@@ -54,6 +29,10 @@ Personal configuration files for macOS
 
 This is a minimalist developer setup focused on simplicity and efficiency. I use Neovim as my primary editor with a Colemak keyboard layout on a custom mechanical keyboard for optimal typing comfort and reduced finger movement.
 
+### Window Management
+
+After experimenting with various tiling window managers including yabai and aerospace, I've settled on a simple single-screen workflow. Most tasks are handled with full-screen applications launched via keyboard shortcuts. For the rare occasions when multiple apps are needed simultaneously, I use Rectangle for basic window positioning.
+
 ### Keyboard Layout and Input Management
 
 The keyboard setup uses **Kanata** for key mapping with a hyper layer system. When holding the hyper key, I enter sublayer selection mode where pressing specific keys activates different function groups:
@@ -69,6 +48,49 @@ The keyboard setup uses **Kanata** for key mapping with a hyper layer system. Wh
 
 This hyper layer approach eliminates the need for complex key combinations while keeping everything accessible from the home position.
 
-### Window Management
+## Setup
 
-After experimenting with various tiling window managers including yabai and aerospace, I've settled on a simple single-screen workflow. Most tasks are handled with full-screen applications launched via keyboard shortcuts. For the rare occasions when multiple apps are needed simultaneously, I use Rectangle for basic window positioning.
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/jakmaz/dotfiles.git ~/git/dotfiles
+   ```
+
+2. **Use GNU Stow to create symlinks:**
+
+   ```bash
+   cd ~/git/dotfiles
+   stow .
+   ```
+
+   This command will automatically symlink all configuration files into their correct locations based on the `.stowrc` settings.
+
+3. **Configure Hammerspoon (if using):**
+
+   After stowing the dotfiles, you need to tell Hammerspoon to use the configuration file from the `.config` directory:
+
+   ```bash
+   defaults write org.hammerspoon.Hammerspoon MJConfigFile "~/.config/hammerspoon/init.lua"
+   ```
+
+### Manual Setup Required
+
+When setting up a new device, these hyper key shortcuts from the Kanata config need to be manually configured in their respective apps:
+
+#### AntiNote
+
+- **Shortcut**: `Cmd+Ctrl+Alt+Shift+A`
+- **Action**: Launch/toggle AntiNote app
+
+#### Shottr
+
+- **Full Screenshot**: `Cmd+Ctrl+Alt+Shift+M`
+- **Window Screenshot**: `Cmd+Ctrl+Alt+Shift+N`
+- **Area Screenshot**: `Cmd+Ctrl+Alt+Shift+E`
+- **OCR Screenshot**: `Cmd+Ctrl+Alt+Shift+O`
+- **Screen Recording**: `Ctrl+Shift+Cmd+Alt+Enter`
+
+#### AI Raycast
+
+- **Shortcut**: `Cmd+Ctrl+Alt+Shift+P`
+- **Action**: Launch AI chat interface
