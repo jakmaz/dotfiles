@@ -31,6 +31,7 @@
   music      (cmd "open" "-a" "Music")
   podcasts   (cmd "open" "-a" "Podcasts")
   calendar   (cmd "open" "-a" "Calendar")
+  antinote   (multi lmeta lctrl lalt lshift a)
 
   ;; browse
   github     (cmd "open" "-a" "Zen" "https://github.com/jakmaz")
@@ -77,20 +78,20 @@
   musicadd    (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background")
 
   ;; capture
+  ssfull     (multi lmeta lctrl lalt lshift m)
+  sswin      (multi lmeta lctrl lalt lshift n)
+  ssarea     (multi lmeta lctrl lalt lshift e)
+  ssocr      (multi lmeta lctrl lalt lshift o)
   ssshow     (cmd "open" "shottr://show")
-  ssfull     (cmd "open" "-g" "shottr://grab/fullscreen")
-  ssfulledit (cmd "open" "-g" "shottr://grab/fullscreen?then=edit")
-  ssarea     (cmd "open" "-g" "shottr://grab/area")
-  ssaredit   (cmd "open" "-g" "shottr://grab/area?then=edit")
+  ssrecord   (multi lctrl lshift lmeta lalt enter)
+  ssfulledit (cmd "open" "shottr://grab/fullscreen?then=edit")
+  sswinedit  (cmd "open" "shottr://grab/window?then=edit")
+  ssaredit   (cmd "open" "shottr://grab/area?then=edit")
   ssappend   (cmd "open" "-g" "shottr://grab/append")
-  sswin      (cmd "open" "-g" "shottr://grab/window")
-  sswinedit  (cmd "open" "-g" "shottr://grab/window?then=edit")
   ssscroll   (cmd "open" "-g" "shottr://grab/scrolling")
-  ssocr      (cmd "open" "-g" "shottr://ocr")
   ssrepeat   (cmd "open" "-g" "shottr://grab/repeat")
   ssdelay    (cmd "open" "-g" "shottr://grab/delayed")
   ssclip     (cmd "open" "-g" "shottr://load/clipboard")
-  ssrecord   (multi lctrl lshift lmeta lalt m)
 
   homerowmove   (multi lctrl f)
   homerowscroll (multi lctrl j)
@@ -143,7 +144,7 @@
   _ _ (layer-toggle window) (layer-toggle files) (layer-toggle ai) (layer-toggle browse)  _ _ _ _ _ _
   _ (layer-toggle app) (layer-toggle raycast) @ghostty @zen _   left down up right tab _
   _ _ (layer-toggle system) (layer-toggle capture) (layer-toggle music) (layer-toggle movement) _ _ _ _ _ _
-  _ _ _ _ _ _
+  _ _ _ @antinote _ _
 )
 
 ;; app - a
