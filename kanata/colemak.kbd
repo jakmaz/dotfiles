@@ -106,7 +106,7 @@
   bluetooth (cmd "open" "-g" "raycast://extensions/VladCuciureanu/toothpick/manage-bluetooth-connections")
 
   ;; ai
-  chat          (cmd "open" "-g" "raycast://extensions/raycast/raycast-ai/ai-chat")
+  chat (multi lmeta lctrl lalt lshift p)
   aiscreenshot  (cmd "open" "-g" "raycast://extensions/raycast/raycast-ai/send-screen-to-ai-chat")
 
   ;; folders
