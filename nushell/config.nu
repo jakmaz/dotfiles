@@ -1016,6 +1016,7 @@ def brewup [] {
     brew cleanup
 }
 alias moviessync = rsync -av --progress --ignore-existing `/Volumes/Jakub's SSD/Movies/` /Volumes/main-pool/Upload/Movies/
+alias polaris-deploy = ssh -t polaris@192.168.88.200 `cd /opt/polaris/app/deployment && ./deploy.sh`
 
 # Yazi function with directory changing capability
 def --env y [...args] {
