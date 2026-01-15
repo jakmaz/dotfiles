@@ -55,11 +55,11 @@ return {
         'stylua', -- Lua formatter
         'terraform', -- Terraform CLI (includes terraform fmt)
         'beautysh', -- Shell script formatter
-        'gofumpt', -- Go formatter
-        'goimports', -- Go import formatter
         'typstyle', -- Typst formatter
 
         -- Other tools
+        'mbake', -- Makefile formatter and litner
+        'delve', -- Go debugger
       },
       auto_update = false, -- Set to true if you want automatic updates
       run_on_start = true, -- Install missing tools when Neovim starts

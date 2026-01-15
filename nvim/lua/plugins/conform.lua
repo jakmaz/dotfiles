@@ -29,9 +29,9 @@ return {
       css = { 'biome-check' },
       typst = { 'typstyle' },
       sh = { 'beautysh' },
-      go = { 'gofumpt', 'goimports' },
       terraform = { 'terraform_fmt' },
       tf = { 'terraform_fmt' },
+      make = { 'bake' },
     },
   },
 }
