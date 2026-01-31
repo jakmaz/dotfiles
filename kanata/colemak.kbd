@@ -120,38 +120,38 @@
 )
 
 (defsrc
-  tab q w e r t   y u i o p [ 
-  caps a s d f g   h j k l ; '
+  tab    q w e r t   y u i o p [ 
+  caps   a s d f g   h j k l ; '
   lshift z x c v b   n m , . / rshift
-  lctrl lalt lmeta spc rmeta ralt
+  lctrl lalt lmeta   spc rmeta ralt
 )
 
 (deflayer colemak
-  tab q w f p b   j l u y ; bspc 
-  esc a r s t g   m n e i o enter
+  tab    q w f p b   j l u y S-; bspc
+  esc    a r s t g   m n e i o enter
   lshift z x c d v   k h , . / '
   lctrl (layer-while-held hyper) lmeta spc (layer-while-held symbol) ralt
 )
 
 (deflayer symbol
-  _ 1 2 3 4 5   6 7 8 9 0 _
-  _ S-- - S-[ S-9 [   ] S-0 S-] + = _
+  _ 1   2       3   4     5   6 7   8 9 0 ;
+  _ S-- -   S-[ S-9 [     ] S-0 S-] +   = _
   _ S-1 S-2 S-3 S-4 S-5   S-6 S-7 S-8 \ grv _
   _ _ spc _ _ _
 )
 
 (deflayer hyper
-  _ _ (layer-toggle window) (layer-toggle files) (layer-toggle ai) (layer-toggle browse)  _ _ _ _ _ _
-  _ (layer-toggle app) (layer-toggle raycast) @ghostty @zen _   left down up right tab _
-  _ _ (layer-toggle system) (layer-toggle capture) (layer-toggle music) (layer-toggle movement) _ _ _ _ _ _
+  _ _                  (layer-toggle window)  (layer-toggle files)   (layer-toggle ai)    (layer-toggle browse)   _    _    _   _    _   _
+  _ (layer-toggle app) (layer-toggle raycast) @ghostty               @zen                 _                       left down up right tab _
+  _ _                  (layer-toggle system)  (layer-toggle capture) (layer-toggle music) (layer-toggle movement) _    _    _  _     _   _
   _ _ _ @antinote _ _
 )
 
 ;; app - a
 (deflayer app
   _ _ _ _ _ _  _ @firefox @yaak @beekeper _ _
-  _ _ _ _ _ _  @vesktop @obsidian @whatsapp @mail @reminders _
-  _ _ _ _ _ _  @finder @calendar @music @podcasts @preview _
+  _ _ _ _ _ _  @preview @obsidian @whatsapp @mail @reminders _
+  _ _ _ _ _ _  @finder @calendar @music @podcasts @vesktop _
   _ _ _ _ _ _
 )
 
