@@ -24,7 +24,7 @@ return {
       typescript = { 'biome-check' },
       javascriptreact = { 'biome-check' },
       typescriptreact = { 'biome-check' },
-      markdown = { 'markdownlint-cli2' },
+      markdown = { 'rumdl' },
       json = { 'biome-check' },
       css = { 'biome-check' },
       typst = { 'typstyle' },
@@ -32,6 +32,7 @@ return {
       terraform = { 'terraform_fmt' },
       tf = { 'terraform_fmt' },
       make = { 'bake' },
+      go = { 'goimports' },
     },
   },
 }

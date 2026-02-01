@@ -46,7 +46,7 @@ return {
         'trivy', -- Security scanner
         'shellcheck', -- Shell script linter
         'hadolint', -- Dockerfile linter
-        'markdownlint-cli2', -- Markdown linter
+        'rumdl', -- Markdown linter
         'yamllint', -- YAML linter
         'actionlint', -- GitHub Actions linter
         'biome', -- JS/TS/JSON linter
@@ -60,6 +60,7 @@ return {
         -- Other tools
         'mbake', -- Makefile formatter and litner
         'delve', -- Go debugger
+        'goimports', -- Go imports
       },
       auto_update = false, -- Set to true if you want automatic updates
       run_on_start = true, -- Install missing tools when Neovim starts

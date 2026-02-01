@@ -15,7 +15,7 @@ return {
       bash = { 'shellcheck' },
       zsh = { 'shellcheck' },
       dockerfile = { 'hadolint', 'trivy' },
-      markdown = { 'markdownlint-cli2' },
+      markdown = { 'rumdl' },
       yaml = { 'yamllint', 'trivy' },
       yml = { 'yamllint', 'trivy' },
       terraform = { 'tflint', 'trivy' },
