@@ -1,2 +1,5 @@
 [global]
-disable = ["MD013"]
+disable = ["MD012", "MD013", "MD041"]
+# MD012: No blank last line
+# MD013: Line length
+# MD041: First line in file should be a top level header
