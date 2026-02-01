@@ -1,5 +1,5 @@
 return { -- Collection of various small independent plugins/modules
-  'echasnovski/mini.nvim',
+  'mini-nvim/mini.nvim',
   config = function()
     require('mini.ai').setup { n_lines = 500 }
     require('mini.bracketed').setup()
