@@ -18,6 +18,12 @@ Expert guidance for Just, a command runner with syntax inspired by make. Use thi
 - Use built-in constants for terminal formatting
 - Implement check/write patterns for code quality tools
 
+**Important Style Guidelines:**
+- Keep justfiles minimal and clean
+- Do not use emojis in recipes or output
+- Use small dividers `# ---` for grouping instead of large section headers
+- Focus on functionality over decoration
+
 ## Quick Reference
 
 
@@ -85,9 +91,9 @@ Display formatted status during multi-step workflows:
 ```just
 @_run-with-status recipe *args:
     echo ""
-    echo -e '{{ CYAN }}→ Running {{ recipe }}...{{ NORMAL }}'
+    echo -e '{{ CYAN }}Running {{ recipe }}...{{ NORMAL }}'
     just {{ recipe }} {{ args }}
-    echo -e '{{ GREEN }}✓ {{ recipe }} completed{{ NORMAL }}'
+    echo -e '{{ GREEN }}{{ recipe }} completed{{ NORMAL }}'
 alias rws := _run-with-status
 ```
 
@@ -177,21 +183,28 @@ import "./node_modules/@sablier/devkit/just/npm.just"
 
 ## Section Organization
 
-Standard section header format:
+For minimal organization, use small dividers only when grouping is needed:
 
 ```just
-# ---------------------------------------------------------------------------- #
-#                                 DEPENDENCIES                                 #
-# ---------------------------------------------------------------------------- #
+# --- Dependencies ---
+
+# Bun: https://bun.sh
+bun := require("bun")
+
+# --- Main Commands ---
+
+# Show available commands
+default:
+    @just --list
 ```
 
 Common sections (in order):
 
-1. **DEPENDENCIES** - Required tools with URLs
-1. **CONSTANTS** - Glob patterns, environment vars
-1. **RECIPES / COMMANDS** - Main entry points
-1. **CHECKS** - Code quality recipes
-1. **UTILITIES / INTERNAL HELPERS** - Private helpers
+1. **Dependencies** - Required tools with URLs
+2. **Constants** - Glob patterns, environment vars  
+3. **Main Commands** - Primary entry points
+4. **Checks** - Code quality recipes
+5. **Utilities** - Private helpers
 
 ## Default Recipe
 
@@ -208,9 +221,7 @@ default:
 Document required tools at the top:
 
 ```just
-# ---------------------------------------------------------------------------- #
-#                                 DEPENDENCIES                                 #
-# ---------------------------------------------------------------------------- #
+# --- Dependencies ---
 
 # Bun: https://bun.sh
 bun := require("bun")
@@ -272,9 +283,10 @@ For complex flag-like behavior, use environment variables or positional paramete
 ## Tips
 
 1. Use `@` prefix to suppress command echo: `@echo "quiet"`
-1. Use `+` for variadic parameters: `test +args`
-1. Use `*` for optional variadic: `build *flags`
-1. Quote glob patterns in variables: `GLOBS := "\"**/*.json\""`
-1. Use `[no-cd]` in monorepos to stay in current directory
-1. Private recipes start with `_` or use `[private]`
-1. Always define aliases after recipe names for discoverability
+2. Use `+` for variadic parameters: `test +args`
+3. Use `*` for optional variadic: `build *flags`
+4. Quote glob patterns in variables: `GLOBS := "\"**/*.json\""`
+5. Use `[no-cd]` in monorepos to stay in current directory
+6. Private recipes start with `_` or use `[private]`
+7. Always define aliases after recipe names for discoverability
+8. Keep output clean and minimal - avoid emojis and decorative elements
