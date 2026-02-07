@@ -1,29 +1,31 @@
 # Oxide Dark Theme for Ghostty
-# Based on oxide.nvim dark color palette
-# Core colors
-background = #141414
-foreground = #e0e4e8
-cursor-color = #e0e4e8
-cursor-text = #0f0f0f
-selection-background = #232323
-selection-foreground = #e0e4e8
+# Based on oxide.nvim dark color palette with OKLCH color system
+# Matches terminal color mappings from Neovim configuration
+
+# Core UI colors
+background = #161616
+foreground = #cecece
+cursor-color = #cecece
+cursor-text = #161616
+selection-background = #262626
+selection-foreground = #cecece
+
 # Standard ANSI colors (0-15)
-palette = 0=#141414
-palette = 1=#ff6370
-palette = 2=#42be65
-palette = 3=#ffcc02
-palette = 4=#33b1ff
-palette = 5=#be95ff
-palette = 6=#08bdba
-palette = 7=#c8cdd2
-palette = 8=#4a4a4a
-palette = 9=#ff6370
-palette = 10=#42be65
-palette = 11=#ffcc02
-palette = 12=#33b1ff
-palette = 13=#be95ff
-palette = 14=#08bdba
-palette = 15=#f2f4f8
-# Extended colors for completeness
-palette = 16=#ff9500
-palette = 17=#ee5396
+palette = 0=#262626
+palette = 1=#ff5655
+palette = 2=#00c300
+palette = 3=#be9b00
+palette = 4=#00a6ff
+palette = 5=#9588ff
+palette = 6=#00baaa
+palette = 7=#cecece
+
+# Bright colors (8-15)
+palette = 8=#8f8f8f
+palette = 9=#ff7b74
+palette = 10=#00d600
+palette = 11=#d0ab00
+palette = 12=#40b6ff
+palette = 13=#a59dff
+palette = 14=#00ccba
+palette = 15=#dedede
