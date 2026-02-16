@@ -45,8 +45,8 @@ The keyboard setup uses **Kanata** for key mapping with a hyper layer system. Wh
 - **Music layer** - Media playback controls
 - **Movement layer** - Advanced text navigation shortcuts
 - **Raycast layer** - Quick access to Raycast extensions
-
-This hyper layer approach eliminates the need for complex key combinations while keeping everything accessible from the home position.
+- **AI layer** - ChatGPT and screenshot analysis
+- **Files layer** - Quick access to folders and file management
 
 ## Setup
 
@@ -79,8 +79,7 @@ When setting up a new device, these hyper key shortcuts from the Kanata config n
 
 #### AntiNote
 
-- **Shortcut**: `Cmd+Ctrl+Alt+Shift+A`
-- **Action**: Launch/toggle AntiNote app
+- **Launch/toggle**: `Cmd+Ctrl+Alt+Shift+A`
 
 #### Shottr
 
@@ -92,5 +91,4 @@ When setting up a new device, these hyper key shortcuts from the Kanata config n
 
 #### AI Raycast
 
-- **Shortcut**: `Cmd+Ctrl+Alt+Shift+P`
-- **Action**: Launch AI chat interface
+- **Launch AI chat**: `Cmd+Ctrl+Alt+Shift+P`
