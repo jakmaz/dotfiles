@@ -12,20 +12,20 @@ selection-foreground = #cecece
 
 # Standard ANSI colors (0-15)
 palette = 0=#262626
-palette = 1=#ff5655
-palette = 2=#00c300
-palette = 3=#be9b00
-palette = 4=#00a6ff
-palette = 5=#9588ff
+palette = 1=#ed756e
+palette = 2=#5bb661
+palette = 3=#c39900
+palette = 4=#3ba6f5
+palette = 5=#968ff7
 palette = 6=#00baaa
 palette = 7=#cecece
 
 # Bright colors (8-15)
 palette = 8=#8f8f8f
-palette = 9=#ff7b74
-palette = 10=#00d600
-palette = 11=#d0ab00
-palette = 12=#40b6ff
-palette = 13=#a59dff
-palette = 14=#00ccba
+palette = 9=#ff9890
+palette = 10=#7bd77f
+palette = 11=#e3b831
+palette = 12=#6fc6ff
+palette = 13=#b5b2ff
+palette = 14=#00dcca
 palette = 15=#dedede
