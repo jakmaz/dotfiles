@@ -924,6 +924,14 @@ source ~/.local/share/atuin/init.nu
 # Aliases
 
 
+# Just aliases
+alias jr = just run
+alias jb = just build
+alias jd = just dev
+alias js = just start
+alias jl = just --list
+alias jc = just clean
+
 # Bun aliases
 alias bd = bun run dev           # Start development server
 alias bb = bun run build         # Build your project
