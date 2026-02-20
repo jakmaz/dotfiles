@@ -77,6 +77,9 @@
   musiclib    (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/play-library-album")
   musicadd    (cmd "open" "-g" "raycast://extensions/fedevitaledev/music/add-to-playlist?launchType=background")
 
+  ;; radio
+  radiotoggle (cmd "$HOME/.config/kanata/radio-toggle.sh" "toggle")
+
   ;; capture
   ssfull     (multi lmeta lctrl lalt lshift m)
   sswin      (multi lmeta lctrl lalt lshift n)
@@ -134,8 +137,8 @@
 )
 
 (deflayer symbol
-  _ 1   2       3   4     5   6 7   8 9 0 ;
-  _ S-- -   S-[ S-9 [     ] S-0 S-] +   = _
+  _ 1   2       3   4     5   6 7   8 9 0   _
+  _ S-- -   S-[ S-9 [     ] S-0 S-] +   =   _
   _ S-1 S-2 S-3 S-4 S-5   S-6 S-7 S-8 \ grv _
   _ _ spc _ _ _
 )
@@ -188,7 +191,7 @@
 
 ;; music - d
 (deflayer music
-  _ _ _ _ _ _   _ _ _ _ _ _
+  _ _ _ _ _ _   @radiotoggle _ _ _ _ _
   _ _ _ _ _ _   _ @musicprev @musicnext @musiclib @musicadd _
   _ _ _ _ _ _  _ _ _ _ _ _
   _ _ _ _ _ _
