@@ -15,7 +15,7 @@ return {
         'eslint', -- Nextjs Linting
         'rust_analyzer', -- Rust
         'clangd', -- C / C++
-        'tailwindcss', -- Tailwind CSS
+        'tsgo', -- TypeScript (Go implementation)
         'harper_ls', -- Spell check
         'java_language_server', -- Java
         'tinymist', -- Typst
@@ -61,6 +61,8 @@ return {
         'mbake', -- Makefile formatter and litner
         'delve', -- Go debugger
         'goimports', -- Go imports
+        'sqruff', -- SQL
+        'just-lsp', -- Justfile LSP
       },
       auto_update = false, -- Set to true if you want automatic updates
       run_on_start = true, -- Install missing tools when Neovim starts
