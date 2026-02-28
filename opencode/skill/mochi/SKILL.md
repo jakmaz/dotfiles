@@ -41,13 +41,13 @@ and calling the Mochi API.
 
 ### Noun — `uh7fGAtd`
 
-| Field ID    | Name               | Notes                                              |
-|-------------|--------------------|----------------------------------------------------|
-| `name`      | term               | Bare noun, no article                              |
+| Field ID    | Name               | Notes                                             |
+|-------------|--------------------|---------------------------------------------------|
+| `name`      | term               | Bare noun, no article                             |
 | `rA0wy2RL`  | article            | Dutch: `de` or `het`; Spanish: `el/la/los/las`    |
-| `TSHL8aOb`  | plural             | Plural form                                        |
-| `1iHjVUoo`  | meaning            | English meaning                                    |
-| `0yO6Y7QH`  | example            | Example sentence in target language                |
+| `TSHL8aOb`  | plural             | Plural form                                       |
+| `1iHjVUoo`  | meaning            | English meaning                                   |
+| `0yO6Y7QH`  | example            | Example sentence in target language               |
 | `pkaTR5m8`  | example_translation| English translation of example                    |
 | `aWoCM4WS`  | sound              | **Omit** — auto-generated                         |
 
@@ -57,10 +57,11 @@ and calling the Mochi API.
 |-------------|--------------------|------------------------------------------------------------------------------------|
 | `name`      | term               | Infinitive form                                                                    |
 | `bDevs3Y7`  | verb_property      | Dutch: `transitive`, `separable`, `reflexive`; Spanish: `irregular`, `stem-changing e→ie`, `reflexive` |
-| `MjwjyOCM`  | past               | Dutch: imperfectum; Spanish: preterite 1st person singular                        |
+| `MjwjyOCM`  | past               | Dutch: imperfectum; Spanish: preterite 1st person singular                         |
 | `3TDAQZqa`  | pp                 | Past participle                                                                    |
+| `HUSo6UxT`  | meaning            | English meaning                                                                    |
 | `K1PS5Xdk`  | example            | Example sentence in target language                                                |
-| `i0XPY85v`  | example_translation| English translation of example                                                    |
+| `i0XPY85v`  | example_translation| English translation of example                                                     |
 
 ### Adjective — `7hgcdBHk`
 
@@ -71,7 +72,7 @@ and calling the Mochi API.
 | `HBozSMzW`  | superlative        | Omit if no superlative form exists         |
 | `eZUFCOjv`  | example            | Example sentence in target language        |
 | `oAFAB6oN`  | meaning            | English meaning                            |
-| `6qB6N45g`  | example_translation| English translation of example            |
+| `6qB6N45g`  | example_translation| English translation of example             |
 
 ### Adverb — `I7PrBcFB`
 
@@ -80,7 +81,7 @@ and calling the Mochi API.
 | `name`      | term               | The adverb                                 |
 | `CBvhyf08`  | example            | Example sentence in target language        |
 | `F5kLaSV0`  | meaning            | English meaning                            |
-| `ypwmtpFG`  | example_translation| English translation of example            |
+| `ypwmtpFG`  | example_translation| English translation of example             |
 
 ### Phrase — `9eGY8JoA`
 
@@ -180,6 +181,7 @@ POST https://app.mochi.cards/api/cards/
     "bDevs3Y7":  { "id": "bDevs3Y7", "value": "regular, transitive" },
     "MjwjyOCM":  { "id": "MjwjyOCM", "value": "hablé" },
     "3TDAQZqa":  { "id": "3TDAQZqa", "value": "hablado" },
+    "HUSo6UxT":  { "id": "HUSo6UxT", "value": "speak" },
     "K1PS5Xdk":  { "id": "K1PS5Xdk", "value": "Ella habla español muy bien." },
     "i0XPY85v":  { "id": "i0XPY85v", "value": "She speaks Spanish very well." }
   }
@@ -206,7 +208,7 @@ POST https://app.mochi.cards/api/cards/
   "template-id": "9eGY8JoA",
   "fields": {
     "name":     { "id": "name",     "value": "het maakt niet uit" },
-    "WbF4DbMJ": { "id": "WbF4DbMJ","value": "it doesn't matter" }
+    "WbF4DbMJ": { "id": "WbF4DbMJ", "value": "it doesn't matter" }
   }
 }
 ```
