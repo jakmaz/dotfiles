@@ -1036,3 +1036,8 @@ def --env y [...args] {
 	}
 	rm -fp $tmp
 }
+
+def mkcd [dir: string] {
+  mkdir $dir
+  cd $dir
+}
