@@ -159,7 +159,7 @@ $env.config = {
     }
 
     table: {
-        mode: thin # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
+        mode: default # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
         index_mode: always # "always" show indexes, "never" show indexes, "auto" = show indexes when a table has "index" column
         show_empty: true # show 'empty list' and 'empty record' placeholders for command output
         padding: { left: 1, right: 1 } # a left right padding of each column in a table
@@ -928,6 +928,7 @@ source ~/.local/share/atuin/init.nu
 alias jr = just run
 alias jb = just build
 alias jd = just dev
+alias jt = just test
 alias js = just start
 alias jl = just --list
 alias jc = just clean
@@ -1024,7 +1025,6 @@ def brewup [] {
     brew cleanup
 }
 alias moviessync = rsync -av --progress --ignore-existing `/Volumes/Jakub's SSD/Movies/` /Volumes/main-pool/Upload/Movies/
-alias polaris-deploy = ssh -t polaris@192.168.88.200 `cd /opt/polaris/app/deployment && ./deploy.sh`
 
 # Yazi function with directory changing capability
 def --env y [...args] {
