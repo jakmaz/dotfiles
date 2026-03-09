@@ -111,6 +111,7 @@
   ;; ai
   chat (multi lmeta lctrl lalt lshift p)
   aiscreenshot  (cmd "open" "-g" "raycast://extensions/raycast/raycast-ai/send-screen-to-ai-chat")
+  flashcards (cmd "open" "-g" "raycast://extensions/raycast/flashcards/ask-flashcards")
 
   ;; folders
   downloads        (cmd "open" "-g" "raycast://extensions/timothy_boye/open-folders/downloads")
@@ -162,7 +163,7 @@
 (deflayer ai
   _ _ _ _ _ _  _ _ _ _ _ _
   _ _ _ _ _ _  _ @chat @aiscreenshot _ _ _
-  _ _ _ _ _ _  _ _ _ _ _ _
+  _ _ _ _ _ _  _ @flashcards _ _ _ _
   _ _ _ _ _ _
 )
 
