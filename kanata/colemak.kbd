@@ -34,7 +34,7 @@
   antinote   (multi lmeta lctrl lalt lshift a)
 
   ;; browse
-  github     (cmd "open" "-a" "Zen" "https://github.com/jakmaz")
+  github     (cmd "open" "-a" "Zen" "https://github.com")
   raindrop   (cmd "open" "-a" "Zen" "https://app.raindrop.io/my/0")
   reddit     (cmd "open" "-a" "Zen" "https://reddit.com")
   youtube    (cmd "open" "-a" "Zen" "https://www.youtube.com")
