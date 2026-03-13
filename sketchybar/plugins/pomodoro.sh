@@ -60,19 +60,19 @@ else
     TIME_LEFT=$((END_TIME - CURRENT_TIME))
 
     if [ $TIME_LEFT -le 0 ]; then
-        # Timer expired - switch mode and notify
+        # Timer expired - switch mode and play sound
         if [ "$MODE" = "sit" ]; then
             # Switch to stand
             END_TIME=$((CURRENT_TIME + STAND_DURATION))
             echo "{\"running\":true,\"mode\":\"stand\",\"end_time\":$END_TIME}" > "$STATE_FILE"
-            osascript -e 'display notification "Time to stand up!" with title "Pomodoro Timer"'
+            afplay /System/Library/Sounds/Glass.aiff &
             MODE="stand"
             TIME_LEFT=$STAND_DURATION
         else
             # Switch to sit
             END_TIME=$((CURRENT_TIME + SIT_DURATION))
             echo "{\"running\":true,\"mode\":\"sit\",\"end_time\":$END_TIME}" > "$STATE_FILE"
-            osascript -e 'display notification "Time to sit down!" with title "Pomodoro Timer"'
+            afplay /System/Library/Sounds/Glass.aiff &
             MODE="sit"
             TIME_LEFT=$SIT_DURATION
         fi
