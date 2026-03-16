@@ -19,7 +19,7 @@ if [ "$SENDER" = "mouse.clicked" ]; then
             exit 0
             ;;
     esac
-# Handle scroll events for volume control
+    # Handle scroll events for volume control
 elif [ "$SENDER" = "mouse.scrolled" ]; then
     # Get current volume
     CURRENT_VOLUME=$(osascript -e "output volume of (get volume settings)")

@@ -21,12 +21,14 @@ if [ "$SENDER" = "mouse.clicked" ]; then
         "left")
             # Toggle running/stopped
             if [ "$RUNNING" = "true" ]; then
-                # Stop the timer
+                # Stop the timer - animate icon pulse
                 echo '{"running":false,"mode":"sit","end_time":0}' > "$STATE_FILE"
+                sketchybar --animate tanh 15 --set "$NAME" icon.scale=1.3 icon.scale=1.0
             else
-                # Start fresh with 20 min sit
+                # Start fresh with 20 min sit - animate icon pop
                 END_TIME=$(($(date +%s) + SIT_DURATION))
                 echo "{\"running\":true,\"mode\":\"sit\",\"end_time\":$END_TIME}" > "$STATE_FILE"
+                sketchybar --animate tanh 20 --set "$NAME" icon.y_offset=-5 icon.y_offset=0
             fi
             ;;
         "right")
@@ -39,6 +41,8 @@ if [ "$SENDER" = "mouse.clicked" ]; then
                     END_TIME=$(($(date +%s) + SIT_DURATION))
                     echo "{\"running\":true,\"mode\":\"sit\",\"end_time\":$END_TIME}" > "$STATE_FILE"
                 fi
+                # Animate icon bounce on skip
+                sketchybar --animate sin 25 --set "$NAME" icon.y_offset=-8 icon.y_offset=0
             fi
             ;;
     esac
@@ -60,7 +64,7 @@ else
     TIME_LEFT=$((END_TIME - CURRENT_TIME))
 
     if [ $TIME_LEFT -le 0 ]; then
-        # Timer expired - switch mode and play sound
+        # Timer expired - switch mode, play sound, and animate
         if [ "$MODE" = "sit" ]; then
             # Switch to stand
             END_TIME=$((CURRENT_TIME + STAND_DURATION))
@@ -68,6 +72,8 @@ else
             afplay /System/Library/Sounds/Glass.aiff &
             MODE="stand"
             TIME_LEFT=$STAND_DURATION
+            # Animate icon pop on mode switch
+            sketchybar --animate tanh 25 --set "$NAME" icon.y_offset=-10 icon.y_offset=0
         else
             # Switch to sit
             END_TIME=$((CURRENT_TIME + SIT_DURATION))
@@ -75,6 +81,8 @@ else
             afplay /System/Library/Sounds/Glass.aiff &
             MODE="sit"
             TIME_LEFT=$SIT_DURATION
+            # Animate icon pop on mode switch
+            sketchybar --animate tanh 25 --set "$NAME" icon.y_offset=-10 icon.y_offset=0
         fi
     fi
 
