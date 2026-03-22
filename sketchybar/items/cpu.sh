@@ -4,5 +4,4 @@
 sketchybar --add item cpu right
 
 # Config
-sketchybar --set cpu icon=  update_freq=2 script="$PLUGIN_DIR/cpu.nu"
-sketchybar --set cpu icon.font="Hack Nerd Font:Bold:14"
+sketchybar --set cpu icon=􀫥  update_freq=2 script="$PLUGIN_DIR/cpu.nu"

@@ -21,14 +21,14 @@ if [ "$SENDER" = "mouse.clicked" ]; then
         "left")
             # Toggle running/stopped
             if [ "$RUNNING" = "true" ]; then
-                # Stop the timer - animate icon pulse
+                # Stop the timer
                 echo '{"running":false,"mode":"sit","end_time":0}' > "$STATE_FILE"
-                sketchybar --animate tanh 15 --set "$NAME" icon.scale=1.3 icon.scale=1.0
+                sketchybar --animate tanh 15 --set "$NAME" y_offset=2 y_offset=0
             else
-                # Start fresh with 20 min sit - animate icon pop
+                # Start fresh with 20 min sit
                 END_TIME=$(($(date +%s) + SIT_DURATION))
                 echo "{\"running\":true,\"mode\":\"sit\",\"end_time\":$END_TIME}" > "$STATE_FILE"
-                sketchybar --animate tanh 20 --set "$NAME" icon.y_offset=-5 icon.y_offset=0
+                sketchybar --animate tanh 15 --set "$NAME" y_offset=2 y_offset=0
             fi
             ;;
         "right")
@@ -42,7 +42,7 @@ if [ "$SENDER" = "mouse.clicked" ]; then
                     echo "{\"running\":true,\"mode\":\"sit\",\"end_time\":$END_TIME}" > "$STATE_FILE"
                 fi
                 # Animate icon bounce on skip
-                sketchybar --animate sin 25 --set "$NAME" icon.y_offset=-8 icon.y_offset=0
+                sketchybar --animate tanh 15 --set "$NAME" y_offset=2 y_offset=0
             fi
             ;;
     esac
@@ -57,7 +57,7 @@ fi
 # Update display based on current state
 if [ "$RUNNING" = "false" ]; then
     # Paused state
-    sketchybar --set "$NAME" icon="⏸" label="PAUSED"
+    sketchybar --set "$NAME" icon="􀊆" label="PAUSED"
 else
     # Running - calculate time left
     CURRENT_TIME=$(date +%s)
@@ -93,9 +93,9 @@ else
 
     # Set icon based on mode
     if [ "$MODE" = "sit" ]; then
-        ICON=""
+        ICON="􁐷"
     else
-        ICON=""
+        ICON="􀳾"
     fi
 
     sketchybar --set "$NAME" icon="$ICON" label="$TIME_STR"

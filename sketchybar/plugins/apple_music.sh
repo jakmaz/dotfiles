@@ -2,12 +2,19 @@
 
 # Handle hover events
 if [ "$SENDER" = "mouse.entered" ]; then
-    # Mouse entered: Add subtle background
-    sketchybar --set "$NAME" background.color=0x20ffffff
+    # Mouse entered: Animate bottom border (underline) appearance
+    sketchybar --animate tanh 15 \
+        --set "$NAME" \
+            background.border_width=2 \
+            background.border_color=0xffffffff \
+            background.border_position=bottom
     exit 0
 elif [ "$SENDER" = "mouse.exited" ]; then
-    # Mouse exited: Remove background
-    sketchybar --set "$NAME" background.color=0x00000000
+    # Mouse exited: Animate bottom border away
+    sketchybar --animate tanh 15 \
+        --set "$NAME" \
+            background.border_width=0 \
+            background.border_color=0x00000000
     exit 0
 fi
 
@@ -54,7 +61,7 @@ INFO=$(osascript -e '
 ')
 
 if [ -z "$INFO" ]; then
-  sketchybar --set "$NAME" label="[jakmaz]" icon.drawing=off
+    sketchybar --set "$NAME" label="[jakmaz]" icon.drawing=off
 else
-  sketchybar --set "$NAME" icon="󰝚 " label="$INFO" icon.drawing=on
+    sketchybar --set "$NAME" icon="󰝚 " label="$INFO" icon.drawing=on
 fi
