@@ -3,7 +3,7 @@
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
 
-##### Colors #####
+##### Constants #####
 BAR_COLOR=0x00000000
 ITEM_BG_COLOR=0x7a121212
 ITEM_LABEL_COLOR=0xffffffff
@@ -12,21 +12,23 @@ BORDER_COLOR=0x36ffffff
 BORDER_WIDTH=1
 HEIGHT=30
 RADIUS=15
-PADDING=2
-BRACKET_PADDING_LEFT=22
-BRACKET_PADDING_RIGHT=22
 
 ##### Bar Appearance #####
 bar=(
   position=top
-  height=40
+  height=30
+  margin=8
   color=$BAR_COLOR
   blur_radius=20
-  padding_left=4
-  padding_right=4
+  padding_left=0
+  padding_right=0
 )
 
 sketchybar --bar "${bar[@]}"
+
+##### Adding Events #####
+BLUETOOTH_EVENT="com.apple.bluetooth.status"
+sketchybar --add event bluetooth_update $BLUETOOTH_EVENT
 
 #### Defaults #####
 default=(
@@ -34,8 +36,8 @@ default=(
   updates=on
   icon.color=$ITEM_ICON_COLOR
   label.color=$ITEM_LABEL_COLOR
-  padding_left=$PADDING
-  padding_right=$PADDING
+  padding_left=2
+  padding_right=2
   icon.font="SF Pro:Bold:16"
   label.font="SF Pro:Semibold:14"
   icon.padding_left=4
@@ -55,7 +57,7 @@ source $ITEM_DIR/apple_music.sh
 
 ##### Adding Right Items #####
 source $ITEM_DIR/calendar.sh
-source $ITEM_DIR/volume.sh
+source $ITEM_DIR/wifi.sh
 source $ITEM_DIR/battery.sh
 source $ITEM_DIR/memory.sh
 source $ITEM_DIR/cpu.sh
@@ -77,18 +79,16 @@ sketchybar --add bracket apple_pill \
 sketchybar --add bracket front_app_pill \
             front_app \
            --set front_app_pill background.color=$ITEM_BG_COLOR \
-                                background.height=$HEIGHT \
-                                background.corner_radius=$RADIUS \
-                                background.border_width=$BORDER_WIDTH \
-                                background.border_color=$BORDER_COLOR \
-                                blur_radius=4 \
-                                background.padding_left=$BRACKET_PADDING_LEFT \
-                                background.padding_right=$BRACKET_PADDING_RIGHT
+                    background.height=$HEIGHT \
+                    background.corner_radius=$RADIUS \
+                    background.border_width=$BORDER_WIDTH \
+                    background.border_color=$BORDER_COLOR \
+                    blur_radius=4 \
 
 # Right side pill
 sketchybar --add bracket right_pill \
             calendar \
-            volume \
+            wifi \
             battery \
             cpu \
             memory \
@@ -100,8 +100,6 @@ sketchybar --add bracket right_pill \
                             background.border_width=$BORDER_WIDTH \
                             background.border_color=$BORDER_COLOR \
                             blur_radius=4 \
-                            background.padding_left=$BRACKET_PADDING_LEFT \
-                            background.padding_right=$BRACKET_PADDING_RIGHT
 
 ##### Force all scripts to run the first time (never do this in a script) #####
 sketchybar --update

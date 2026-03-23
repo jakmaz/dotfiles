@@ -9,4 +9,4 @@ sketchybar --add item kanata right \
     padding_left=10 \
     label.drawing=off \
     click_script="$PLUGIN_DIR/kanata.sh" \
-    --subscribe kanata mouse.clicked mouse.entered mouse.exited kanata_update
+    --subscribe kanata mouse.clicked kanata_update
