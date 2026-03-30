@@ -1,0 +1,2 @@
+-- Plugin disabled by user configuration
+-- vim.pack.add({ 'https://github.com/dmmulroy/ts-error-translator.nvim' })

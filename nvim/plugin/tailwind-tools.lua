@@ -1,0 +1,2 @@
+-- Plugin disabled by user configuration
+-- vim.pack.add({ 'https://github.com/luckasRanarison/tailwind-tools.nvim' })
