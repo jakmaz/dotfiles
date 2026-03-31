@@ -1,7 +1,7 @@
-vim.pack.add({ { src = 'https://github.com/nvim-treesitter/nvim-treesitter', branch = 'master' } })
-vim.pack.add({ 'https://github.com/nvim-treesitter/nvim-treesitter-context' })
+vim.pack.add { { src = 'https://github.com/nvim-treesitter/nvim-treesitter', branch = 'main' } }
+vim.pack.add { 'https://github.com/nvim-treesitter/nvim-treesitter-context' }
 
-require('treesitter-context').setup({
+require('treesitter-context').setup {
   enable = true,
   multiwindow = false,
   max_lines = 0,
@@ -13,4 +13,4 @@ require('treesitter-context').setup({
   separator = nil,
   zindex = 20,
   on_attach = nil,
-})
+}
