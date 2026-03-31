@@ -34,10 +34,10 @@ colorizer_toggle:map '<leader>ul'
 local supermaven_toggle = Snacks.toggle.new {
   id = 'supermaven',
   name = 'Supermaven',
-  get = function() 
+  get = function()
     local has_sm, sm = pcall(require, 'supermaven-nvim.api')
     if not has_sm then return false end
-    return sm.is_running() 
+    return sm.is_running()
   end,
   set = function(state)
     local has_sm, sm = pcall(require, 'supermaven-nvim.api')
@@ -121,11 +121,6 @@ require('snacks').setup {
   dashboard = {
     sections = {
       { section = 'header' },
-      {
-        align = 'center',
-        padding = 1,
-        text = { { '[ @jakmaz • v' .. tostring(vim.version()) .. ' ]', hl = 'footer' } },
-      },
       { section = 'keys', gap = 1, padding = 1 },
       {
         align = 'center',
@@ -137,14 +132,15 @@ require('snacks').setup {
     preset = {
       header = [[
       )                             
-  ( /(                             
-  )\())   (        )   (      )    
-((_)\   ))\  (   /((  )\    (     
-  _((_) /((_) )\ (_))\((_)   )\  ' 
-| \| |(_))  ((_)_)((_)(_) _((_))  
-| .` |/ -_)/ _ \\ V / | || '  \() 
-|_|\_|\___|\___/ \_/  |_||_|_|_|  
-]],
+   ( /(                             
+   )\())   (        )   (      )    
+ ((_)\   ))\  (   /((  )\    (     
+   _((_) /((_) )\ (_))\((_)   )\  ' 
+ | \| |(_))  ((_)_((_)(_) _((_))  
+ | .` |/ -_)/ _ \\ V / | || '  \()
+ |_|\_|\___|\___/ \_/  |_||_|_|_|
+
+ @jakmaz • v]] .. tostring(vim.version()) .. [[]],
       keys = {
         { icon = '', key = 'e', desc = 'Explore Files', action = ":lua Snacks.dashboard.pick('explorer')" },
         {
