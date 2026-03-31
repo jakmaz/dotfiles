@@ -1,2 +1,2 @@
-vim.pack.add({ { src = 'https://github.com/oxidescheme/nvim', name = 'oxide' } })
-    vim.cmd.colorscheme("oxide")
+-- vim.pack.add { { src = ' file:///Users/jakubmazur/git/oxide/nvim ', name = 'oxide' } }
+vim.cmd.colorscheme 'oxide'
