@@ -53,7 +53,21 @@ supermaven_toggle:map '<leader>ua'
 
 -- OPTS BLOCK
 require('snacks').setup {
-  input = { enabled = true },
+  input = {
+    enabled = true,
+    expand = true, -- Enable dynamic width expansion
+    win = {
+      relative = 'cursor',
+      row = -3,
+      col = 0,
+      width = 30,      -- Minimum width: starts small
+      max_width = 100, -- Maximum width: caps expansion
+      keys = {
+        -- Override default i_esc to cancel/close window instead of just exiting insert mode
+        i_esc = { '<esc>', { 'cmp_close', 'cancel' }, mode = 'i', expr = true },
+      },
+    },
+  },
   bigfile = { enabled = true },
   lazygit = { enabled = true },
   git = { enabled = true },
@@ -68,7 +82,7 @@ require('snacks').setup {
   scope = { enabled = true },
   scroll = { enabled = true },
   statuscolumn = { enabled = true },
-  words = { enabled = false },
+  words = { enabled = true },
   styles = { float = { backdrop = false } },
   picker = {
     enabled = true,
