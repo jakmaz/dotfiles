@@ -1,27 +1,42 @@
 vim.pack.add({ 'https://github.com/mfussenegger/nvim-lint' })
 
 local lint = require 'lint'
+
 lint.linters_by_ft = {
-  javascript = { 'biome' },
-  typescript = { 'biome' },
-  javascriptreact = { 'biome' },
-  typescriptreact = { 'biome' },
-  yml = { 'yamllint' },
-  yaml = { 'yamllint' },
+  javascript = { 'biomejs' },
+  typescript = { 'biomejs' },
+  typescriptreact = { 'biomejs' },
+  javascriptreact = { 'biomejs' },
+  json = { 'biomejs' },
+  css = { 'biomejs' },
   sh = { 'shellcheck' },
+  bash = { 'shellcheck' },
+  zsh = { 'shellcheck' },
+  dockerfile = { 'hadolint', 'trivy' },
   markdown = { 'rumdl' },
+  yaml = { 'yamllint', 'trivy' },
+  yml = { 'yamllint', 'trivy' },
+  terraform = { 'tflint', 'trivy' },
 }
 
+-- Custom function to run actionlint only on GitHub Actions files
+local function lint_github_actions()
+  local filepath = vim.api.nvim_buf_get_name(0)
+  if filepath:match '%.github/workflows/.*%.ya?ml$' then
+    lint.try_lint { 'actionlint' }
+  end
+end
+
 local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
+
 vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWritePost', 'InsertLeave' }, {
   group = lint_augroup,
   callback = function()
-    if vim.opt_local.modifiable:get() then
-      lint.try_lint()
-    end
+    lint.try_lint()
+    lint_github_actions()
   end,
 })
 
-vim.keymap.set('n', '<leader>l', function()
+vim.keymap.set('n', '<leader>cl', function()
   lint.try_lint()
 end, { desc = 'Trigger linting for current file' })
