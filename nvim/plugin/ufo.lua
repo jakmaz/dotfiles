@@ -1,7 +1,6 @@
-vim.pack.add({ 'https://github.com/kevinhwang91/promise-async' })
-vim.pack.add({ 'https://github.com/kevinhwang91/nvim-ufo' })
+vim.pack.add { 'https://github.com/kevinhwang91/promise-async' }
+vim.pack.add { 'https://github.com/kevinhwang91/nvim-ufo' }
 
-vim.o.foldcolumn = '1'
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
