@@ -7,6 +7,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Quit neovim
 vim.keymap.set('n', '<leader>q', '<cmd>qa<CR>', { desc = 'Quit All' })
+vim.keymap.set('n', '<leader>or', '<cmd>restart<CR>', { desc = 'Restart Neovim' })
 
 -- Save on Ctrl+S in normal and insert mode, then return to normal mode
 vim.keymap.set({ 'n', 'i' }, '<C-s>', '<cmd>w<CR><Esc>', { desc = 'Save File' })
