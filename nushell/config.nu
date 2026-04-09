@@ -1041,3 +1041,9 @@ def mkcd [dir: string] {
   mkdir $dir
   cd $dir
 }
+
+# Add opencode skill to dotfiles
+export def add-skill [cmd: string] {
+    source ~/git/dotfiles/scripts/add-skill.nu
+    main $cmd
+}
