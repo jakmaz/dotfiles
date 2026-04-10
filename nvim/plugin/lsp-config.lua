@@ -14,7 +14,7 @@ require('mason-lspconfig').setup {
     'clangd',
     'tsgo',
     'harper_ls',
-    'java_language_server',
+    'jdtls',
     'tinymist',
     'biome',
     'jsonls',
