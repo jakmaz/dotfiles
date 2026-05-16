@@ -1,7 +1,7 @@
 # Theme and appearance
 theme = "Oxide"
 font-family = "JetBrains Mono"
-font-size = 16
+font-size = 18
 bold-is-bright = true
 window-decoration = true
 window-padding-color = "background"
