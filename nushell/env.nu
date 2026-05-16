@@ -6,6 +6,7 @@ $env.PATH = (
   $env.PATH 
   | split row (char esep) 
   | append '/opt/homebrew/bin' 
+  | append '/opt/homebrew/sbin'
   | append '/usr/local/bin' 
   | append '/Users/jakubmazur/.bun/bin'
   | append '/Users/jakubmazur/go/bin'

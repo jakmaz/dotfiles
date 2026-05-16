@@ -892,6 +892,20 @@ $env.config = {
             mode: emacs
             event: { edit: selectall }
         }
+        {
+            name: cmux_sessionizer
+            modifier: alt
+            keycode: char_s
+            mode: [emacs, vi_normal, vi_insert]
+            event: { send: executehostcommand cmd: "/Users/jakubmazur/git/dotfiles/scripts/cmux-sessionizer" }
+        }
+        {
+            name: open_yazi
+            modifier: alt
+            keycode: char_y
+            mode: [emacs, vi_normal, vi_insert]
+            event: { send: executehostcommand cmd: "cmux new-surface --command /opt/homebrew/bin/yazi" }
+        }
     ]
 }
 
@@ -1025,6 +1039,8 @@ def brewup [] {
     brew cleanup
 }
 alias moviessync = rsync -av --progress --ignore-existing `/Volumes/Jakub's SSD/Movies/` /Volumes/main-pool/Upload/Movies/
+
+alias tunnel = cloudflared --url localhost:
 
 # Yazi function with directory changing capability
 def --env y [...args] {

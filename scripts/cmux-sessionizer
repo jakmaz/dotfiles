@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+# Fetch cmux workspaces and zoxide dirs
+# We prefix them with icons to distinguish
+
+get_workspaces() {
+    # cmux list-workspaces might output space-separated, we just want to list them nicely
+    # If daemon is off, it fails, so we suppress error
+    cmux list-workspaces 2>/dev/null | awk '{print "  " $0}'
+}
+
+get_zoxide() {
+    zoxide query -l | awk '{print "  " $0}'
+}
+
+get_find() {
+    fd -H -d 2 -t d -E .Trash . ~ | awk '{print "🔎  " $0}'
+}
+
+get_all() {
+    get_workspaces
+    get_zoxide
+}
+
+# The initial list
+INITIAL_LIST=$(get_all)
+
+# We use fzf to select
+SELECTED=$(echo "$INITIAL_LIST" | fzf \
+    --no-sort --ansi --border-label ' cmux ' --prompt '  ' \
+    --header '  ^a all ^w workspaces ^x zoxide ^d kill workspace ^f find' \
+    --bind 'ctrl-a:change-prompt(  )+reload(cmux list-workspaces 2>/dev/null | awk '\''{print "  " $0}'\'' ; zoxide query -l | awk '\''{print "  " $0}'\'')' \
+    --bind 'ctrl-w:change-prompt(  )+reload(cmux list-workspaces 2>/dev/null | awk '\''{print "  " $0}'\'')' \
+    --bind 'ctrl-x:change-prompt(  )+reload(zoxide query -l | awk '\''{print "  " $0}'\'')' \
+    --bind 'ctrl-f:change-prompt(🔎  )+reload(fd -H -d 2 -t d -E .Trash . ~ | awk '\''{print "🔎  " $0}'\'')' \
+    --bind 'ctrl-d:execute(cmux close-workspace --workspace {2..})+change-prompt(⚡  )+reload(cmux list-workspaces 2>/dev/null | awk '\''{print "  " $0}'\'')' \
+)
+
+if [[ -z "$SELECTED" ]]; then
+    exit 0
+fi
+
+ICON=$(echo "$SELECTED" | awk '{print $1}')
+TARGET=$(echo "$SELECTED" | awk '{$1=""; print substr($0,2)}')
+
+if [[ "$ICON" == "" ]]; then
+    # Target is a workspace name/id
+    cmux select-workspace --workspace "$TARGET"
+else
+    # Target is a directory path
+    cmux "$TARGET"
+fi
