@@ -9,6 +9,7 @@ require('mason-lspconfig').setup {
   ensure_installed = {
     'lua_ls',
     'ruff',
+    'pyright',
     'eslint',
     'rust_analyzer',
     'clangd',
@@ -66,4 +67,31 @@ vim.lsp.config('harper_ls', {
 vim.lsp.config('nushell', {
   cmd = { 'nu', '--lsp' },
   filetypes = { 'nu' },
+})
+
+-- Ruff LSP configuration (linting & formatting, not hover/docs)
+vim.lsp.config('ruff', {
+  on_attach = function(client)
+    client.server_capabilities.hoverProvider = false
+    client.server_capabilities.inlayHintProvider = false
+  end,
+})
+
+-- Pyright LSP configuration (autocomplete, type checking, hover docs)
+vim.lsp.config('pyright', {
+  settings = {
+    pyright = {
+      useLibraryCodeForTypes = true,
+    },
+    python = {
+      analysis = {
+        typeCheckingMode = 'basic',
+        autoSearchPaths = true,
+        useLibraryCodeForTypes = true,
+        diagnosticMode = 'workspace',
+        index = true,
+      },
+    },
+  },
+  root_markers = { 'pyproject.toml', 'setup.py', 'requirements.txt', '.git', '.venv', 'venv', 'uv.lock' },
 })

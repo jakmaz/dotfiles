@@ -26,7 +26,7 @@ local colorizer_toggle = Snacks.toggle.new {
     local bufnr = vim.api.nvim_get_current_buf()
     return colorizer.is_buffer_attached(bufnr)
   end,
-  set = function(state) pcall(vim.cmd, 'ColorizerToggle') end,
+  set = function() pcall(vim.cmd, 'ColorizerToggle') end,
 }
 colorizer_toggle:map '<leader>ul'
 
@@ -60,12 +60,8 @@ require('snacks').setup {
       relative = 'cursor',
       row = -3,
       col = 0,
-      width = 30,      -- Minimum width: starts small
+      width = 30, -- Minimum width: starts small
       max_width = 100, -- Maximum width: caps expansion
-      keys = {
-        -- Override default i_esc to cancel/close window instead of just exiting insert mode
-        i_esc = { '<esc>', { 'cmp_close', 'cancel' }, mode = 'i', expr = true },
-      },
     },
   },
   bigfile = { enabled = true },
@@ -232,7 +228,6 @@ map('n', '<leader>sl', function() Snacks.picker.loclist() end, { desc = 'Locatio
 map('n', '<leader>sm', function() Snacks.picker.marks() end, { desc = 'Marks' })
 map('n', '<leader>sM', function() Snacks.picker.man() end, { desc = 'Man Pages' })
 map('n', '<leader>sp', function() Snacks.picker.lazy() end, { desc = 'Search for Plugin Spec' })
-map('n', '<leader>st', function() Snacks.picker.todo_comments() end, { desc = 'Todo comments' })
 map('n', '<leader>sq', function() Snacks.picker.qflist() end, { desc = 'Quickfix List' })
 map('n', '<leader>sR', function() Snacks.picker.resume() end, { desc = 'Resume' })
 map('n', '<leader>su', function() Snacks.picker.undo() end, { desc = 'Undo History' })

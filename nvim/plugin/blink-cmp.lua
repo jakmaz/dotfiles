@@ -1,22 +1,25 @@
-vim.pack.add({ 'https://github.com/rafamadriz/friendly-snippets' })
-vim.pack.add({ 'https://github.com/L3MON4D3/LuaSnip' })
-vim.pack.add({ { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range('*') } })
+vim.pack.add { 'https://github.com/rafamadriz/friendly-snippets' }
+vim.pack.add { { src = 'https://github.com/saghen/blink.cmp', version = vim.version.range '*' } }
 
-require('blink.cmp').setup({
-  keymap = { preset = 'super-tab' },
-  appearance = { use_nvim_cmp_as_default = true, nerd_font_variant = 'mono' },
+require('blink.cmp').setup {
+  sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
+  keymap = { preset = 'enter' },
+  appearance = { nerd_font_variant = 'normal' },
   completion = {
     keyword = { range = 'full' },
     accept = { auto_brackets = { enabled = true } },
     menu = {
-      draw = {
-        treesitter = { 'lsp' },
-        columns = { { 'label', 'label_description', gap = 1 }, { 'kind_icon', 'kind' } },
-      },
-      border = 'none',
+      -- border = 'rounded', -- Adds border to the autocomplete menu
+      draw = { treesitter = { 'lsp' } },
     },
-    documentation = { auto_show = true, auto_show_delay_ms = 200, window = { border = 'none' } },
+    documentation = {
+      auto_show = true,
+      auto_show_delay_ms = 250,
+      -- window = { border = 'rounded' }, -- Changed from 'none' to 'rounded'
+    },
   },
-  signature = { enabled = true, window = { border = 'none' } },
-  sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
-})
+  signature = {
+    enabled = true,
+    -- window = { border = 'rounded' }, -- Adds border to the signature help
+  },
+}

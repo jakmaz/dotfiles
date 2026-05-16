@@ -3,6 +3,11 @@ vim.pack.add({ 'https://github.com/MeanderingProgrammer/render-markdown.nvim' })
 -- Start disabled by default
 require('render-markdown').setup({
   enabled = false,
+  sign = { enabled = false },
+  heading = {
+    icons = {},
+    position = 'inline',
+  },
 })
 
 -- Create Snacks toggle after all plugins are loaded
