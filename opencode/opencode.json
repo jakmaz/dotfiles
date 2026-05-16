@@ -1,23 +1,22 @@
 {
   "$schema": "https://opencode.ai/config.json",
-	"model": "opencode/kimi-k2.5-free",
-	"autoshare": false,
-	"autoupdate": true,
-	"mcp": {
-		"obsidian": {
-			"type": "local",
-			"command": ["uvx", "mcp-obsidian"],
-			"enabled": true,
-			"environment": {
-				"OBSIDIAN_API_KEY": "4e0bfeb9c3cb471f23acb6f401f639aa312f8a49dd522fbf49f4d65359488ed4",
-				"OBSIDIAN_HOST": "127.0.0.1",
-				"OBSIDIAN_PORT": "27124"
-			}
-		},
-		"context7": {
-			"type": "local",
-			"command": ["bunx", "-y", "@upstash/context7-mcp"],
-			"enabled": true
-		}
-	}
+  "model": "opencode-go/kimi-k2.6",
+  "default_agent": "plan",
+  "autoshare": false,
+  "autoupdate": true,
+  "mcp": {
+    "context7": {
+      "type": "local",
+      "command": ["bunx", "-y", "@upstash/context7-mcp"],
+      "enabled": true
+    },
+    "flashcards": {
+      "type": "local",
+      "command": [
+        "bun",
+        "/Users/jakubmazur/git/atlas/apps/flashcards-mcp/index.ts"
+      ]
+    }
+  },
+  "plugin": ["@mohak34/opencode-notifier@latest"]
 }

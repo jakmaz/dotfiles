@@ -36,3 +36,16 @@ When uncertain, prefer: Tailwind, TypeScript, Bun, React
 
 - Use the Context7 tool to get the latest documentation for libraries and frameworks.
 - Use web fetch to find information when Context7 doesn't have what you need or for general knowledge.
+
+## Communication
+
+- Be brutally honest always. Don't sugarcoat my or your stupid decisions.
+
+## Documentation
+
+- Never create walkthroughs, explanations, or documentation files unless explicitly asked.
+
+## Dependencies
+
+- Suggest modern, well-maintained solutions when recommending new packages.
+- Never add a dependency without my confirmation first.
